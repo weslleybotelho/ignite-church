@@ -1,0 +1,119 @@
+// Colors of project
+
+// Brand-colors
+$primary-dark: #d95916;
+$primary-normal: #ef702d;
+$primary-light: #fc935b;
+
+$secondary-dark: #a9c96b;
+$secondary-normal: #d2f988;
+$secondary-light: #dcfd9e;
+
+// Neutral-colors
+$black-dark: #080402;
+$black-normal: #14100d;
+$black-light: #1c1815;
+$black-lighten: #332e29;
+$black-darken: #1d1309;
+
+$white-darken: #d2c9c1;
+$white-dark: #ede6df;
+$white-normal: #f7f0e9;
+$white-light: #fffbf5;
+
+// Gray Scale
+$gray-1: #252626;
+$gray-2: #353536;
+$gray-3: #4c4c4d;
+$gray-4: #646465;
+$gray-5: #7c7c7d;
+$gray-6: #949494;
+$gray-7: #9ea0a3;
+
+// Auxiliary colors
+$red-normal: #f03d3d;
+$red-dark: #d03333;
+$red-light: #f05454;
+
+$green-normal: #0bb07b;
+$green-dark: #28bb49;
+$green-light: #50e170;
+
+$yellow-normal: #ffce52;
+$yellow-dark: #d9b043;
+$yellow-light: #ffd76b;
+
+.color-white {
+  color: $white-normal;
+}
+
+.color-black {
+  color: $black-light;
+}
+
+.color-primary {
+  color: $primary-normal;
+}
+
+.color-gradient {
+  display: inline-block;
+  background: linear-gradient(224.78deg, $primary-light 8.12%, $primary-dark 92.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-gradient2 {
+  display: inline-block;
+  background: linear-gradient(270deg, #1141bd 0.95%, #6bbaff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+  background: linear-gradient(224.78deg, $primary-dark 8.12%, $secondary-dark 92.21%);
+}
+
+.label {
+  background: linear-gradient(224.78deg, $primary-normal 8.12%, $secondary-dark 92.21%);
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 2px;
+
+  color: $black-dark;
+}
+
+.color-gray {
+  color: $gray-5;
+}
+
+.color-red {
+  color: $red-normal;
+}
+
+.color-green {
+  color: $green-normal;
+}
+
+.color-yellow {
+  color: $yellow-normal;
+}
+
+.bg-red {
+  background-color: $red-normal;
+}
+
+.bg-green {
+  background-color: $green-normal;
+}
+
+.bg-yellow {
+  background-color: $yellow-normal;
+}
+
+.bg-black {
+  background-color: $black-dark;
+}
+
+.bg-black-light {
+  background-color: $black-light;
+}

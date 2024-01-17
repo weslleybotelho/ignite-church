@@ -1,0 +1,372 @@
+.btn-address {
+  display: inline-block;
+  color: $white-light;
+  transition: 0.6s ease;
+  padding: 12px 65px 12px 18px;
+  text-align: center;
+
+  background: linear-gradient(225deg, $primary-light 8.12%, $primary-dark 92.21%);
+
+  border-radius: 2px;
+
+  box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  position: relative;
+  transition: 0.7s ease;
+
+  &::before {
+    content: '';
+
+    width: 52px;
+    height: 40px;
+
+    background-image: url('/svg/icon-map.svg');
+    background-size: 44%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 50%;
+    right: -20px;
+
+    transform: translate(-50%, -50%);
+
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    &::before {
+      transform: translate(-50%, -50%) translate3d(6px, 0, 0);
+    }
+  }
+}
+
+.btn-live {
+  display: inline-block;
+  color: $white-light;
+  transition: 0.6s ease;
+  padding: 12px 65px 12px 18px;
+  text-align: center;
+
+  background: linear-gradient(225deg, $gray-2 8.12%, $gray-4 92.21%);
+
+  border-radius: 2px;
+
+  box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  position: relative;
+  transition: 0.7s ease;
+
+  &::before {
+    content: '';
+
+    width: 52px;
+    height: 40px;
+
+    background-image: url('/svg/icon-live.svg');
+    background-size: 44%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 50%;
+    right: -20px;
+
+    transform: translate(-50%, -50%);
+
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    &::before {
+      transform: translate(-50%, -50%) translate3d(6px, 0, 0);
+    }
+  }
+}
+
+.btn-black {
+  display: inline-block;
+  color: $white-light;
+  transition: 0.6s ease;
+  padding: 12px;
+  text-align: center;
+
+  background: linear-gradient(225deg, $gray-2 8.12%, $gray-4 92.21%);
+
+  border-radius: 2px;
+
+  box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
+
+  @include typeface-2(h7, desktop);
+  @include responsive(s) {
+    @include typeface-2(h7, mobile);
+  }
+
+  position: relative;
+  transition: 0.7s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.btn-orange {
+  display: inline-block;
+  color: $white-light;
+  transition: 0.6s ease;
+  padding: 12px;
+  text-align: center;
+
+  background: linear-gradient(225deg, $primary-light 8.12%, $primary-dark 92.21%);
+
+  border-radius: 2px;
+
+  box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
+
+  @include typeface-2(h7, desktop);
+  @include responsive(s) {
+    @include typeface-2(h7, mobile);
+  }
+
+  position: relative;
+  transition: 0.7s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+// @keyframes rotate-icon-button {
+//   0% {
+//     transform: translate(-50%, -50%) rotate(0deg);
+//   }
+//   100% {
+//     transform: translate(-50%, -50%) rotate(360deg);
+//   }
+// }
+
+.btn-small {
+  display: inline-block;
+  color: $white-light;
+  transition: 0.6s ease;
+  padding: 12px 28px 12px 28px;
+  text-align: center;
+
+  background: linear-gradient(225deg, $primary-normal 8.12%, $secondary-dark 92.21%);
+
+  border-radius: 10px;
+
+  box-shadow: 0px 7px 32px rgba(92, 118, 46, 0.6);
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  position: relative;
+}
+
+.btn-secondary {
+  display: inline-block;
+  color: $white-light;
+  transition: 0.6s ease;
+  padding: 18px 40px;
+  text-align: center;
+  border: 0;
+
+  background: transparent;
+  border: 2px solid $black-lighten;
+  border-radius: 12px;
+
+  @include typeface-1(h7, desktop);
+  @include responsive(s) {
+    @include typeface-1(h7, mobile);
+  }
+
+  &:hover {
+    //opacity: .8;
+    border: 2px solid $black-lighten;
+    background: $black-normal;
+  }
+}
+
+.link-black {
+  color: $black-lighten;
+}
+
+a,
+button {
+  @include typeface-2(p3, desktop);
+  text-decoration: none;
+  color: $white-light;
+  transition: 0.5s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.underline {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    width: 80%;
+    height: 1px;
+    transform: translate(-50%, -50%);
+
+    background-color: $white-light;
+
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.link {
+  color: $white-light;
+
+  @include typeface-1(h6, desktop);
+  @include responsive(s) {
+    @include typeface-1(h6, mobile);
+  }
+
+  padding: 18px 52px 18px 24px;
+  position: relative;
+  border-radius: 16px;
+
+  background-color: $black-normal;
+  border: 3px solid $black-lighten;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    top: 50%;
+    right: 7%;
+
+    width: 28px;
+    height: 28px;
+
+    transform: translate(-50%, -50%) translate3d(10px, 0, 0);
+
+    // background-image: url('../svg/icon-blank.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    transition: 0.5s ease;
+  }
+
+  &:hover {
+    border: 3px solid $secondary-dark;
+    &::before {
+      transform: translate(-50%, -50%) translate3d(12px, -4px, 0);
+    }
+  }
+}
+
+.link-footer {
+  padding: 8px 8px 8px 8px;
+
+  transition: 0.7s ease;
+
+  &:hover {
+    padding: 8px 8px 8px 16px;
+  }
+}
+
+.btn-send {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(217.08deg, $secondary-dark 2.12%, $primary-dark 98.96%);
+  border: 0;
+  border-radius: 8px;
+}
+
+input {
+  accent-color: $primary-normal;
+}
+
+/*
+input[type=text]{
+  padding: 8px 12px;
+  background-color: $black-light;
+  border: 0;
+  border-radius: 4px;
+  color: $white-light;
+
+  @include typeface-2(p3, desktop);
+}
+*/
+
+input,
+select,
+option,
+textarea {
+  padding: 12px 16px;
+  background-color: $white-light;
+  border: 2px solid $white-light;
+  border-radius: 4px;
+  color: $black-lighten;
+  width: 100%;
+
+  @include typeface-2(p3, desktop);
+
+  &:focus {
+    border: 2px solid $white-normal;
+  }
+}
+
+.label-error {
+  color: $red-normal;
+  text-align: right;
+  display: none;
+}
+
+.label-active {
+  display: block;
+}
+
+.border-error {
+  background-color: $black-light;
+  border: 2px solid $red-normal;
+}
+
+.border-success {
+  background-color: $black-light;
+  border: 2px solid $green-normal;
+}
+
+input[type='date'],
+select,
+option {
+  height: 44px;
+}
+
+.box-form {
+  min-width: 420px;
+
+  @include responsive(s) {
+    max-width: 420px;
+    min-width: 300px;
+  }
+}
