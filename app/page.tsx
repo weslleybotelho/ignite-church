@@ -134,10 +134,10 @@ export default function Home() {
               <h2 className="color-gradient p2 uppercase">ministries</h2>
               <p className="p1 color-gray mt-4 ">
                 At Ignite, our ministries are the heartbeat of our community, each serving as a unique avenue for
-                spiritual growth, fellowship, and service. Whether you're seeking camaraderie in our vibrant men's and
-                women's groups, exploring inner healing and restoration, pursuing deeper insights through our School of
-                Ministries, or engaging with thought-provoking discussions on our insightful podcasts, there's a place
-                for you to thrive and connect at Ignite.
+                spiritual growth, fellowship, and service. Whether you&apos;re seeking camaraderie in our vibrant
+                men&apos;s and women&apos;s groups, exploring inner healing and restoration, pursuing deeper insights
+                through our School of Ministries, or engaging with thought-provoking discussions on our insightful
+                podcasts, there&apos;s a place for you to thrive and connect at Ignite.
               </p>
               <Link className="btn-orange mt-5" href="#">
                 Check our Ministries
@@ -184,8 +184,8 @@ export default function Home() {
               style={{ borderRadius: '4px', maxWidth: '276px' }}
             />
             <p className="p5 text-center mt-3 events-desc">
-              We are living in a time of great potential for the manifestation of God's glory on Earth, and it's time
-              for the Church to come together in unity to see transformation and reformation.
+              We are living in a time of great potential for the manifestation of God&apos;s glory on Earth, and
+              it&apos;s time for the Church to come together in unity to see transformation and reformation.
             </p>
             <Link className="btn-black mt-3" href="https://www.ariseurope.com/" target="_blank">
               View more
@@ -231,7 +231,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="grid-6 pt-6">
-              <Image src={IsmImg} quality={100} style={{ objectFit: 'cover' }} width={360} height={390}></Image>
+              <Image
+                src={IsmImg}
+                alt="Ignite School of Ministry"
+                quality={100}
+                style={{ objectFit: 'cover' }}
+                width={360}
+                height={390}></Image>
             </div>
           </div>
         </div>
