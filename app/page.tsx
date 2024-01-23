@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { list } from '@vercel/blob';
 
 import BgHero from './img/bg-hero-dark.jpg';
 import AboutIgniteImg from './img/about-ignite.jpg';
@@ -72,7 +73,12 @@ export default function Home() {
             style={{ objectFit: 'cover' }}
             quality={100}
           /> */}
-          <video src="/img/IgniteChurch-video.mp4" height={1026} autoPlay={true} loop={true} muted={true}>
+          <video
+            src="https://pkhsl2qgjxadjbvi.public.blob.vercel-storage.com/ignitechurch-video-RS12oCEpLOphmRe1qIElaBMCEmRKGu"
+            height={1026}
+            autoPlay={true}
+            loop={true}
+            muted={true}>
             <p>Your browser doesn&apos;t support HTML video.</p>
           </video>
         </div>
