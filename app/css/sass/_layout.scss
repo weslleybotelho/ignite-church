@@ -382,3 +382,9 @@ $gutter: 32px;
 .bg-section {
   position: absolute;
 }
+
+.img-ministry {
+  @include responsive(s) {
+    object-fit: contain;
+  }
+}

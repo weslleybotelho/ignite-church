@@ -65,13 +65,16 @@ export default function Home() {
 
       <div className="bg-black relative hidden py-5" style={{ height: '850px' }} id="hero">
         <div className="bg-hero ">
-          <Image
+          {/* <Image
             src={BgHero}
             alt="background ignite church service"
             height={1026}
             style={{ objectFit: 'cover' }}
             quality={100}
-          />
+          /> */}
+          <video src="/img/IgniteChurch-video.mp4" height={1026} autoPlay={true} loop={true} muted={true}>
+            <p>Your browser doesn&apos;t support HTML video.</p>
+          </video>
         </div>
 
         <section className="container hero">
@@ -117,6 +120,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ----------------------------Ministries------------------------------ */}
       <section className="relative bg-black" id="ministries">
         <div className="container py-3">
           <div className="row">
@@ -128,6 +132,7 @@ export default function Home() {
                 style={{ objectFit: 'fill' }}
                 height={340}
                 width={360}
+                className="img-ministry"
               />
             </div>
             <div className="grid-6 grid-itens-mobile">
