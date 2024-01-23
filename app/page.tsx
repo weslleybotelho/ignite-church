@@ -78,7 +78,8 @@ export default function Home() {
             height={1026}
             autoPlay={true}
             loop={true}
-            muted={true}>
+            muted={true}
+            playsInline={true}>
             <p>Your browser doesn&apos;t support HTML video.</p>
           </video>
         </div>
