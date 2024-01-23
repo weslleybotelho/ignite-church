@@ -578,6 +578,12 @@
     align-items: center;
   }
 }
+@media screen and (max-width: 460px) {
+  .grid-itens-mobile {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
 
 .img-full {
   margin: 0;
@@ -599,7 +605,14 @@
 }
 @media screen and (max-width: 960px) {
   .grid-ministry-mobile {
-    padding-top: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .grid-ministry-mobile {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 

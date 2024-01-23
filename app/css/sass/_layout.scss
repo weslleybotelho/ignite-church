@@ -367,6 +367,11 @@ $gutter: 32px;
     flex-direction: column;
     align-items: center;
   }
+
+  @include responsive(xs) {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
 }
 
 .img-full {
@@ -386,7 +391,12 @@ $gutter: 32px;
 .grid-ministry-mobile {
   padding-top: 64px;
   @include responsive(s) {
-    padding-top: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  @include responsive(xs) {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 .img-ministry {
