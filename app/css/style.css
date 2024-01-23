@@ -594,6 +594,15 @@
   position: absolute;
 }
 
+.grid-ministry-mobile {
+  padding-top: 64px;
+}
+@media screen and (max-width: 960px) {
+  .grid-ministry-mobile {
+    padding-top: 12px;
+  }
+}
+
 @media screen and (max-width: 960px) {
   .img-ministry {
     -o-object-fit: contain !important;

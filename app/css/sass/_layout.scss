@@ -383,6 +383,12 @@ $gutter: 32px;
   position: absolute;
 }
 
+.grid-ministry-mobile {
+  padding-top: 64px;
+  @include responsive(s) {
+    padding-top: 12px;
+  }
+}
 .img-ministry {
   @include responsive(s) {
     object-fit: contain !important;

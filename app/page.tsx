@@ -131,7 +131,7 @@ export default function Home() {
       <section className="relative bg-black" id="ministries">
         <div className="container py-3">
           <div className="row">
-            <div className="grid-6 pt-6">
+            <div className="grid-6 grid-ministry-mobile">
               <Image
                 src={MinistriesImg}
                 alt="about ignite"
