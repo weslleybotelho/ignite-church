@@ -1734,11 +1734,113 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 960px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 .active-header {
   opacity: 1;
   background: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.bx {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .bx {
+    display: block;
+  }
+}
+.bx::after {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  transition: 1s ease;
+  border-radius: 2px;
+  background-color: #fffbf5;
+}
+.bx::before {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  transition: 1s ease;
+  border-radius: 2px;
+  background-color: #fffbf5;
+}
+
+.bx.activebx::after {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  border-radius: 2px;
+  background-color: #fffbf5;
+}
+.bx.activebx::before {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-315deg);
+  border-radius: 2px;
+  background-color: #fffbf5;
+}
+
+.menu-mobile {
+  width: 100%;
+  height: 100vh;
+  margin-top: 80px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background-color: rgba(6, 9, 15, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  transition: 0.7s ease;
+  z-index: 999;
+}
+.menu-mobile li {
+  border-bottom: 1px solid #1c1815;
+}
+.menu-mobile li .link-menu-mobile {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 24px 16px 24px 16px;
+}
+.menu-mobile li .link-menu-mobile:hover {
+  background-color: #1c1815;
+  padding: 24px 16px 24px 24px;
+}
+
+.menu-mobile.showmenu {
+  left: 0;
 }
 
 .icon {
