@@ -5,7 +5,7 @@
   font-family: 'Hind', sans-serif;
 
   @if $size == hbig and $device == desktop {
-    font-size: 96px;
+    font-size: px;
     line-height: 120%;
     font-weight: 400;
   } @else if $size == hbig and $device == mobile {
@@ -311,7 +311,6 @@ p {
 
 .bold {
   font-weight: bold;
-  color: $black-light;
 }
 
 span {

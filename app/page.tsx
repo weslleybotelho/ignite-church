@@ -33,7 +33,8 @@ export default function Home() {
             autoPlay={true}
             loop={true}
             muted={true}
-            playsInline={true}>
+            playsInline={true}
+            style={{ width: '100%', objectFit: 'cover' }}>
             <p>Your browser doesn&apos;t support HTML video.</p>
           </video>
         </div>
@@ -41,12 +42,10 @@ export default function Home() {
         <section className="container hero">
           <div className="row">
             <div className="grid-6 relative" style={{ paddingRight: '28px' }}>
-              <h1 className="uppercase color-white" style={{ letterSpacing: '6px' }}>
-                igniting a generation for jesus
-              </h1>
-              <p className="mt-4 color-white p1">Join us this Sunday at 10:00am</p>
+              <h1 className="uppercase color-white h1-hero">igniting a generation for jesus</h1>
 
-              <div className="cta mt-3">
+              <p className="mt-4 color-white p1 bold">Join us this Sunday at 10:00am</p>
+              <div className="cta mt-9">
                 <Link href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-address">
                   Save the address
                 </Link>

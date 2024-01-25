@@ -309,7 +309,7 @@ $gutter: 32px;
   // top: 80%;
   // left: 15%;
 
-  transform: translate(-0%, 5%);
+  transform: translate(-0%, -5%);
 
   // background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(122, 122, 122, 0) 50%);
 
@@ -325,6 +325,13 @@ $gutter: 32px;
 
   transition: 1s ease;
   // z-index: -1;
+}
+
+.h1-hero {
+  letter-spacing: 6px !important;
+  @include responsive(s) {
+    letter-spacing: 4px !important;
+  }
 }
 
 .cta {

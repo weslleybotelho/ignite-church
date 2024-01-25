@@ -5,9 +5,12 @@
   padding: 12px 65px 12px 18px;
   text-align: center;
 
-  background: linear-gradient(225deg, $primary-light 8.12%, $primary-dark 92.21%);
-
+  // background: linear-gradient(225deg, $primary-light 8.12%, $primary-dark 92.21%);
+  background-color: rgba(250, 181, 85, 0.4);
+  backdrop-filter: blur(8px);
+  // border-color: $primary-light;
   border-radius: 2px;
+  // border-style: solid;
 
   box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
 
@@ -53,9 +56,13 @@
   padding: 12px 65px 12px 18px;
   text-align: center;
 
-  background: linear-gradient(225deg, $gray-2 8.12%, $gray-4 92.21%);
+  // background: linear-gradient(225deg, $gray-2 8.12%, $gray-4 92.21%);
 
+  background-color: rgba(6, 9, 15, 0.4);
+  backdrop-filter: blur(8px);
+  // border-color: $gray-2;
   border-radius: 2px;
+  // border-style: solid;
 
   box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
 
