@@ -1,18 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import logoIgniteFooter from '../../../public/svg/icon-footer.svg';
-import iconInstagram from '../../../public/svg/icon-insta.svg';
-import iconYoutube from '../../../public/svg/icon-yt.svg';
-import iconTikTok from '../../../public/svg/icon-tiktok.svg';
-import iconSpotify from '../../../public/svg/icon-spotify.svg';
-import iconApple from '../../../public/svg/icon-apple.svg';
+import logoIgniteFooter from '../../../public/svg/icon-footer.svg?url';
+import iconInstagram from '../../../public/svg/icon-insta.svg?url';
+import iconYoutube from '../../../public/svg/icon-yt.svg?url';
+import iconTikTok from '../../../public/svg/icon-tiktok.svg?url';
+import iconSpotify from '../../../public/svg/icon-spotify.svg?url';
+import iconApple from '../../../public/svg/icon-apple.svg?url';
 
 export default function Footer() {
   return (
     <>
       <footer className="relative bg-black" id="footer">
-        <div className="container py-3">
+        <div className="container py-1">
           <div className="row flex-center">
             <div className="grid-2">
               <Image src={logoIgniteFooter} alt="Ignite Logo" quality={100} width={168} height={168} />
@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <div className="grid-3 disappear"></div>
           </div>
-          <div className="row mt-4">
+          <div className="row">
             <div className="grid-4">
               <h4 className="color-white">Address</h4>
               <p className="p2 color-gray">Rue de Ligne 8, 1000 Bruxelles</p>
@@ -36,7 +36,7 @@ export default function Footer() {
               <p className="p2 color-gray">Service every Sunday at 10:00am</p>
             </div>
           </div>
-          <div className="row flex-space mt-7">
+          <div className="row flex-space mt-3">
             <Link href="https://www.instagram.com/ignitechurchbrussels/" target="_blank" className="flex-center">
               <Image className="ml-3" src={iconInstagram} alt="Icon Instagram" quality={100} width={36} height={36} />
               <p className="p2 color-white ml-2 disappear">Instagram</p>

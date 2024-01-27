@@ -1,6 +1,6 @@
+// 'use server';
 import Image from 'next/image';
 import Link from 'next/link';
-import { list } from '@vercel/blob';
 
 import BgHero from './img/bg-hero-dark.jpg';
 import AboutIgniteImg from './img/about-ignite.jpg';
@@ -9,14 +9,14 @@ import AriseImg from './img/arise.jpg';
 import PresenceImg from './img/presence-conference.jpeg';
 import EvangelismImg from './img/evangelism.jpg';
 import IsmImg from './img/ism.jpg';
-
-import Header from './components/Header/page';
-import Footer from './components/Footer/page';
+import Loading from './components/Loading/page';
 
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* --------------screen loading--------------------------- */}
+      <Loading />
+      {/* ----------------Hero-------------------------- */}
       <div className="bg-black relative hidden py-5" style={{ height: '850px' }} id="hero">
         <div className="bg-hero ">
           {/* <Image
@@ -28,13 +28,14 @@ export default function Home() {
           /> */}
           {/* src="https://pkhsl2qgjxadjbvi.public.blob.vercel-storage.com/ignitechurch-video-RS12oCEpLOphmRe1qIElaBMCEmRKGu" */}
           <video
-            src="IgniteChurch-video2.mp4"
+            src="https://pub-77383fbe3b1e4aa7845b78670fb0f016.r2.dev/IgniteChurch-video3.mp4"
             height={1026}
             autoPlay={true}
             loop={true}
             muted={true}
             playsInline={true}
-            style={{ width: '100%', objectFit: 'cover' }}>
+            style={{ width: '100%', objectFit: 'cover' }}
+            poster="church-service.jpg">
             <p>Your browser doesn&apos;t support HTML video.</p>
           </video>
         </div>
@@ -234,7 +235,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }
