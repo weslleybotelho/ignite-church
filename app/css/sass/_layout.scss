@@ -76,7 +76,7 @@ $gutter: 32px;
   max-width: $container-l;
   margin: 0 auto;
 
-  padding: 128px 24px;
+  padding: 64px 24px;
 
   /*display: flex;
   justify-content: center;
@@ -288,6 +288,13 @@ $gutter: 32px;
   border-right: 2px solid $white-darken;
 }
 
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
@@ -325,6 +332,17 @@ $gutter: 32px;
 
   transition: 1s ease;
   // z-index: -1;
+}
+
+.bg-about {
+  width: 100%;
+  height: 100%;
+
+  @include responsive(xs) {
+    img {
+      height: 520px;
+    }
+  }
 }
 
 .h1-hero {
@@ -391,6 +409,10 @@ $gutter: 32px;
   }
 }
 
+.img-100 {
+  width: 100%;
+}
+
 .bg-section {
   position: absolute;
 }
@@ -406,8 +428,29 @@ $gutter: 32px;
     margin-bottom: 0px;
   }
 }
+
 .img-ministry {
   @include responsive(s) {
     object-fit: contain !important;
   }
+}
+
+.text-about {
+  width: 50%;
+  @include responsive(s) {
+    width: 75%;
+  }
+  @include responsive(xs) {
+    width: 100%;
+  }
+}
+
+.img-mobile {
+  @include responsive(xs) {
+    height: 320px;
+  }
+}
+
+.img-round {
+  border-radius: 4px;
 }
