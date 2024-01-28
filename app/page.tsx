@@ -1,8 +1,6 @@
-// 'use server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import BgHero from './img/bg-hero-dark.jpg';
 import AboutIgniteImg from './img/about-ignite.jpg';
 import MinistriesImg from './img/ministries-img.png';
 import AriseImg from './img/arise.jpg';
@@ -19,16 +17,7 @@ export default function Home() {
       {/* ----------------Hero-------------------------- */}
       <div className="bg-black relative hidden py-5" style={{ height: '850px' }} id="hero">
         <div className="bg-hero ">
-          {/* <Image
-            src={BgHero}
-            alt="background ignite church service"
-            height={1026}
-            style={{ objectFit: 'cover' }}
-            quality={100}
-          /> */}
-          {/* src="https://pkhsl2qgjxadjbvi.public.blob.vercel-storage.com/ignitechurch-video-RS12oCEpLOphmRe1qIElaBMCEmRKGu" */}
           <video
-            src="https://pub-77383fbe3b1e4aa7845b78670fb0f016.r2.dev/IgniteChurch-video3.mp4"
             height={1026}
             autoPlay={true}
             loop={true}
@@ -36,6 +25,8 @@ export default function Home() {
             playsInline={true}
             style={{ width: '100%', objectFit: 'cover' }}
             poster="church-service.jpg">
+            <source src="https://pub-77383fbe3b1e4aa7845b78670fb0f016.r2.dev/IgniteChurch-video3.mp4" />
+            <source src="https://pub-77383fbe3b1e4aa7845b78670fb0f016.r2.dev/IgniteChurch-video3.webm" />
             <p>Your browser doesn&apos;t support HTML video.</p>
           </video>
         </div>
