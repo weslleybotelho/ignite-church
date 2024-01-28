@@ -8,7 +8,7 @@ export default function About() {
     <>
       <div className="bg-black">
         <div className="bg-about relative">
-          <Image src={aboutHero} alt="About Ignite" className="cover img-100" />
+          <Image src={aboutHero} alt="About Ignite" className="cover " />
           <h1 className="absolute-center absolut color-white">About</h1>
         </div>
       </div>
@@ -35,7 +35,7 @@ export default function About() {
             <Image
               src={aboutImg1}
               alt="Image of Pastor Maldo and his wife Jasmine"
-              className="img-100 cover img-mobile img-round"
+              className=" cover img-mobile img-round"
               width={360}
               height={390}
             />
@@ -81,7 +81,7 @@ export default function About() {
               </p>
             </div>
             <div className="grid-6 flex-center-column">
-              <Image src={coreValuesImg} alt="Core valeues Ignite" width={360} height={360} className="" />
+              <Image src={coreValuesImg} alt="Core valeues Ignite" width={360} height={360} className="img-mobile" />
             </div>
           </div>
         </div>

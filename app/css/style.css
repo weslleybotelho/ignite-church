@@ -626,10 +626,6 @@
   }
 }
 
-.img-100 {
-  width: 100%;
-}
-
 .bg-section {
   position: absolute;
 }
@@ -1764,6 +1760,11 @@ body::-webkit-scrollbar-thumb {
 
 .relative {
   position: relative;
+}
+
+svg,
+img {
+  width: 100%;
 }
 
 header {

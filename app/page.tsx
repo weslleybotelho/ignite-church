@@ -68,14 +68,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid-6">
-            <Image
-              src={AboutIgniteImg}
-              alt="about ignite"
-              className="cover img-100"
-              quality={100}
-              width={490}
-              height={410}
-            />
+            <Image src={AboutIgniteImg} alt="about ignite" className="cover " quality={100} width={490} height={410} />
           </div>
         </div>
       </section>
@@ -91,7 +84,7 @@ export default function Home() {
                 style={{ objectFit: 'fill' }}
                 height={340}
                 width={360}
-                className="img-100 img-ministry"
+                className=" img-ministry"
               />
             </div>
             <div className="grid-6 grid-itens-mobile">
@@ -197,7 +190,7 @@ export default function Home() {
             <div className="grid-6 pt-6">
               <Image
                 src={IsmImg}
-                className="img-100"
+                className=""
                 alt="Ignite School of Ministry"
                 quality={100}
                 style={{ objectFit: 'cover' }}
