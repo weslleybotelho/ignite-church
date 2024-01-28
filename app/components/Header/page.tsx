@@ -26,12 +26,12 @@ export default function Header() {
           <div className="disappear">
             <div className="flex-start-row">
               <div>
-                <a href="#" className="link-menu">
+                <a href="/" className="link-menu">
                   Home
                 </a>
               </div>
               <div className="ml-3">
-                <a href="#" className=" link-menu">
+                <a href="/about" className=" link-menu">
                   About
                 </a>
               </div>
@@ -65,12 +65,12 @@ export default function Header() {
         <div className="menu-mobile" ref={menuMobileRef}>
           <ul className="nav-mobile">
             <li>
-              <Link href="#" className="link-menu-mobile">
+              <Link href="/" className="link-menu-mobile">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="" className="link-menu-mobile">
+              <Link href="/about" className="link-menu-mobile">
                 About
               </Link>
             </li>
