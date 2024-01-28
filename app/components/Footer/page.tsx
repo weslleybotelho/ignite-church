@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import logoIgniteFooter from '../../../public/svg/icon-footer.svg?url';
-import iconInstagram from '../../../public/svg/icon-insta.svg?url';
-import iconYoutube from '../../../public/svg/icon-yt.svg?url';
-import iconTikTok from '../../../public/svg/icon-tiktok.svg?url';
-import iconSpotify from '../../../public/svg/icon-spotify.svg?url';
-import iconApple from '../../../public/svg/icon-apple.svg?url';
+import logoIgniteFooter from '../../../public/svg/icon-footer.svg';
+import iconInstagram from '../../../public/svg/icon-insta.svg';
+import iconYoutube from '../../../public/svg/icon-yt.svg';
+import iconTikTok from '../../../public/svg/icon-tiktok.svg';
+import iconSpotify from '../../../public/svg/icon-spotify.svg';
+import iconApple from '../../../public/svg/icon-apple.svg';
 
 export default function Footer() {
   return (

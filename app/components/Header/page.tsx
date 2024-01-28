@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import logoIgnite from '../../../public/svg/logo-ignite.svg?url';
+import logoIgnite from '../../../public/svg/logo-ignite.svg';
 import { useRef } from 'react';
 import Link from 'next/link';
 
