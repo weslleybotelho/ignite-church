@@ -1,8 +1,9 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useLayoutEffect } from 'react';
 
 export default function Loading() {
-  useGSAP(() => {
+  useLayoutEffect(() => {
     gsap.to('.screen-loading', {
       duration: 1.2,
       opacity: 0,
