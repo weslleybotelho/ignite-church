@@ -26,34 +26,34 @@ export default function Header() {
           <div className="disappear">
             <div className="flex-start-row">
               <div>
-                <a href="/" className="link-menu">
+                <Link href="/" className="link-menu">
                   Home
-                </a>
+                </Link>
               </div>
               <div className="ml-3">
-                <a href="/about" className=" link-menu">
+                <Link href="about" className=" link-menu">
                   About
-                </a>
+                </Link>
               </div>
               <div className="ml-3">
-                <a href="#" className=" link-menu">
+                <Link href="#" className=" link-menu">
                   Events
-                </a>
+                </Link>
               </div>
               <div className="ml-3">
-                <a href="#" className=" link-menu">
+                <Link href="#" className=" link-menu">
                   School
-                </a>
+                </Link>
               </div>
               <div className="ml-3">
-                <a href="#" className=" link-menu">
+                <Link href="#" className=" link-menu">
                   Ministries
-                </a>
+                </Link>
               </div>
               <div className="ml-3">
-                <a href="#" className=" link-menu">
+                <Link href="#" className=" link-menu">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -65,12 +65,12 @@ export default function Header() {
         <div className="menu-mobile" ref={menuMobileRef}>
           <ul className="nav-mobile">
             <li>
-              <Link href="/" className="link-menu-mobile">
+              <Link href="/" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="link-menu-mobile">
+              <Link href="about" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 About
               </Link>
             </li>

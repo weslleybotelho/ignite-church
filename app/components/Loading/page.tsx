@@ -1,13 +1,8 @@
-'use client';
-import IconLoading from '../../../public/svg/icon-loading.svg';
-
-import { useEffect, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 export default function Loading() {
-  //   const loadingRef = useRef<HTMLDivElement>(null);
-  useLayoutEffect(() => {
+  useGSAP(() => {
     gsap.to('.screen-loading', {
       duration: 1.2,
       opacity: 0,
@@ -15,19 +10,11 @@ export default function Loading() {
       ease: 'power4.out',
     });
   });
-  //   useLayoutEffect(() => {
-  //     gsap.to('.screen-loading', {
-  //       duration: 1.2,
-  //       opacity: 0,
-  //       delay: 3.3,
-  //       ease: 'power4.out',
-  //     }); // <-- automatically reverted
-  //   });
+
   return (
     <>
       <div className="screen-loading flex-column">
         <div className="logo-ignite">
-          {/* <img src="svg/icon-loading.svg" alt="loading icon ignite church" /> */}
           <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="icon-loading">
               <path
@@ -118,8 +105,6 @@ export default function Loading() {
               />
             </g>
           </svg>
-
-          {/* <IconLoading /> */}
         </div>
 
         <div className="bar-loader mt-1"></div>
