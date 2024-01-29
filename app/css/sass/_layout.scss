@@ -447,6 +447,12 @@ $gutter: 32px;
   }
 }
 
+.img-event {
+  @include responsive(xs) {
+    height: 270px;
+  }
+}
+
 .img-round {
   border-radius: 4px;
 }

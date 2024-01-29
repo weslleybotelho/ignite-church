@@ -42,7 +42,7 @@ export default function Home() {
             muted={true}
             playsInline={true}
             style={{ width: '100%', objectFit: 'cover' }}
-            poster="church-service.jpg">
+            poster="bg-hero.png">
             <source src="https://pub-77383fbe3b1e4aa7845b78670fb0f016.r2.dev/IgniteChurch-video3.mp4" />
             <source src="https://pub-77383fbe3b1e4aa7845b78670fb0f016.r2.dev/IgniteChurch-video3.webm" />
             <p>Your browser doesn&apos;t support HTML video.</p>
@@ -86,7 +86,14 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid-6">
-            <Image src={AboutIgniteImg} alt="about ignite" className="cover " quality={100} width={490} height={410} />
+            <Image
+              src={AboutIgniteImg}
+              alt="about ignite"
+              className="cover img-mobile"
+              quality={100}
+              width={490}
+              height={410}
+            />
           </div>
         </div>
       </section>
@@ -130,7 +137,7 @@ export default function Home() {
             <Image
               src={PresenceImg}
               alt="Arise background"
-              className="mt-2"
+              className="mt-2 img-event"
               width={276}
               height={300}
               style={{ borderRadius: '4px', maxWidth: '276px' }}
@@ -153,7 +160,7 @@ export default function Home() {
             <Image
               src={AriseImg}
               alt="Arise background"
-              className="mt-2"
+              className="mt-2 img-event"
               width={276}
               height={300}
               style={{ borderRadius: '4px', maxWidth: '276px' }}
@@ -172,7 +179,7 @@ export default function Home() {
             <Image
               src={EvangelismImg}
               alt="Arise background"
-              className="mt-2"
+              className="mt-2 img-event"
               width={276}
               height={300}
               style={{ borderRadius: '4px', maxWidth: '276px', objectFit: 'cover' }}
@@ -208,7 +215,7 @@ export default function Home() {
             <div className="grid-6 pt-6">
               <Image
                 src={IsmImg}
-                className=""
+                className="img-mobile"
                 alt="Ignite School of Ministry"
                 quality={100}
                 style={{ objectFit: 'cover' }}

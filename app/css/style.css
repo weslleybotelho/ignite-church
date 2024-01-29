@@ -673,6 +673,12 @@
   }
 }
 
+@media screen and (max-width: 460px) {
+  .img-event {
+    height: 270px;
+  }
+}
+
 .img-round {
   border-radius: 4px;
 }
