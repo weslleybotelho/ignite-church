@@ -9,30 +9,31 @@ import PresenceImg from './img/presence-conference.jpeg';
 import EvangelismImg from './img/evangelism.jpg';
 import IsmImg from './img/ism.jpg';
 import Loading from './components/Loading/page';
-import { useEffect, useLayoutEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
-  // const isClient = typeof window !== 'undefined';
+  const [isSSR, setIsSSR] = useState(false);
 
-  useLayoutEffect(() => {
-    // if (isClient) {
-    // Check if it's a hard refresh
-    const isHardRefresh = !sessionStorage.getItem('firstLoadComplete');
-
-    if (isHardRefresh) {
-      // Set a flag in sessionStorage to indicate the first load
-      sessionStorage.setItem('firstLoadComplete', 'true');
-    }
-
-    console.log('Is hard refresh:', isHardRefresh);
-    // }
+  useEffect(() => {
+    setIsSSR(true);
   }, []);
+
+  useEffect(() => {
+    if (isSSR) {
+      const isHardRefresh = !sessionStorage.getItem('firstLoadComplete');
+
+      if (isHardRefresh) {
+        sessionStorage.setItem('firstLoadComplete', 'true');
+      }
+
+      console.log('Is hard refresh:', isHardRefresh);
+    }
+  }, [isSSR]);
 
   return (
     <>
       {/* --------------screen loading--------------------------- */}
       {sessionStorage.getItem('firstLoadComplete') !== 'true' ? <Loading /> : null}
-      {/* <Loading /> */}
       {/* ----------------Hero-------------------------- */}
       <div className="bg-black relative hidden py-5" style={{ height: '850px' }} id="hero">
         <div className="bg-hero ">
