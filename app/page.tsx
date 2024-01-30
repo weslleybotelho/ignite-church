@@ -9,7 +9,7 @@ import PresenceImg from './img/presence-conference.jpeg';
 import EvangelismImg from './img/evangelism.jpg';
 import IsmImg from './img/ism.jpg';
 import Loading from './components/Loading/page';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 export default function Home() {
   const [isSSR, setIsSSR] = useState(false);
@@ -18,7 +18,7 @@ export default function Home() {
     setIsSSR(true);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (isSSR) {
       const isHardRefresh = !sessionStorage.getItem('firstLoadComplete');
 
