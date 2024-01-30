@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       {/* --------------screen loading--------------------------- */}
-      {sessionStorage.getItem('firstLoadComplete') !== 'true' ? <Loading /> : null}
+      {isSSR && sessionStorage.getItem('firstLoadComplete') !== 'true' ? <Loading /> : null}
       {/* ----------------Hero-------------------------- */}
       <div className="bg-black relative hidden py-5" style={{ height: '850px' }} id="hero">
         <div className="bg-hero ">
