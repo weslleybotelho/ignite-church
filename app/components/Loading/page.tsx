@@ -2,8 +2,9 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useLayoutEffect } from 'react';
+import dynamic from 'next/dynamic';
 
-export default function Loading() {
+function Loading() {
   useLayoutEffect(() => {
     gsap.to('.screen-loading', {
       duration: 1.2,
@@ -114,3 +115,5 @@ export default function Loading() {
     </>
   );
 }
+
+export default dynamic(() => Promise.resolve(Loading), { ssr: false });

@@ -80,8 +80,15 @@ export default function About() {
                 auctor sapien mattis vel gravida massa nisl arcu sit.
               </p>
             </div>
-            <div className="grid-6 flex-center-column">
-              <Image src={coreValuesImg} alt="Core valeues Ignite" width={360} height={360} className="img-mobile" />
+            <div className="grid-6 flex-center grid-ministry-mobile">
+              <Image
+                src={coreValuesImg}
+                alt="Core valeues Ignite"
+                width={360}
+                height={350}
+                className="img-mobile "
+                style={{ maxWidth: '360px' }}
+              />
             </div>
           </div>
         </div>
