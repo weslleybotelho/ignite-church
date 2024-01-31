@@ -9,7 +9,7 @@ interface LoadingProps {
   onLoadingComplete: () => void;
 }
 
-function Loading({ onLoadingComplete }: LoadingProps) {
+export default function Loading({ onLoadingComplete }: LoadingProps) {
   useLayoutEffect(() => {
     gsap.to('.screen-loading', {
       duration: 1.2,
@@ -124,5 +124,3 @@ function Loading({ onLoadingComplete }: LoadingProps) {
     </>
   );
 }
-
-export default Loading;
