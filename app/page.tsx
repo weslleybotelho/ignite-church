@@ -29,7 +29,6 @@ export default function Home() {
 
   useGSAP(() => {
     gsap.from('#about-ignite > div', {
-      y: 200,
       opacity: 0,
       ease: 'power4.out',
       stagger: { each: 0.2 },
