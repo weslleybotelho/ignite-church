@@ -1,20 +1,33 @@
+'use client';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './css/style.css';
 import Header from './components/Header/page';
 import Footer from './components/Footer/page';
+import { useState } from 'react';
+import Loading from './components/Loading/page';
+import dynamic from 'next/dynamic';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  title: 'Ignite Church Brussels',
-  description:
-    'Experience vibrant Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events. Explore Ignite Church now.',
-  keywords:
-    'ignite church, church, brussels, church brussels, christian church, christian community, evangelical church, worship brussels',
-};
+// const Loading = dynamic(() => import('./components/Loading/page'), {
+//   ssr: false,
+// });
+
+// export const metadata: Metadata = {
+//   title: 'Ignite Church Brussels',
+//   description:
+//     'Experience vibrant Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events. Explore Ignite Church now.',
+//   keywords:
+//     'ignite church, church, brussels, church brussels, christian church, christian community, evangelical church, worship brussels',
+// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleLoadingComplete = () => {
+    setIsLoaded(true);
+  };
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
@@ -48,9 +61,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="twitter:image" content="/metatag-ignitechurch.png" />
       </head>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        {!isLoaded ? <Loading onLoadingComplete={handleLoadingComplete} /> : null}
+        {isLoaded && (
+          <>
+            <Header />
+            {children}
+            <Footer />
+          </>
+        )}
       </body>
     </html>
   );

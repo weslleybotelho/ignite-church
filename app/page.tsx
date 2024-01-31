@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,32 +7,10 @@ import AriseImg from './img/arise.jpg';
 import PresenceImg from './img/presence-conference.jpeg';
 import EvangelismImg from './img/evangelism.jpg';
 import IsmImg from './img/ism.jpg';
-import Loading from './components/Loading/page';
-import { useEffect, useLayoutEffect, useState } from 'react';
 
 export default function Home() {
-  const [isSSR, setIsSSR] = useState(false);
-
-  useEffect(() => {
-    setIsSSR(true);
-  }, []);
-
-  useLayoutEffect(() => {
-    if (isSSR) {
-      const isHardRefresh = !sessionStorage.getItem('firstLoadComplete');
-
-      if (isHardRefresh) {
-        sessionStorage.setItem('firstLoadComplete', 'true');
-      }
-
-      console.log('Is hard refresh:', isHardRefresh);
-    }
-  }, [isSSR]);
-
   return (
     <>
-      {/* --------------screen loading--------------------------- */}
-      {isSSR && sessionStorage.getItem('firstLoadComplete') !== 'true' ? <Loading /> : null}
       {/* ----------------Hero-------------------------- */}
       <div className="bg-black relative hidden py-5" style={{ height: '850px' }} id="hero">
         <div className="bg-hero ">

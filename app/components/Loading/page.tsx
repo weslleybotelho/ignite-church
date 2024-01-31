@@ -3,14 +3,23 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useLayoutEffect } from 'react';
 import dynamic from 'next/dynamic';
+import React from 'react';
 
-function Loading() {
+interface LoadingProps {
+  onLoadingComplete: () => void;
+}
+
+function Loading({ onLoadingComplete }: LoadingProps) {
   useLayoutEffect(() => {
     gsap.to('.screen-loading', {
       duration: 1.2,
       opacity: 0,
       delay: 3.3,
       ease: 'power4.out',
+      onStart: () => {
+        // Notify the parent component that loading is complete
+        onLoadingComplete();
+      },
     });
   });
 
@@ -116,4 +125,4 @@ function Loading() {
   );
 }
 
-export default dynamic(() => Promise.resolve(Loading), { ssr: false });
+export default Loading;
