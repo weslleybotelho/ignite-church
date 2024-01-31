@@ -1,8 +1,6 @@
 'use client';
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { useLayoutEffect } from 'react';
-import dynamic from 'next/dynamic';
+import { useEffect, useLayoutEffect } from 'react';
 import React from 'react';
 
 interface LoadingProps {
@@ -10,8 +8,9 @@ interface LoadingProps {
 }
 
 export default function Loading({ onLoadingComplete }: LoadingProps) {
+  const tl1 = gsap.timeline();
   useLayoutEffect(() => {
-    gsap.to('.screen-loading', {
+    tl1.to('.screen-loading', {
       duration: 1.2,
       opacity: 0,
       delay: 3.3,

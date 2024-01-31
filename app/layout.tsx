@@ -1,26 +1,12 @@
 'use client';
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './css/style.css';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import { useState } from 'react';
 import Loading from './components/Loading/loading';
-import dynamic from 'next/dynamic';
 
 const inter = Inter({ subsets: ['latin'] });
-
-// const Loading = dynamic(() => import('./components/Loading/page'), {
-//   ssr: false,
-// });
-
-// export const metadata: Metadata = {
-//   title: 'Ignite Church Brussels',
-//   description:
-//     'Experience vibrant Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events. Explore Ignite Church now.',
-//   keywords:
-//     'ignite church, church, brussels, church brussels, christian church, christian community, evangelical church, worship brussels',
-// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -33,6 +19,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#0f0f0f" />
+        <meta name="title" content="gnite Church Brussel" />
+        <meta
+          name="description"
+          content="Experience vibrant Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events. Explore Ignite Church now."
+        />
+        <meta
+          name="keywords"
+          content="ignite church, church, brussels, church brussels, christian church, christian community, evangelical church, worship brussels"
+        />
 
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

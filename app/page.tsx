@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,8 +8,91 @@ import AriseImg from './img/arise.jpg';
 import PresenceImg from './img/presence-conference.jpeg';
 import EvangelismImg from './img/evangelism.jpg';
 import IsmImg from './img/ism.jpg';
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function Home() {
+  gsap.registerPlugin(ScrollTrigger);
+  const tl1 = gsap.timeline();
+
+  useGSAP(() => {
+    tl1.from('.hero div', {
+      duration: 3,
+      opacity: 1,
+      y: 200,
+      stagger: { each: 0.1 },
+      ease: 'power4.out',
+    });
+  });
+
+  useGSAP(() => {
+    gsap.from('#about-ignite > div', {
+      y: 200,
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 3,
+      scrollTrigger: {
+        trigger: '#about-ignite',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+
+    gsap.from('#ministries > div', {
+      x: 200,
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 3,
+      scrollTrigger: {
+        trigger: '#ministries',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+
+    gsap.from('#events > div', {
+      y: 200,
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 3,
+      scrollTrigger: {
+        trigger: '#events',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+
+    gsap.from('#ism > div', {
+      x: -200,
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 3,
+      scrollTrigger: {
+        trigger: '#ism',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+
+    gsap.from('#newsletter > div', {
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 3,
+      scrollTrigger: {
+        trigger: '#newsletter',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+  });
+
   return (
     <>
       {/* ----------------Hero-------------------------- */}
