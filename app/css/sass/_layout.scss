@@ -456,3 +456,86 @@ $gutter: 32px;
 .img-round {
   border-radius: 4px;
 }
+
+// ---------------------------------
+
+.carousel-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 44px 0;
+  transition: all 0.25s ease-in;
+}
+
+.item-list {
+  max-width: 950px;
+  width: 70vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 48px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+
+  // Hide scrollbar for IE, Edge and Firefox
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  scroll-snap-align: center;
+  min-width: 170px;
+  width: 300px;
+  height: 450px;
+}
+
+.prev-btn {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+
+  transition: 0.6s ease;
+  display: inline-block;
+
+  border-style: none;
+  // border-radius: 2px;
+  cursor: pointer;
+  background-color: transparent;
+
+  background-image: url('/svg/arrow-left.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.next-btn {
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+  transition: 0.6s ease;
+  display: inline-block;
+
+  border-style: none;
+  // border-radius: 2px;
+  cursor: pointer;
+  background-color: transparent;
+
+  background-image: url('/svg/arrow-right.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.img-slider {
+  @include responsive(s) {
+    min-width: 160px;
+    min-height: 160px;
+    border-radius: 4px;
+  }
+}

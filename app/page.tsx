@@ -8,10 +8,11 @@ import AriseImg from './img/arise.jpg';
 import PresenceImg from './img/presence-conference.jpeg';
 import EvangelismImg from './img/evangelism.jpg';
 import IsmImg from './img/ism.jpg';
-import { useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Slider from './slider/slider';
+import { Hedvig_Letters_Sans } from 'next/font/google';
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -191,10 +192,12 @@ export default function Home() {
         </div>
       </section>
       <section className="container py-3 relative" id="events">
-        <div className="row">
+        {/* <div className="row">
           <h3 className="uppercase text-center">events</h3>
           <div className="grid-4 flex-center-column">
-            <h4 className="">Presence Conference</h4>
+            <h4 className="" style={{ height: '25px' }}>
+              Presence Conference
+            </h4>
             <p className="">Apr 19-20-21, 2024</p>
             <Image
               src={PresenceImg}
@@ -256,6 +259,9 @@ export default function Home() {
               View more
             </Link>
           </div>
+        </div> */}
+        <div className="row">
+          <Slider></Slider>
         </div>
       </section>
       <section className="relative bg-black" id="ism">
