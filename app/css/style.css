@@ -669,7 +669,7 @@
 
 @media screen and (max-width: 460px) {
   .img-mobile {
-    height: 320px;
+    height: 300px;
   }
 }
 
@@ -688,7 +688,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 44px 0;
+  padding: 0;
   transition: all 0.25s ease-in;
 }
 
@@ -704,6 +704,11 @@
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.item-list::after,
+.item-list::before {
+  content: "";
 }
 
 .item-list::-webkit-scrollbar {
@@ -752,6 +757,18 @@
     min-width: 160px;
     min-height: 160px;
     border-radius: 4px;
+  }
+}
+
+.img-ministries {
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 960px) {
+  .img-ministries {
+    min-width: 160px;
+    min-height: 160px;
   }
 }
 

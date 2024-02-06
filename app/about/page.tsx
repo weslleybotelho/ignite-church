@@ -9,7 +9,7 @@ export default function About() {
       <div className="bg-black">
         <div className="bg-about relative">
           <Image src={aboutHero} alt="About Ignite" className="cover " />
-          <h1 className="absolute-center absolut color-white">About</h1>
+          <h1 className="absolute-center absolut color-white text-center">About Ignite</h1>
         </div>
       </div>
 

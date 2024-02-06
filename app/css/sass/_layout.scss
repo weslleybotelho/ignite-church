@@ -443,7 +443,7 @@ $gutter: 32px;
 
 .img-mobile {
   @include responsive(xs) {
-    height: 320px;
+    height: 300px;
   }
 }
 
@@ -464,7 +464,7 @@ $gutter: 32px;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 44px 0;
+  padding: 0;
   transition: all 0.25s ease-in;
 }
 
@@ -482,6 +482,11 @@ $gutter: 32px;
   // Hide scrollbar for IE, Edge and Firefox
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.item-list::after,
+.item-list::before {
+  content: '';
 }
 
 .item-list::-webkit-scrollbar {
@@ -537,5 +542,15 @@ $gutter: 32px;
     min-width: 160px;
     min-height: 160px;
     border-radius: 4px;
+  }
+}
+
+.img-ministries {
+  border-radius: 4px;
+  object-fit: cover;
+
+  @include responsive(s) {
+    min-width: 160px;
+    min-height: 160px;
   }
 }

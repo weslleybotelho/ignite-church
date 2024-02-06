@@ -46,7 +46,7 @@ export default function Header() {
                 </Link>
               </div>
               <div className="ml-3">
-                <Link href="#" className=" link-menu">
+                <Link href="/ministries" className=" link-menu">
                   Ministries
                 </Link>
               </div>
@@ -85,7 +85,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="" className="link-menu-mobile">
+              <Link href="/ministries" className="link-menu-mobile">
                 Ministries
               </Link>
             </li>

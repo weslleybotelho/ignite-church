@@ -1,18 +1,14 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import AboutIgniteImg from './img/about-ignite.jpg';
-import MinistriesImg from './img/ministries-img.png';
-import AriseImg from './img/arise.jpg';
-import PresenceImg from './img/presence-conference.jpeg';
-import EvangelismImg from './img/evangelism.jpg';
-import IsmImg from './img/ism.jpg';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Slider from './slider/slider';
-import { Hedvig_Letters_Sans } from 'next/font/google';
+
+import AboutIgniteImg from './img/about-ignite.jpg';
+import MinistriesImg from './img/ministries-img.png';
+import IsmImg from './img/ism.jpg';
+import SliderEvents from './components/Slider/sliderEvents';
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -134,6 +130,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      {/* ------------------About------------------------- */}
       <section className="container py-3 relative" id="about-ignite">
         <div className="row">
           <div className="grid-6 grid-itens-mobile">
@@ -144,7 +141,7 @@ export default function Home() {
               we are more than just a congregation; we are a family of believers united by our passion for spiritual
               awakening and a genuine desire to make a positive impact on the world around us.
             </p>
-            <Link className="btn-orange mt-5" href="#">
+            <Link className="btn-orange mt-5" href="/about">
               About Ignite
             </Link>
           </div>
@@ -184,7 +181,7 @@ export default function Home() {
                 through our School of Ministries, or engaging with thought-provoking discussions on our insightful
                 podcasts, there&apos;s a place for you to thrive and connect at Ignite.
               </p>
-              <Link className="btn-orange mt-5" href="#">
+              <Link className="btn-orange mt-5" href="/ministries">
                 Check our Ministries
               </Link>
             </div>
@@ -192,77 +189,7 @@ export default function Home() {
         </div>
       </section>
       <section className="container py-3 relative" id="events">
-        {/* <div className="row">
-          <h3 className="uppercase text-center">events</h3>
-          <div className="grid-4 flex-center-column">
-            <h4 className="" style={{ height: '25px' }}>
-              Presence Conference
-            </h4>
-            <p className="">Apr 19-20-21, 2024</p>
-            <Image
-              src={PresenceImg}
-              alt="Arise background"
-              className="mt-2 img-event"
-              width={276}
-              height={300}
-              style={{ borderRadius: '4px', maxWidth: '276px' }}
-              quality={100}
-            />
-            <p className="p5 text-center mt-3 events-desc">
-              3-day conference organized by Ignite Church Brussels led by Pastor Maldo Amadar to enable the body of
-              Christ to experience and cultivate the presence of God in private and public settings.
-            </p>
-            <Link
-              className="btn-black mt-3"
-              href="https://www.eventbrite.com/e/ignite-presence-conference-2024-tickets-778365942487?fbclid=IwAR0MzdYcCfR5u5E3OiX16Rc56pUsezoFL_rQxpjuU8NSxBJt2RPEy0O9m8M"
-              target="_blank">
-              View more
-            </Link>
-          </div>
-          <div className="grid-4 flex-center-column">
-            <h4 className="">Arise</h4>
-            <p className="">Jul 19-20-21, 2024</p>
-            <Image
-              src={AriseImg}
-              alt="Arise background"
-              className="mt-2 img-event"
-              width={276}
-              height={300}
-              style={{ borderRadius: '4px', maxWidth: '276px' }}
-            />
-            <p className="p5 text-center mt-3 events-desc">
-              We are living in a time of great potential for the manifestation of God&apos;s glory on Earth, and
-              it&apos;s time for the Church to come together in unity to see transformation and reformation.
-            </p>
-            <Link className="btn-black mt-3" href="https://www.ariseurope.com/" target="_blank">
-              View more
-            </Link>
-          </div>
-          <div className="grid-4 flex-center-column">
-            <h4>Arise Camp</h4>
-            <p className="">Jul 29, 2024</p>
-            <Image
-              src={EvangelismImg}
-              alt="Arise background"
-              className="mt-2 img-event"
-              width={276}
-              height={300}
-              style={{ borderRadius: '4px', maxWidth: '276px', objectFit: 'cover' }}
-              quality={100}
-            />
-            <p className="p5 text-center mt-3 events-desc">
-              Embark on a transformative journey at Arise Camp—a three-day experience designed to ignite your passion
-              for evangelism. This all-inclusive event offers insightful teachings, hands-on training, and engaging
-              community activities.
-            </p>
-            <Link className="btn-black mt-3" href="#">
-              View more
-            </Link>
-          </div>
-        </div> */}
-        <div className="row">
-          <Slider></Slider>
-        </div>
+        <SliderEvents></SliderEvents>
       </section>
       <section className="relative bg-black" id="ism">
         <div className="container py-3">
