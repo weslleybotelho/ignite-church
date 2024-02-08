@@ -1,5 +1,7 @@
 'use client';
 import { Inter } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import './css/style.css';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
@@ -64,6 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </>
         )}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
