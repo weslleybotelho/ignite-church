@@ -191,6 +191,7 @@ export default function Home() {
       <section className="container py-3 relative" id="events">
         <SliderEvents></SliderEvents>
       </section>
+      {/* -----------------School---------------------- */}
       <section className="relative bg-black" id="ism">
         <div className="container py-3">
           <div className="row">
@@ -203,7 +204,7 @@ export default function Home() {
                 “Our misson is to see our students be transformed and empowered to reform the world around them and
                 release Heaven on earth.”
               </p>
-              <Link href="#" className="btn-orange mt-5">
+              <Link href="/ministries/school" className="btn-orange mt-5">
                 Read more
               </Link>
             </div>

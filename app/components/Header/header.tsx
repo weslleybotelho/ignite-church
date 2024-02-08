@@ -31,17 +31,12 @@ export default function Header() {
                 </Link>
               </div>
               <div className="ml-3">
-                <Link href="about" className=" link-menu">
+                <Link href="/about" className=" link-menu">
                   About
                 </Link>
               </div>
               <div className="ml-3">
-                <Link href="#" className=" link-menu">
-                  Events
-                </Link>
-              </div>
-              <div className="ml-3">
-                <Link href="#" className=" link-menu">
+                <Link href="/ministries/school" className=" link-menu">
                   School
                 </Link>
               </div>
@@ -70,27 +65,22 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="about" className="link-menu-mobile" onClick={handlerMenuMobile}>
+              <Link href="/about" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 About
               </Link>
             </li>
             <li>
-              <Link href="" className="link-menu-mobile">
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="link-menu-mobile">
+              <Link href="/ministries/school" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 School
               </Link>
             </li>
             <li>
-              <Link href="/ministries" className="link-menu-mobile">
+              <Link href="/ministries" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 Ministries
               </Link>
             </li>
             <li>
-              <Link href="" className="link-menu-mobile">
+              <Link href="" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 Contact
               </Link>
             </li>

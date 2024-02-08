@@ -554,3 +554,16 @@ $gutter: 32px;
     min-height: 160px;
   }
 }
+
+.bg-ministries {
+  height: 100vh;
+
+  background-image: url('/bg-dark.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.none-bullet {
+  list-style-type: none;
+}

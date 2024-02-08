@@ -772,6 +772,18 @@
   }
 }
 
+.bg-ministries {
+  height: 100vh;
+  background-image: url("/bg-dark.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.none-bullet {
+  list-style-type: none;
+}
+
 .s-0 {
   margin: 0;
   padding: 0;
@@ -1557,14 +1569,14 @@ h6 {
   font-family: "Hind", sans-serif;
   font-size: 18px;
   line-height: 150%;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media screen and (max-width: 960px) {
   h6 {
     font-family: "Hind", sans-serif;
     font-size: 16px;
     line-height: 150%;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 
@@ -1750,6 +1762,21 @@ strong {
 
 b {
   color: #353536;
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+@media screen and (max-width: 960px) {
+  li {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+  }
 }
 
 .text-center {
@@ -2295,7 +2322,7 @@ button:hover {
   font-family: "Hind", sans-serif;
   font-size: 18px;
   line-height: 150%;
-  font-weight: 600;
+  font-weight: 500;
   padding: 18px 52px 18px 24px;
   position: relative;
   border-radius: 16px;
@@ -2307,7 +2334,7 @@ button:hover {
     font-family: "Hind", sans-serif;
     font-size: 16px;
     line-height: 150%;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 .link::before {

@@ -91,11 +91,11 @@
   } @else if $size == h6 and $device == desktop {
     font-size: 18px;
     line-height: 150%;
-    font-weight: 600;
+    font-weight: 500;
   } @else if $size == h6 and $device == mobile {
     font-size: 16px;
     line-height: 150%;
-    font-weight: 600;
+    font-weight: 500;
   } @else if $size == h7 and $device == desktop {
     font-size: 16px;
     line-height: 150%;
@@ -337,6 +337,13 @@ strong {
 
 b {
   color: $gray-2;
+}
+
+li {
+  @include typeface-2(p4, desktop);
+  @include responsive(s) {
+    @include typeface-2(p4, mobile);
+  }
 }
 
 .text-center {
