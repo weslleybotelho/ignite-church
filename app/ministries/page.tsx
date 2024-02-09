@@ -23,7 +23,7 @@ export default function Ministries() {
               className="img-ministries"
             />
             <h6 className="">Evangelism</h6>
-            <Link href={''} className="color-gradient bold">
+            <Link href="/ministries/evangelism" className="color-gradient bold">
               View More
             </Link>
           </div>
@@ -78,7 +78,7 @@ export default function Ministries() {
               className="img-ministries"
             />
             <h6 className="">Home Groups</h6>
-            <Link href={''} className="color-gradient bold">
+            <Link href="/ministries/homegroup" className="color-gradient bold">
               View More
             </Link>
           </div>

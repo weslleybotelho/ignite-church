@@ -55,8 +55,8 @@ export default function School() {
           </div>
         </div>
       </section>
-      <section className="" id="about">
-        <div className="container">
+      <section>
+        <div className="container" id="about">
           <div className="row">
             <div className="grid-2 disappear"></div>
             <div className="grid-8">
@@ -117,7 +117,9 @@ export default function School() {
           <div className="row">
             <div className="grid-2 disappear"></div>
             <div className="grid-8">
-              <h6>Contact</h6>
+              <h6>Meeting Times</h6>
+              <p className="p5 color-black">April</p>
+              <h6 className="mt-3">Contact</h6>
               <p className="p5 color-black">More information on the school and how to apply via email:</p>
               <a
                 href="mailto:ignite.ministryschool@gmail.com?subject = ISM Information&body = Hi, I would like to get more information about the school."
