@@ -20,7 +20,7 @@ export default function Header() {
       <header>
         <nav>
           <div>
-            <Image src={logoIgnite} alt="Ignite Church" width={42} height={42}></Image>
+            <Image src={logoIgnite} alt="Ignite Church Logo" width={42} height={42}></Image>
           </div>
 
           <div className="disappear">

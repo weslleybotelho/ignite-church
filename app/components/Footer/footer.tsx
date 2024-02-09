@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="container py-1">
           <div className="row flex-center">
             <div className="grid-2">
-              <Image src={logoIgniteFooter} alt="Ignite Logo" quality={100} width={168} height={168} />
+              <Image src={logoIgniteFooter} alt="Ignite Logo" width={168} height={168} />
             </div>
             <div className="grid-7">
               <h3 className="uppercase color-white hbig">ignite church</h3>
@@ -38,29 +38,29 @@ export default function Footer() {
           </div>
           <div className="row flex-space mt-3">
             <Link href="https://www.instagram.com/ignitechurchbrussels/" target="_blank" className="flex-center">
-              <Image className="ml-3" src={iconInstagram} alt="Icon Instagram" quality={100} width={36} height={36} />
+              <Image className="ml-3" src={iconInstagram} alt="Icon Instagram" width={36} height={36} />
               <p className="p2 color-white ml-2 disappear">Instagram</p>
             </Link>
             <Link href="#" className="flex-center">
-              <Image src={iconTikTok} alt="Icon TikTok" quality={100} width={36} height={36} />
+              <Image src={iconTikTok} alt="Icon TikTok" width={36} height={36} />
               <p className="p2 color-white ml-2 disappear">TikTok</p>
             </Link>
             <Link href="https://www.youtube.com/@ignitechurchbrussels/streams" target="_blank" className="flex-center">
-              <Image src={iconYoutube} alt="Icon Youtube" quality={100} width={36} height={36} />
+              <Image src={iconYoutube} alt="Icon Youtube" width={36} height={36} />
               <p className="p2 color-white ml-2 disappear">Youtube</p>
             </Link>
             <Link
               href="https://open.spotify.com/show/2szZKZKVqaQhb0z4TFurZD?si=44f10ecc525a4d29"
               target="_blank"
               className="flex-center">
-              <Image src={iconSpotify} alt="Icon Spotify" quality={100} width={36} height={36} />
+              <Image src={iconSpotify} alt="Icon Spotify" width={36} height={36} />
               <p className="p2 color-white ml-2 disappear">Spotify</p>
             </Link>
             <Link
               href="https://podcasts.apple.com/be/podcast/ignite-church-brussels-messages/id1671893632"
               target="_blank"
               className="flex-center">
-              <Image src={iconApple} alt="Icon Apple Music" quality={100} width={36} height={36} />
+              <Image src={iconApple} alt="Icon Apple Music" width={36} height={36} />
               <p className="p2 color-white ml-2 disappear">Apple</p>
             </Link>
           </div>

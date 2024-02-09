@@ -1,6 +1,6 @@
 'use client';
 import gsap from 'gsap';
-import { useEffect, useLayoutEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import React from 'react';
 
 interface LoadingProps {

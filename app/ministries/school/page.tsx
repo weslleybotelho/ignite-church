@@ -1,12 +1,42 @@
+'use client';
 import Image from 'next/image';
 import bgImg from '../../img/school.jpg';
 import Link from 'next/link';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function School() {
+  gsap.registerPlugin(ScrollTrigger);
+  const tl1 = gsap.timeline();
+
+  useGSAP(() => {
+    tl1.from('#hero div', {
+      duration: 3,
+      opacity: 1,
+      y: 200,
+      stagger: { each: 0.1 },
+      ease: 'power4.out',
+    });
+  });
+
+  useGSAP(() => {
+    gsap.from('#about > div', {
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 3,
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+  });
   return (
     <>
-      <section className="bg-ministries" id="hero">
-        <div className="container h-100 flex-center">
+      <section className="bg-ministries">
+        <div className="container h-100 flex-center" id="hero">
           <div className="row">
             <div className="grid-6">
               <h1 className="color-white">Ignite School of Ministries</h1>
