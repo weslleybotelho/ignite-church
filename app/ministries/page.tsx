@@ -5,12 +5,14 @@ import schoolImg from '../img/school.jpg';
 import musicImg from '../img/music.jpg';
 import podcastImg from '../img/ignite-podcast.png';
 import homeGroupImg from '../img/homegroup.jpg';
+import womenImg from '../img/women.jpg';
+import menImg from '../img/men.jpg';
 import Link from 'next/link';
 
 export default function Ministries() {
   return (
     <>
-      <div className="container">
+      <div className="container mt-3">
         <h1>Ministries</h1>
         <h5>Find a place for you in what God is doing here</h5>
         <div className="row">
@@ -48,7 +50,7 @@ export default function Ministries() {
               height={190}
               className="img-ministries"
             />
-            <h6 className="">School of Ministries</h6>
+            <h6 className="">School of Ministry</h6>
             <Link href="/ministries/school" className="color-gradient bold">
               View More
             </Link>
@@ -82,6 +84,24 @@ export default function Ministries() {
               View More
             </Link>
           </div>
+          <div className="grid-3">
+            <Image src={menImg} alt="Men Ministry at Ignite" width={260} height={190} className="img-ministries" />
+            <h6 className="">Men Ministry</h6>
+            <Link href="/ministries/men" className="color-gradient bold">
+              View More
+            </Link>
+          </div>
+          <div className="grid-3">
+            <Image src={womenImg} alt="Men Ministry at Ignite" width={260} height={190} className="img-ministries" />
+            <h6 className="">Women Ministry</h6>
+            <Link href="/ministries/women" className="color-gradient bold">
+              View More
+            </Link>
+          </div>
+        </div>
+        <div className="row">
+          <div className="grid-3"></div>
+          <div className="grid-3"></div>
           <div className="grid-3"></div>
           <div className="grid-3"></div>
         </div>

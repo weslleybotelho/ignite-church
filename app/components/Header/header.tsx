@@ -38,20 +38,20 @@ export default function Header() {
                 </Link>
               </div>
               <div className="ml-3">
-                <Link href="/ministries/school" className=" link-menu">
-                  School
-                </Link>
-              </div>
-              <div className="ml-3">
                 <Link href="/ministries" className=" link-menu">
                   Ministries
                 </Link>
               </div>
               <div className="ml-3">
+                <Link href="/ministries/school" className=" link-menu">
+                  School
+                </Link>
+              </div>
+              {/* <div className="ml-3">
                 <Link href="#" className=" link-menu">
                   Contact
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="bx" ref={bxRef} onClick={handlerMenuMobile}></div>
@@ -71,21 +71,22 @@ export default function Header() {
                 About
               </Link>
             </li>
-            <li>
-              <Link href="/ministries/school" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                School
-              </Link>
-            </li>
+
             <li>
               <Link href="/ministries" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 Ministries
               </Link>
             </li>
             <li>
+              <Link href="/ministries/school" className="link-menu-mobile" onClick={handlerMenuMobile}>
+                School
+              </Link>
+            </li>
+            {/* <li>
               <Link href="" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

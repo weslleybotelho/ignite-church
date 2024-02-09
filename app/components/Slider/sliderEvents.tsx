@@ -60,7 +60,7 @@ export default function SliderEvents() {
                 Arise
               </h4>
               <p className="">Jul 19-20-21, 2024</p>
-              <Image src={AriseImg} alt="Arise background" className="mt-2 img-slider" width={160} height={160} />
+              <Image src={AriseImg} alt="Arise background" className="mt-2 img-slider cover" width={160} height={160} />
               <p className="p5 text-center mt-3 events-desc">
                 We are living in a time of great potential for the manifestation of God&apos;s glory on Earth, and
                 it&apos;s time for the Church to come together in unity to see transformation and reformation.
@@ -74,7 +74,13 @@ export default function SliderEvents() {
                 Arise Camp
               </h4>
               <p className="">Jul 29, 2024</p>
-              <Image src={EvangelismImg} alt="Arise background" className="mt-2 img-slider" width={160} height={160} />
+              <Image
+                src={EvangelismImg}
+                alt="Arise background"
+                className="mt-2 img-slider cover"
+                width={160}
+                height={160}
+              />
               <p className="p5 text-center mt-3 events-desc">
                 Embark on a transformative journey at Arise Camp—a three-day experience designed to ignite your passion
                 for evangelism. This all-inclusive event offers insightful teachings, hands-on training, and engaging
