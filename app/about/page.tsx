@@ -1,19 +1,75 @@
+'use client';
 import Image from 'next/image';
 import aboutHero from '../img/about-hero.jpg';
 import aboutImg1 from '../img/about-image1.jpg';
 import coreValuesImg from '../img/core-values.png';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function About() {
+  gsap.registerPlugin(ScrollTrigger);
+  const tl1 = gsap.timeline();
+
+  useGSAP(() => {
+    tl1.from('#hero div', {
+      duration: 2,
+      opacity: 1,
+      y: 200,
+      stagger: { each: 0.1 },
+      ease: 'power4.out',
+    });
+  });
+
+  useGSAP(() => {
+    gsap.from('#about > div', {
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 2,
+      scrollTrigger: {
+        trigger: '#about',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+
+    gsap.from('#pastors > div', {
+      x: -200,
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 2,
+      scrollTrigger: {
+        trigger: '#pastors',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+
+    gsap.from('#core-values > div', {
+      x: 200,
+      opacity: 0,
+      ease: 'power4.out',
+      stagger: { each: 0.2 },
+      duration: 2,
+      scrollTrigger: {
+        trigger: '#core-values',
+        start: 'top 80%',
+        end: 'top 50%',
+      },
+    });
+  });
   return (
     <>
-      <div className="bg-black">
+      <div className="bg-black" id="hero">
         <div className="bg-about relative">
           <Image src={aboutHero} alt="About Ignite" className="cover " />
           <h1 className="absolute-center absolut color-white text-center">About Ignite</h1>
         </div>
       </div>
 
-      <section className="bg-black">
+      <section className="bg-black" id="about">
         <div className="container text-center text-about">
           <h3 className="color-white">Ignite is a church that is based in the heart of Europe, Brussels ... </h3>
           <p className="pt-4 p1 color-gray">
@@ -28,7 +84,7 @@ export default function About() {
           </p>
         </div>
       </section>
-      <section className="container">
+      <section className="container" id="pastors">
         <h2 className="color-gradient p2 uppercase bold ml-2">about our pastors</h2>
         <div className="row">
           <div className="grid-6 ">
@@ -61,7 +117,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-black">
+      <section className="bg-black" id="core-values">
         <div className="container">
           <h2 className="color-gradient p2 uppercase bold ml-2">our mission and values</h2>
 
