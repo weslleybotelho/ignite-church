@@ -653,6 +653,11 @@
   }
 }
 
+.hidden-x {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .text-about {
   width: 50%;
 }
@@ -1848,6 +1853,7 @@ html {
 
 body {
   width: 100%;
+  overflow-x: hidden;
   background-color: #ede6df;
 }
 body::-webkit-scrollbar {
@@ -1890,7 +1896,7 @@ img {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   height: 60px;
   padding: 6px 18px;
   transition: 1s ease;
@@ -1906,6 +1912,7 @@ header {
 
 nav {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

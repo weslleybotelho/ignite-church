@@ -431,6 +431,11 @@ $gutter: 32px;
   }
 }
 
+.hidden-x {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .text-about {
   width: 50%;
   @include responsive(s) {

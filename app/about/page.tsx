@@ -117,7 +117,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-black" id="core-values">
+      <section className="bg-black hidden-x" id="core-values">
         <div className="container">
           <h2 className="color-gradient p2 uppercase bold ml-2">our mission and values</h2>
 

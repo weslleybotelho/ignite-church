@@ -1,5 +1,5 @@
 header {
-  width: 100%;
+  width: 100vw;
   height: 60px;
 
   padding: 6px 18px;
@@ -19,6 +19,7 @@ header {
 
 nav {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 
   display: flex;

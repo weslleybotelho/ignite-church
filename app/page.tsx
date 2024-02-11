@@ -38,20 +38,20 @@ export default function Home() {
     });
 
     gsap.from('#ministries > div', {
-      x: 200,
+      x: 100,
       opacity: 0,
       ease: 'power4.out',
       stagger: { each: 0.2 },
       duration: 3,
       scrollTrigger: {
         trigger: '#ministries',
-        start: 'top 80%',
+        start: 'top bottom',
         end: 'top 50%',
       },
     });
 
     gsap.from('#events > div', {
-      y: 200,
+      y: 100,
       opacity: 0,
       ease: 'power4.out',
       stagger: { each: 0.2 },
@@ -64,7 +64,7 @@ export default function Home() {
     });
 
     gsap.from('#ism > div', {
-      x: -200,
+      x: -100,
       opacity: 0,
       ease: 'power4.out',
       stagger: { each: 0.2 },
@@ -151,7 +151,7 @@ export default function Home() {
         </div>
       </section>
       {/* ----------------------------Ministries------------------------------ */}
-      <section className="relative bg-black" id="ministries">
+      <section className="relative bg-black hidden-x" id="ministries">
         <div className="container py-3">
           <div className="row">
             <div className="grid-6 grid-ministry-mobile">
@@ -180,6 +180,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ------------------------Events-------------------------------- */}
       <section className="container py-3 relative" id="events">
         <SliderEvents></SliderEvents>
       </section>

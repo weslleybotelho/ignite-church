@@ -30,7 +30,6 @@ export default function Evangelism() {
               <h6>Vision</h6>
               <div className="ml-3">
                 <ul className="none-bullet">
-                  {/* <li>Empower each other in our natural and spiritual abilities</li> */}
                   <li>Empower each other</li>
                   <li>Expand our capabilities on a personnel and professional level</li>
                   <li>
