@@ -17,42 +17,32 @@ export default function Header() {
 
   return (
     <>
-      <header>
+      <header className="header-bar">
         <nav>
-          <div>
-            <Link href="/">
-              <Image src={logoIgnite} alt="Ignite Church Logo" width={42} height={42}></Image>
-            </Link>
-          </div>
+          <Link href="/">
+            <Image src={logoIgnite} alt="Ignite Church Logo" width={42} height={42}></Image>
+          </Link>
 
-          <div className="disappear">
-            <div className="flex-start-row">
-              <div>
-                <Link href="/" className="link-menu">
-                  Home
-                </Link>
-              </div>
-              <div className="ml-3">
-                <Link href="/about" className=" link-menu">
-                  About
-                </Link>
-              </div>
-              <div className="ml-3">
-                <Link href="/ministries" className=" link-menu">
-                  Ministries
-                </Link>
-              </div>
-              <div className="ml-3">
-                <Link href="/ministries/school" className=" link-menu">
-                  School
-                </Link>
-              </div>
-              {/* <div className="ml-3">
+          <div className="flex-start-row ">
+            <div className="disappear">
+              <Link href="/" className="link-menu">
+                Home
+              </Link>
+              <Link href="/about" className="link-menu ml-3">
+                About
+              </Link>
+              <Link href="/ministries" className=" link-menu ml-3">
+                Ministries
+              </Link>
+              <Link href="/ministries/school" className=" link-menu ml-3">
+                School
+              </Link>
+            </div>
+            {/* <div className="ml-3">
                 <Link href="#" className=" link-menu">
                   Contact
                 </Link>
               </div> */}
-            </div>
           </div>
           <div className="bx" ref={bxRef} onClick={handlerMenuMobile}></div>
         </nav>

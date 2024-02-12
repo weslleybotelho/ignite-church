@@ -19,9 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
+        <title>Ignite Church Brussels</title>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="theme-color" content="#0f0f0f" />
-        <meta name="title" content="gnite Church Brussel" />
+        <meta name="title" content="Ignite Church Brussel" />
         <meta
           name="description"
           content="Experience vibrant Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events. Explore Ignite Church now."
@@ -62,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {isLoaded && (
           <>
             <Header />
-            {children}
+            <main>{children}</main>
             <Footer />
           </>
         )}

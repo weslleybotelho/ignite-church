@@ -30,20 +30,26 @@ export default function SliderEvents() {
 
   return (
     <>
-      <div className="container py-1">
-        <h3 className="uppercase color-gradient" style={{ display: '' }}>
+      <section className="container py-1">
+        <h5 className="uppercase color-gradient" style={{ display: '' }}>
           events
-        </h3>
+        </h5>
         <p className=" color-black">Take a look in our next events</p>
-        <div className="carousel-view">
+        <section className="carousel-view">
           <button id="prev-btn" className="prev-btn" ref={prev} onClick={handlerPrevButton}></button>
-          <div className="item-list" ref={list}>
+          <section className="item-list" ref={list}>
             <div className="item flex-center-column" id="item">
-              <h4 className="text-center" style={{ height: '70px' }}>
+              <h6 className="text-center p1 bold" style={{ height: '70px' }}>
                 Presence Conference
-              </h4>
-              <p className="">Apr 19-20-21, 2024</p>
-              <Image src={PresenceImg} alt="Arise background" className="mt-2 img-slider" width={160} height={160} />
+              </h6>
+              <p className="color-gradient">Apr 19-20-21, 2024</p>
+              <Image
+                src={PresenceImg}
+                alt="Arise background"
+                className="mt-2 img-slider img-round"
+                width={160}
+                height={160}
+              />
               <p className="p5 text-center mt-3 events-desc ">
                 3-day conference organized by Ignite Church Brussels led by Pastor Maldo Amadar to enable the body of
                 Christ to experience and cultivate the presence of God in private and public settings.
@@ -56,11 +62,17 @@ export default function SliderEvents() {
               </Link>
             </div>
             <div className="item flex-center-column" id="item">
-              <h4 className="text-center" style={{ height: '70px' }}>
+              <h6 className="text-center p1 bold" style={{ height: '70px' }}>
                 Arise
-              </h4>
-              <p className="">Jul 19-20-21, 2024</p>
-              <Image src={AriseImg} alt="Arise background" className="mt-2 img-slider cover" width={160} height={160} />
+              </h6>
+              <p className="color-gradient">Jul 19-20-21, 2024</p>
+              <Image
+                src={AriseImg}
+                alt="Arise background"
+                className="mt-2 img-slider cover img-round"
+                width={160}
+                height={160}
+              />
               <p className="p5 text-center mt-3 events-desc">
                 We are living in a time of great potential for the manifestation of God&apos;s glory on Earth, and
                 it&apos;s time for the Church to come together in unity to see transformation and reformation.
@@ -70,14 +82,14 @@ export default function SliderEvents() {
               </Link>
             </div>
             <div className="item flex-center-column" id="item">
-              <h4 className="text-center" style={{ height: '70px' }}>
+              <h6 className="text-center p1 bold" style={{ height: '70px' }}>
                 Arise Camp
-              </h4>
-              <p className="">Jul 29, 2024</p>
+              </h6>
+              <p className="color-gradient">Jul 29, 2024</p>
               <Image
                 src={EvangelismImg}
                 alt="Arise background"
-                className="mt-2 img-slider cover"
+                className="mt-2 img-slider cover img-round"
                 width={160}
                 height={160}
               />
@@ -90,10 +102,10 @@ export default function SliderEvents() {
                 View more
               </Link>
             </div>
-          </div>
+          </section>
           <button id="next-btn" className="next-btn" ref={next} onClick={handlerNextButton}></button>
-        </div>
-      </div>
+        </section>
+      </section>
     </>
   );
 }

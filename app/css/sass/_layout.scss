@@ -316,7 +316,7 @@ $gutter: 32px;
   // top: 80%;
   // left: 15%;
 
-  transform: translate(-0%, -5%);
+  // transform: translate(-0%, -5%);
 
   // background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(122, 122, 122, 0) 50%);
 
@@ -328,6 +328,7 @@ $gutter: 32px;
     // img {
     //   object-fit: contain;
     // }
+    // height: 100vh;
   }
 
   transition: 1s ease;
