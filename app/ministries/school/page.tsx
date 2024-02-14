@@ -12,16 +12,16 @@ export default function School() {
 
   useGSAP(() => {
     tl1.from('#hero div', {
-      duration: 3,
       opacity: 1,
       y: 200,
+      delay: 5,
       stagger: { each: 0.1 },
       ease: 'power4.out',
     });
   });
 
   useGSAP(() => {
-    gsap.from('#about > div', {
+    gsap.from('#about > section', {
       opacity: 0,
       ease: 'power4.out',
       stagger: { each: 0.2 },
@@ -35,13 +35,13 @@ export default function School() {
   });
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Ignite School of Ministry</title>
         <meta
           name="description"
           content="Ignite School of Ministry: Unleashing spiritual growth and empowerment. Explore our dynamic programs and join a community committed to reforming the world through the transformative power of God's love. Ignite your passion and purpose with ISM."
         />
-      </Helmet>
+      </Helmet> */}
       <article>
         <header className="bg-ministries">
           <div className="container row h-100 flex-center" id="hero">

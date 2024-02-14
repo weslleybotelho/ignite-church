@@ -34,7 +34,7 @@ export default function Header() {
               <Link href="/ministries" className=" link-menu ml-3">
                 Ministries
               </Link>
-              <Link href="/ministries/school" className=" link-menu ml-3">
+              <Link href="/ministries/school" className=" link-menu ml-3 mr-3">
                 School
               </Link>
             </div>

@@ -16,9 +16,10 @@ export default function Home() {
 
   useGSAP(() => {
     tl1.from('.hero section', {
+      delay: 3.3,
       duration: 3,
       opacity: 1,
-      y: 200,
+      y: 800,
       stagger: { each: 0.1 },
       ease: 'power4.out',
     });

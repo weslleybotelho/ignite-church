@@ -4,16 +4,16 @@ import { useLayoutEffect } from 'react';
 import React from 'react';
 
 interface LoadingProps {
-  onLoadingComplete: () => void;
+  onLoadingComplete?: () => void;
 }
 
-export default function Loading({ onLoadingComplete }: LoadingProps) {
+export default function Loading({ onLoadingComplete = () => {} }: LoadingProps) {
   const tl1 = gsap.timeline();
   useLayoutEffect(() => {
     tl1.to('.screen-loading', {
+      delay: 3.3,
       duration: 1.2,
       opacity: 0,
-      delay: 3.3,
       ease: 'power4.out',
       onStart: () => {
         // Notify the parent component that loading is complete
