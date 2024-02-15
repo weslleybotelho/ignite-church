@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import bgImg from '../../img/school.jpg';
+import bgImg from '../img/school.jpg';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,7 +14,6 @@ export default function School() {
     tl1.from('#hero div', {
       opacity: 1,
       y: 200,
-      delay: 5,
       stagger: { each: 0.1 },
       ease: 'power4.out',
     });

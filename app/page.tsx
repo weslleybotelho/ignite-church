@@ -138,7 +138,7 @@ export default function Home() {
               At Ignite Church, we are more than just a congregation; we are a family of believers united by our passion
               for spiritual awakening and a genuine desire to make a positive impact on the world around us.
             </p>
-            <Link className="btn-orange mt-5" href="/about">
+            <Link className="btn-orange mt-5" href="/about-ignite">
               Read more
             </Link>
           </section>
@@ -175,7 +175,7 @@ export default function Home() {
                   through our School of Ministries, or engaging with thought-provoking discussions on our insightful
                   podcasts, there&apos;s a place for you to thrive and connect at Ignite.
                 </p>
-                <Link className="btn-orange mt-5" href="/ministries">
+                <Link className="btn-orange mt-5" href="/ignite-ministries">
                   Check our Ministries
                 </Link>
               </div>
@@ -198,7 +198,7 @@ export default function Home() {
                 “Our misson is to see our students be transformed and empowered to reform the world around them and
                 release Heaven on earth.”
               </p>
-              <Link href="/ministries/school" className="btn-orange mt-5">
+              <Link href="/ignite-school-of-ministry" className="btn-orange mt-5">
                 Read more
               </Link>
             </section>

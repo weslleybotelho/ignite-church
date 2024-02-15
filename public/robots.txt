@@ -1,0 +1,16 @@
+# Block all crawlers for /api
+User-agent: *
+Disallow: /api
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+User-agent: *
+Allow: /about-ignite
+
+User-agent: *
+Allow: /ignite-ministries
+
+User-agent: *
+Allow: /ignite-school-of-ministry
