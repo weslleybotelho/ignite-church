@@ -237,7 +237,7 @@ button {
     height: 1px;
     transform: translate(-50%, -50%);
 
-    background-color: $white-light;
+    background-color: $white-dark;
 
     transition: 0.3s ease;
   }
@@ -330,8 +330,8 @@ select,
 option,
 textarea {
   padding: 12px 16px;
-  background-color: $white-light;
-  border: 2px solid $white-light;
+  background-color: $white-dark;
+  border: 2px solid $white-dark;
   border-radius: 4px;
   color: $black-lighten;
   width: 100%;

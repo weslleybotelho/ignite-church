@@ -152,7 +152,7 @@ export default function Home() {
             />
           </section>
         </section>
-        {/* ----------------------------Ministries------------------------------ */}
+        {/* ----------------------------Ministries------------------------- */}
         <section className="relative bg-black hidden-x" id="ministries">
           <div className="container py-3">
             <div className="row">
@@ -182,11 +182,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* ------------------------Events-------------------------------- */}
+        {/* ----------------------Events----------------------------------- */}
         <section className="container py-3 relative" id="events">
           <SliderEvents></SliderEvents>
         </section>
-        {/* -----------------School---------------------- */}
+        {/* ----------------------School------------------------------------ */}
         <section className="relative bg-black" id="ism">
           <section className="container row py-3">
             <section className="grid-6 grid-itens-mobile">
@@ -213,6 +213,7 @@ export default function Home() {
             </section>
           </section>
         </section>
+        {/* ----------------------Newsletter--------------------------------- */}
         <section className="relative" id="newsletter">
           <div className="container py-3">
             <div className="row">

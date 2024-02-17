@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import aboutHero from '../img/about-hero.jpg';
+import aboutHero from '../img/about-hero3.jpg';
 import aboutImg1 from '../img/about-image1.jpg';
 import coreValuesImg from '../img/core-values.png';
 import gsap from 'gsap';
@@ -62,16 +62,16 @@ export default function About() {
   });
   return (
     <>
-      <div className="bg-black" id="hero">
-        <div className="bg-about relative">
-          <Image src={aboutHero} alt="About Ignite" className="cover " />
+      <div className="bg-black h-100" id="hero">
+        <div className="bg-about relativexs">
+          <Image src={aboutHero} alt="About Ignite" className="cover h-100" />
           <h1 className="absolute-center absolut color-white text-center">About Ignite</h1>
         </div>
       </div>
 
-      <section className="bg-black" id="about">
+      <section id="about">
         <div className="container text-center text-about">
-          <h3 className="color-white">Ignite is a church that is based in the heart of Europe, Brussels ... </h3>
+          <h3 className="">Ignite is a church that is based in the heart of Europe, Brussels ... </h3>
           <p className="pt-4 p1 color-gray">
             Lorem ipsum dolor sit amet consectetur. Pellentesque at nunc ipsum quis risus rhoncus neque turpis quis.
             Posuere et blandit sit convallis tempus id. Scelerisque vulputate volutpat ac gravida nam consequat
@@ -84,8 +84,8 @@ export default function About() {
           </p>
         </div>
       </section>
-      <section className="container" id="pastors">
-        <h2 className="color-gradient p2 uppercase bold ml-2">about our pastors</h2>
+      <section className="container py-3" id="pastors">
+        <h4 className="color-gradient p2 uppercase bold ml-2">about our pastors</h4>
         <div className="row">
           <div className="grid-6 ">
             <Image
@@ -97,7 +97,7 @@ export default function About() {
             />
           </div>
           <div className="grid-6">
-            <h3 className="text-center">Pr Maldo & Jasmine</h3>
+            <h5 className="text-center">Pr Maldo & Jasmine</h5>
             <p className="text-center pt-4">
               Lorem ipsum dolor sit amet consectetur. Varius proin odio ut morbi nulla velit fusce. Pulvinar suspendisse
               facilisis et habitant pulvinar pellentesque. Egestas vel dui fermentum risus in. Platea auctor sapien
@@ -117,19 +117,19 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-black hidden-x" id="core-values">
-        <div className="container">
-          <h2 className="color-gradient p2 uppercase bold ml-2">our mission and values</h2>
+      <section className="hidden-x" id="core-values">
+        <div className="container py-3">
+          <h6 className="color-gradient p2 uppercase bold ml-2">our mission and values</h6>
 
           <div className="row">
             <div className="grid-6 flex-center-column">
-              <h3 className="uppercase color-white">our vision</h3>
+              <h3 className="uppercase">our vision</h3>
               <p className="p2 mt-2 color-gray text-center">
                 Lorem ipsum dolor sit amet consectetur. Varius proin odio ut morbi nulla velit fusce. Pulvinar
                 suspendisse facilisis et habitant pulvinar pellentesque. Egestas vel dui fermentum risus in. Platea
                 auctor sapien mattis vel gravida massa nisl arcu sit.
               </p>
-              <h3 className="uppercase color-white mt-5">our mission</h3>
+              <h3 className="uppercase mt-5">our mission</h3>
               <p className="p2 mt-2 color-gray text-center">
                 Lorem ipsum dolor sit amet consectetur. Varius proin odio ut morbi nulla velit fusce. Pulvinar
                 suspendisse facilisis et habitant pulvinar pellentesque. Egestas vel dui fermentum risus in. Platea
