@@ -25,7 +25,6 @@
     "@types/react-helmet": "^6.1.11",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
-    "react-helmet": "^6.1.0",
     "typescript": "^5"
   }
 }

@@ -52,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <meta property="twitter:image" content="/metatag-ignitechurch.png" />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
         <Loading />
         <>
           <Header />

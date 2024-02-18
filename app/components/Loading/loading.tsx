@@ -1,4 +1,5 @@
 'use client';
+import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useLayoutEffect } from 'react';
 import React from 'react';
@@ -9,15 +10,24 @@ interface LoadingProps {
 
 export default function Loading({ onLoadingComplete = () => {} }: LoadingProps) {
   const tl1 = gsap.timeline();
-  useLayoutEffect(() => {
+  useGSAP(() => {
     tl1.to('.screen-loading', {
       delay: 3.3,
       duration: 1.2,
       opacity: 0,
       ease: 'power4.out',
       onStart: () => {
-        // Notify the parent component that loading is complete
         onLoadingComplete();
+      },
+      onComplete: () => {
+        tl1.to('#hero section', {
+          duration: 0.5,
+          scale: 1.04,
+          repeat: 1,
+          yoyo: true,
+          stagger: { each: 0.1 },
+          ease: 'power1.out',
+        });
       },
     });
   });

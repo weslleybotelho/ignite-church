@@ -1,77 +1,53 @@
 'use client';
 import Image from 'next/image';
 import bgImg from '../img/school.jpg';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Helmet } from 'react-helmet';
+import { fadeFromBelow, slideFromLeftScroll } from '../utils/gsapAnimations';
 
 export default function School() {
-  gsap.registerPlugin(ScrollTrigger);
-  const tl1 = gsap.timeline();
-
   useGSAP(() => {
-    tl1.from('#hero div', {
-      opacity: 1,
-      y: 200,
-      stagger: { each: 0.1 },
-      ease: 'power4.out',
-    });
+    fadeFromBelow('#hero > section');
   });
 
   useGSAP(() => {
-    gsap.from('#about > section', {
-      opacity: 0,
-      ease: 'power4.out',
-      stagger: { each: 0.2 },
-      duration: 3,
-      scrollTrigger: {
-        trigger: '#about',
-        start: 'top 80%',
-        end: 'top 50%',
-      },
-    });
+    slideFromLeftScroll('#about > section', '#about');
   });
   return (
     <>
-      {/* <Helmet>
-        <title>Ignite School of Ministry</title>
-        <meta
-          name="description"
-          content="Ignite School of Ministry: Unleashing spiritual growth and empowerment. Explore our dynamic programs and join a community committed to reforming the world through the transformative power of God's love. Ignite your passion and purpose with ISM."
-        />
-      </Helmet> */}
       <article>
         <header className="bg-ministries">
-          <div className="container row h-100 flex-center" id="hero">
-            <div className="grid-6">
+          <section className="container row h-100 flex-center" id="hero">
+            <section className="grid-6">
               <h1 className="color-white">Ignite School of Ministry</h1>
               <p>Be equiped to release Heaven on earth.</p>
               <a href="mailto:ignite.ministryschool@gmail.com" className="btn-orange mt-3 p-1">
                 Send email
               </a>
-            </div>
-            <div className="grid-6">
+            </section>
+            <section className="grid-6">
               <Image
                 src={bgImg}
                 alt="Ignite School of Ministries background"
                 height={400}
                 className="cover img-mobile"
               />
-            </div>
-          </div>
+            </section>
+          </section>
         </header>
         <section>
           <section className="container" id="about">
             <section className="row">
               <div className="grid-2 disappear"></div>
               <div className="grid-8">
-                <h2>About ISM</h2>
-                <h6>Vision</h6>
+                <h2>
+                  About <br />
+                  Ignite School of Ministry
+                </h2>
+                <h3 className="mt-3">Vision</h3>
                 <p className="p3 color-black ">
                   Equip a generation to walk in the Spirit and to experience God&apos;s radical love for them.
                 </p>
-                <h6 className="mt-3">Mission</h6>
+                <h3 className="mt-3">Mission</h3>
                 <p className="p3 color-black ">
                   See our students be transformed and empowered to reform the world around them and release Heaven on
                   earth.
@@ -84,7 +60,7 @@ export default function School() {
                   spiritual growth and impactful learning at ISM, where the pursuit of divine understanding and
                   purposeful living takes center stage.
                 </p>
-                <h5 className="mt-3">The school is for you if:</h5>
+                <h4 className="mt-3">The school is for you if:</h4>
                 <div className="ml-2">
                   <li>You feel a call towards ministry</li>
                   <li>You want to know your identity as a son and daughter of God</li>
@@ -98,7 +74,7 @@ export default function School() {
             <section className="row">
               <div className="grid-2 disappear"></div>
               <div className="grid-4">
-                <h6>First year</h6>
+                <h5>First year</h5>
                 <div className="ml-2">
                   <ul className="none-bullet">
                     <li>Identity in Christ</li>
@@ -112,7 +88,7 @@ export default function School() {
                 </div>
               </div>
               <div className="grid-4">
-                <h6>Second year</h6>
+                <h5>Second year</h5>
                 <div className="ml-2">
                   <ul className="none-bullet">
                     <li>Leadership and character</li>
@@ -131,9 +107,9 @@ export default function School() {
             <section className="row">
               <div className="grid-2 disappear"></div>
               <div className="grid-8">
-                <h6>Meeting Times</h6>
+                <h5>Meeting Times</h5>
                 <p className="p5 color-black">April</p>
-                <h6 className="mt-3">Contact</h6>
+                <h5 className="mt-3">Contact</h5>
                 <p className="p5 color-black">More information on the school and how to apply via email:</p>
                 <a
                   href="mailto:ignite.ministryschool@gmail.com?subject = ISM Information&body = Hi, I would like to get more information about the school."

@@ -13,13 +13,11 @@ import SliderEvents from './components/Slider/sliderEvents';
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
   const tl1 = gsap.timeline();
-
   useGSAP(() => {
-    tl1.from('.hero section', {
-      delay: 3.3,
-      duration: 3,
+    tl1.from('#hero > section', {
+      duration: 2,
       opacity: 1,
-      y: 800,
+      y: 400,
       stagger: { each: 0.1 },
       ease: 'power4.out',
     });
@@ -175,7 +173,7 @@ export default function Home() {
                   through our School of Ministries, or engaging with thought-provoking discussions on our insightful
                   podcasts, there&apos;s a place for you to thrive and connect at Ignite.
                 </p>
-                <Link className="btn-orange mt-5" href="/ignite-ministries">
+                <Link className="btn-orange mt-5" href="/ministries">
                   Check our Ministries
                 </Link>
               </div>

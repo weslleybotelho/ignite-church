@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import evangelismImg from '../img/evangelism.jpg';
 import innerHealingImg from '../img/inner-healing.jpg';
@@ -8,104 +9,116 @@ import homeGroupImg from '../img/homegroup.jpg';
 import womenImg from '../img/women.jpg';
 import menImg from '../img/men.jpg';
 import Link from 'next/link';
+import { useGSAP } from '@gsap/react';
+import { fadeFromOpacity, fadeFromOpacityScroll, slideFromRight } from '../utils/gsapAnimations';
 
 export default function Ministries() {
+  useGSAP(() => {
+    slideFromRight('#hero');
+  });
+  useGSAP(() => {
+    fadeFromOpacity('#ministries div');
+  });
   return (
     <>
-      <div className="container mt-3">
-        <h1>Ministries</h1>
-        <h5>Find a place for you in what God is doing here</h5>
-        <div className="row">
-          <div className="grid-3">
-            <Image
-              src={evangelismImg}
-              alt="Image Ignite Evangelism"
-              width={260}
-              height={190}
-              className="img-ministries"
-            />
-            <h6 className="">Evangelism</h6>
-            <Link href="/ministries/evangelism" className="color-gradient bold">
-              View More
-            </Link>
+      <article>
+        <section className="container mt-3" id="ministries">
+          <header id="hero">
+            <h1>Ministries</h1>
+            <h5>Find a place for you in what God is doing here</h5>
+          </header>
+          <div className="row">
+            <div className="grid-3">
+              <Image
+                src={evangelismImg}
+                alt="Image Ignite Evangelism"
+                width={260}
+                height={190}
+                className="img-ministries"
+              />
+              <h6 className="">Evangelism</h6>
+              <Link href="/ministries/evangelism" className="color-gradient bold">
+                View More
+              </Link>
+            </div>
+            <div className="grid-3">
+              <Image
+                src={innerHealingImg}
+                alt="Image Ignite Inner Healing"
+                width={260}
+                height={190}
+                className="img-ministries"
+              />
+              <h6 className="">Inner Healing</h6>
+              <Link href={''} className="color-gradient bold">
+                View More
+              </Link>
+            </div>
+            <div className="grid-3">
+              <Image
+                src={schoolImg}
+                alt="Image Ignite School of Ministries"
+                width={260}
+                height={190}
+                className="img-ministries"
+              />
+              <h6 className="">School of Ministry</h6>
+              <Link href="/ignite-school-of-ministry" className="color-gradient bold">
+                View More
+              </Link>
+            </div>
+            <div className="grid-3">
+              <Image src={musicImg} alt="Image Ignite Music" width={260} height={190} className="img-ministries" />
+              <h6 className="">Ignite Music</h6>
+              <Link href={''} className="color-gradient bold">
+                View More
+              </Link>
+            </div>
           </div>
-          <div className="grid-3">
-            <Image
-              src={innerHealingImg}
-              alt="Image Ignite Inner Healing"
-              width={260}
-              height={190}
-              className="img-ministries"
-            />
-            <h6 className="">Inner Healing</h6>
-            <Link href={''} className="color-gradient bold">
-              View More
-            </Link>
+          <div className="row">
+            <div className="grid-3">
+              <Image src={podcastImg} alt="Image Ignite Podcast" width={260} height={190} className="img-ministries" />
+              <h6 className="">Podcast</h6>
+              <Link href={''} className="color-gradient bold">
+                View More
+              </Link>
+            </div>
+            <div className="grid-3">
+              <Image
+                src={homeGroupImg}
+                alt="Image Ignite Home Group"
+                width={260}
+                height={190}
+                className="img-ministries"
+              />
+              <h6 className="">Home Groups</h6>
+              <Link href="/ministries/homegroup" className="color-gradient bold">
+                View More
+              </Link>
+            </div>
+            <div className="grid-3">
+              <Image src={menImg} alt="Men Ministry at Ignite" width={260} height={190} className="img-ministries" />
+              <h6 className="">Men Ministry</h6>
+              <Link href="/ministries/men" className="color-gradient bold">
+                View More
+              </Link>
+            </div>
+            <div className="grid-3">
+              <Image src={womenImg} alt="Men Ministry at Ignite" width={260} height={190} className="img-ministries" />
+              <h6 className="">Women Ministry</h6>
+              <Link href="/ministries/women" className="color-gradient bold">
+                View More
+              </Link>
+            </div>
           </div>
-          <div className="grid-3">
-            <Image
-              src={schoolImg}
-              alt="Image Ignite School of Ministries"
-              width={260}
-              height={190}
-              className="img-ministries"
-            />
-            <h6 className="">School of Ministry</h6>
-            <Link href="/ignite-school-of-ministry" className="color-gradient bold">
-              View More
-            </Link>
+          <div className="row">
+            <div className="grid-3"></div>
+            <div className="grid-3"></div>
+            <div className="grid-3"></div>
+            <div className="grid-3"></div>
           </div>
-          <div className="grid-3">
-            <Image src={musicImg} alt="Image Ignite Music" width={260} height={190} className="img-ministries" />
-            <h6 className="">Ignite Music</h6>
-            <Link href={''} className="color-gradient bold">
-              View More
-            </Link>
-          </div>
-        </div>
-        <div className="row">
-          <div className="grid-3">
-            <Image src={podcastImg} alt="Image Ignite Podcast" width={260} height={190} className="img-ministries" />
-            <h6 className="">Podcast</h6>
-            <Link href={''} className="color-gradient bold">
-              View More
-            </Link>
-          </div>
-          <div className="grid-3">
-            <Image
-              src={homeGroupImg}
-              alt="Image Ignite Home Group"
-              width={260}
-              height={190}
-              className="img-ministries"
-            />
-            <h6 className="">Home Groups</h6>
-            <Link href="/ministries/homegroup" className="color-gradient bold">
-              View More
-            </Link>
-          </div>
-          <div className="grid-3">
-            <Image src={menImg} alt="Men Ministry at Ignite" width={260} height={190} className="img-ministries" />
-            <h6 className="">Men Ministry</h6>
-            <Link href="/ministries/men" className="color-gradient bold">
-              View More
-            </Link>
-          </div>
-          <div className="grid-3">
-            <Image src={womenImg} alt="Men Ministry at Ignite" width={260} height={190} className="img-ministries" />
-            <h6 className="">Women Ministry</h6>
-            <Link href="/ministries/women" className="color-gradient bold">
-              View More
-            </Link>
-          </div>
-        </div>
-        <div className="row">
-          <div className="grid-3"></div>
-          <div className="grid-3"></div>
-          <div className="grid-3"></div>
-          <div className="grid-3"></div>
-        </div>
-      </div>
+        </section>
+      </article>
     </>
   );
 }
