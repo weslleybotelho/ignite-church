@@ -8,6 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AboutIgniteImg from './img/about-ignite.jpg';
 import MinistriesImg from './img/ministries-img.png';
 import IsmImg from './img/ism.jpg';
+import BuildingImg from './img/building.jpg';
 import SliderEvents from './components/Slider/sliderEvents';
 
 export default function Home() {
@@ -211,7 +212,39 @@ export default function Home() {
             </section>
           </section>
         </section>
+        {/* ----------------------Building--------------------------------- */}
+
+        <section className="relative" id="building">
+          <section className="container row py-2">
+            <section className="grid-6">
+              <Image
+                src={BuildingImg}
+                alt="Ignite Church Brussels building idea"
+                className="cover img-round img-mobile"
+              />
+            </section>
+            <section className="grid-6 grid-itens-mobile">
+              <h5 className="p2 uppercase color-gradient">Building dreams, Shaping futures</h5>
+              <p className="p1 color-black pt-3">
+                Ignite the future with our <span className="color-gradient">new home</span>
+              </p>
+              <p className="p3 pt-4 color-gray">
+                At Ignite Church, we&apos;re embarking on an exciting journey to secure a permanent home that goes
+                beyond bricks and mortar — it&apos;s a sanctuary where dreams are built and futures are shaped. <br />
+                We envision a space that caters to the diverse needs of our community. With your support, we aim to
+                create a hub that not only serves our attendees but also extends a welcoming hand to the people of
+                Brussels, fostering connection and spreading the transformative message of God&apos;s love throughout
+                our city.
+              </p>
+              <Link href="#" className="btn-orange mt-5">
+                Donate
+              </Link>
+            </section>
+          </section>
+        </section>
+
         {/* ----------------------Newsletter--------------------------------- */}
+        <hr className="w-75 m-auto" />
         <section className="relative" id="newsletter">
           <div className="container py-3">
             <div className="row">

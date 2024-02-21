@@ -10,7 +10,7 @@ import womenImg from '../img/women.jpg';
 import menImg from '../img/men.jpg';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
-import { fadeFromOpacity, fadeFromOpacityScroll, slideFromRight } from '../utils/gsapAnimations';
+import { fadeFromOpacity, slideFromRight } from '../utils/gsapAnimations';
 
 export default function Ministries() {
   useGSAP(() => {
