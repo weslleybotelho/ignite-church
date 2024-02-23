@@ -13,6 +13,20 @@ export const fadeFromBelow = (element: string, duration: number = 2) => {
     ease: 'power4.out',
   });
 };
+export const fadeFromBelowScroll = (element: string, trigger: string, duration: number = 2) => {
+  gsap.from(element, {
+    duration,
+    opacity: 1,
+    y: 200,
+    stagger: { each: 0.1 },
+    ease: 'power4.out',
+    scrollTrigger: {
+      trigger,
+      start: 'top 80%',
+      end: 'top 50%',
+    },
+  });
+};
 
 export const fadeFromOpacity = (element: string, duration: number = 2) => {
   gsap.from(element, {
@@ -52,7 +66,7 @@ export const slideFromRight = (element: string, duration: number = 2) => {
 export const slideFromRightScroll = (element: string, trigger: string, duration: number = 2) => {
   gsap.from(element, {
     opacity: 1,
-    x: 200,
+    x: 300,
     ease: 'power4.out',
     stagger: { each: 0.2 },
     duration,
@@ -67,7 +81,7 @@ export const slideFromRightScroll = (element: string, trigger: string, duration:
 export const slideFromLeftScroll = (element: string, trigger: string, duration: number = 2) => {
   gsap.from(element, {
     opacity: 1,
-    x: -200,
+    x: -300,
     ease: 'power4.out',
     stagger: { each: 0.2 },
     duration,

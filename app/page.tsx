@@ -1,92 +1,38 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import AboutIgniteImg from './img/about-ignite.jpg';
 import MinistriesImg from './img/ministries-img.png';
 import IsmImg from './img/ism.jpg';
 import BuildingImg from './img/building.jpg';
 import SliderEvents from './components/Slider/sliderEvents';
+import {
+  fadeFromBelow,
+  fadeFromBelowScroll,
+  fadeFromOpacityScroll,
+  slideFromLeftScroll,
+  slideFromRightScroll,
+} from './utils/gsapAnimations';
 
 export default function Home() {
-  gsap.registerPlugin(ScrollTrigger);
-  const tl1 = gsap.timeline();
   useGSAP(() => {
-    tl1.from('#hero > section', {
-      duration: 2,
-      opacity: 1,
-      y: 400,
-      stagger: { each: 0.1 },
-      ease: 'power4.out',
-    });
+    fadeFromBelow('#hero > section');
   });
 
   useGSAP(() => {
-    gsap.from('#about-ignite > section', {
-      opacity: 0,
-      ease: 'power4.out',
-      stagger: { each: 0.2 },
-      duration: 3,
-      scrollTrigger: {
-        trigger: '#about-ignite',
-        start: 'top 80%',
-        end: 'top 50%',
-      },
-    });
+    slideFromLeftScroll('#about-ignite > section', '#about-ignite');
 
-    gsap.from('#ministries > div', {
-      x: 100,
-      opacity: 0,
-      ease: 'power4.out',
-      stagger: { each: 0.2 },
-      duration: 3,
-      scrollTrigger: {
-        trigger: '#ministries',
-        start: 'top bottom',
-        end: 'top 50%',
-      },
-    });
+    slideFromRightScroll('#ministries > div', '#ministries');
 
-    gsap.from('#events > section', {
-      y: 100,
-      opacity: 0,
-      ease: 'power4.out',
-      stagger: { each: 0.2 },
-      duration: 3,
-      scrollTrigger: {
-        trigger: '#events',
-        start: 'top 80%',
-        end: 'top 50%',
-      },
-    });
+    fadeFromBelowScroll('#events > section', '#events');
 
-    gsap.from('#ism > section', {
-      x: -100,
-      opacity: 0,
-      ease: 'power4.out',
-      stagger: { each: 0.2 },
-      duration: 3,
-      scrollTrigger: {
-        trigger: '#ism',
-        start: 'top 80%',
-        end: 'top 50%',
-      },
-    });
+    slideFromLeftScroll('#ism > section', '#ism');
 
-    gsap.from('#newsletter > div', {
-      opacity: 0,
-      ease: 'power4.out',
-      stagger: { each: 0.2 },
-      duration: 3,
-      scrollTrigger: {
-        trigger: '#newsletter',
-        start: 'top 80%',
-        end: 'top 50%',
-      },
-    });
+    slideFromRightScroll('#building > section', '#building');
+
+    fadeFromOpacityScroll('#newsletter > div', '#newsletter');
   });
 
   return (
