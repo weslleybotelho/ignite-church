@@ -121,3 +121,7 @@ $yellow-light: #ffd76b;
 .bg-black-light {
   background-color: $black-light;
 }
+
+.filter-black50 {
+  filter: brightness(50%);
+}
