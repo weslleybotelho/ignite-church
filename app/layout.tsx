@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import './css/style.css';
+import './css/style.scss';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import Loading from './components/Loading/loading';
@@ -10,11 +10,11 @@ import { Metadata } from 'next';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ignite Church Brussel',
+  title: 'Ignite Church Brussels',
   description:
-    'Experience vibrant Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events. Explore Ignite Church now.',
+    'Ignite Church Brussels, your Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events.',
   keywords:
-    'ignite church, church, brussels, church brussels, christian church, christian community, evangelical church, worship brussels',
+    'ignite church brussels, ignite, church, brussels, church brussels, christian church, christian community, evangelical church, worship brussels',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* <--========== Open Graph / Facebook ===========--> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ignite-church.vercel.app/" />
-        <meta property="og:title" content="Ignite Church" />
+        <meta property="og:title" content="Ignite Church Brussels" />
         <meta
           property="og:description"
           content="Your Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events."

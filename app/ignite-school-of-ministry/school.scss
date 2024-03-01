@@ -1,0 +1,19 @@
+@import '../css/sass/colors';
+
+.hero-school {
+  // height: 100vh;
+  // background-image: url('../img/school-1.png');
+  // background-position: left;
+  // background-repeat: no-repeat;
+  // background-size: 50%;
+  // /* position: absolute; */
+  // object-fit: fit;
+  /* width: 100%; */
+  mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent 100%);
+}
+
+.li-white {
+  li {
+    color: $white-normal;
+  }
+}

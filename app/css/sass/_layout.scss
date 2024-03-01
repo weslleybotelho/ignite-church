@@ -132,6 +132,10 @@ $gutter: 32px;
   object-fit: cover;
 }
 
+.contain {
+  object-fit: contain;
+}
+
 .h-100 {
   height: 100vh;
 }
@@ -572,4 +576,11 @@ $gutter: 32px;
 
 .none-bullet {
   list-style-type: none;
+}
+
+.school2 {
+  transform: translate(0px, -130px);
+  @include responsive(s) {
+    transform: translate(0px, 0px);
+  }
 }

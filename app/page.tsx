@@ -54,7 +54,7 @@ export default function Home() {
 
           <section className="container hero row">
             <section className="grid-6 relative p-3">
-              <h1 className="uppercase color-gradient p5">ignite church</h1>
+              <h1 className="uppercase color-gradient p5">ignite church brussels</h1>
               <h2 className="uppercase color-white h1-hero">igniting a generation for jesus</h2>
 
               <p className="mt-4 color-white p1 bold">Join us this Sunday at 10:00am</p>
@@ -76,12 +76,12 @@ export default function Home() {
         {/* ------------------About------------------------- */}
         <section className="container py-3 relative row" id="about-ignite">
           <section className="grid-6 grid-itens-mobile">
-            <h3 className="color-gradient p2 uppercase">About Ignite Church</h3>
+            <h3 className="color-gradient p2 uppercase">About Ignite Church Brussels</h3>
             <p className="p1 color-gray mt-4">
               Welcome to Ignite Church Brussels, a vibrant Christian church nestled in the heart of Belgium. Our
-              community is rooted in the Protestant faith, with a fervent belief in the transformative power of revival.
-              At Ignite Church, we are more than just a congregation; we are a family of believers united by our passion
-              for spiritual awakening and a genuine desire to make a positive impact on the world around us.
+              community is rooted in the faith in Jesus, with a fervent belief in the transformative power of revival.
+              At Ignite Church Brussels, we are more than just a congregation; we are a family of believers united by
+              our passion for spiritual awakening and a genuine desire to make a positive impact on the world around us.
             </p>
             <Link className="btn-orange mt-5" href="/about-ignite">
               Read more

@@ -1,0 +1,87 @@
+.color-white {
+  color: #f7f0e9;
+}
+
+.color-black {
+  color: #1c1815;
+}
+
+.color-primary {
+  color: #ef702d;
+}
+
+.color-gradient {
+  display: inline-block;
+  background: linear-gradient(224.78deg, #fc935b 8.12%, #d95916 92.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.color-gradient2 {
+  display: inline-block;
+  background: linear-gradient(270deg, #1141bd 0.95%, #6bbaff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+  background: linear-gradient(224.78deg, #d95916 8.12%, #a9c96b 92.21%);
+}
+
+.label {
+  background: linear-gradient(224.78deg, #ef702d 8.12%, #a9c96b 92.21%);
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 2px;
+  color: #080402;
+}
+
+.color-gray {
+  color: #7c7c7d;
+}
+
+.color-gray-light {
+  color: #9ea0a3;
+}
+
+.color-red {
+  color: #f03d3d;
+}
+
+.color-green {
+  color: #0bb07b;
+}
+
+.color-yellow {
+  color: #ffce52;
+}
+
+.bg-red {
+  background-color: #f03d3d;
+}
+
+.bg-green {
+  background-color: #0bb07b;
+}
+
+.bg-yellow {
+  background-color: #ffce52;
+}
+
+.bg-black {
+  background-color: #080402;
+}
+
+.bg-black-light {
+  background-color: #1c1815;
+}
+
+.hero-school {
+  /* width: 100%; */
+  -webkit-mask-image: linear-gradient(rgb(0, 0, 0), transparent 100%);
+          mask-image: linear-gradient(rgb(0, 0, 0), transparent 100%);
+}
+
+.li-white li {
+  color: #f7f0e9;
+}/*# sourceMappingURL=school.css.map */
