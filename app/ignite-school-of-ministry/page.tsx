@@ -5,7 +5,13 @@ import school1 from '../img/school-1.png';
 import school2 from '../img/school-2.jpg';
 import school3 from '../img/school-3.jpg';
 import { useGSAP } from '@gsap/react';
-import { fadeFromBelow, slideFromLeftScroll } from '../utils/gsapAnimations';
+import {
+  fadeFromBelow,
+  fadeFromBelowScroll,
+  fadeFromOpacityScroll,
+  slideFromLeftScroll,
+  slideFromRightScroll,
+} from '../utils/gsapAnimations';
 import './school.scss';
 
 export default function School() {
@@ -14,7 +20,11 @@ export default function School() {
   });
 
   useGSAP(() => {
-    slideFromLeftScroll('#about > section', '#about');
+    slideFromLeftScroll('#vision > section', '#vision');
+    slideFromRightScroll('#mission > section', '#mission');
+    fadeFromOpacityScroll('#points > section', '#points');
+    fadeFromBelowScroll('#years > section', '#years');
+    slideFromLeftScroll('#infos > section', '#infos');
   });
   return (
     <>
@@ -32,7 +42,7 @@ export default function School() {
             </section>
           </section>
         </header>
-        <section className="relative bg-black ">
+        <section className="relative bg-black" id="vision">
           <section className="container flex-center p-0">
             <section className="grid-6 p-0">
               <Image src={school1} alt="school 1" className="contain h-auto" />
@@ -45,7 +55,7 @@ export default function School() {
             </section>
           </section>
         </section>
-        <section className="relative container flex-center py-0">
+        <section className="relative container flex-center py-0" id="mission">
           <section className="grid-6">
             <h2 className="uppercase text-center">mission</h2>
             <p className="p1 text-center color-black">
@@ -68,7 +78,7 @@ export default function School() {
             <Image src={school2} alt="school 1" className="contain h-auto school2" />
           </section>
         </section>
-        <section className="relative bg-black">
+        <section className="relative bg-black" id="points">
           <section className="relative container flex-center py-0">
             <section className="grid-6 ">
               <Image src={school3} alt="school 1" className="contain h-auto school2" />
@@ -85,9 +95,9 @@ export default function School() {
             </section>
           </section>
         </section>
-        <section className="container row py-0">
-          <div className="grid-2 disappear"></div>
-          <div className="grid-4">
+        <section className="container row py-0" id="years">
+          <section className="grid-2 disappear"></section>
+          <section className="grid-4">
             <h5 className="bold uppercase">First year</h5>
             <div className="ml-2">
               <ul className="">
@@ -100,8 +110,8 @@ export default function School() {
                 <li>And more ...</li>
               </ul>
             </div>
-          </div>
-          <div className="grid-4">
+          </section>
+          <section className="grid-4">
             <h5 className="bold uppercase">Second year</h5>
             <div className="ml-2">
               <ul className="">
@@ -115,12 +125,12 @@ export default function School() {
                 <li>And more ...</li>
               </ul>
             </div>
-          </div>
-          <div className="grid-2 disappear"></div>
+          </section>
+          <section className="grid-2 disappear"></section>
         </section>
-        <section className="container row py-0">
-          <div className="grid-2 disappear"></div>
-          <div className="grid-8">
+        <section className="container row py-0" id="infos">
+          <section className="grid-2 disappear"></section>
+          <section className="grid-8">
             <h5>Meeting Times</h5>
             <p className="p5 color-black">April</p>
             <h5 className="mt-3">Contact</h5>
@@ -130,8 +140,8 @@ export default function School() {
               className="color-gradient">
               ignite.ministryschool@gmail.com
             </a>
-          </div>
-          <div className="grid-2 disappear"></div>
+          </section>
+          <section className="grid-2 disappear"></section>
         </section>
       </article>
     </>
