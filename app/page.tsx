@@ -160,7 +160,7 @@ export default function Home() {
         </section>
         {/* ----------------------Building--------------------------------- */}
 
-        <section className="relative" id="building">
+        <section className="relative hidden-x" id="building">
           <section className="container row py-2">
             <section className="grid-6">
               <Image

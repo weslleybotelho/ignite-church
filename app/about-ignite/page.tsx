@@ -14,9 +14,6 @@ import {
 } from '../utils/gsapAnimations';
 
 export default function About() {
-  gsap.registerPlugin(ScrollTrigger);
-  const tl1 = gsap.timeline();
-
   useGSAP(() => {
     fadeFromBelow('#hero > section');
   });

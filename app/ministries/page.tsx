@@ -9,6 +9,7 @@ import homeGroupImg from '../img/homegroup.jpg';
 import womenImg from '../img/women.jpg';
 import menImg from '../img/men.jpg';
 import kidsMinistry from '../img/kidsministry.jpg';
+import youthMinistry from '../img/hero-youth.webp';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 import { fadeFromOpacity, slideFromRight } from '../utils/gsapAnimations';
@@ -126,7 +127,19 @@ export default function Ministries() {
                 View More
               </Link>
             </div>
-            <div className="grid-3"></div>
+            <div className="grid-3">
+              <Image
+                src={youthMinistry}
+                alt="Image Ignite Podcast"
+                width={260}
+                height={190}
+                className="img-ministries cover"
+              />
+              <h6 className="">Youth Ministry</h6>
+              <Link href={'/ministries/youth'} className="color-gradient bold">
+                View More
+              </Link>
+            </div>
             <div className="grid-3"></div>
             <div className="grid-3"></div>
           </div>
