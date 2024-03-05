@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 
 import AboutIgniteImg from './img/about-ignite.jpg';
-import MinistriesImg from './img/ministries-img.png';
+import MinistriesImg from './img/ministries-home.jpg';
 import IsmImg from './img/ism.jpg';
 import BuildingImg from './img/building.jpg';
 import SliderEvents from './components/Slider/sliderEvents';
@@ -75,13 +75,21 @@ export default function Home() {
         </header>
         {/* ------------------About------------------------- */}
         <section className="container py-3 relative row" id="about-ignite">
+          <section>
+            <p className="text-center p1">
+              You found more than a church, you found a <span className="color-gradient">family</span>.
+            </p>
+          </section>
           <section className="grid-6 grid-itens-mobile">
-            <h3 className="color-gradient p2 uppercase">About Ignite Church Brussels</h3>
-            <p className="p1 color-gray mt-4">
-              Welcome to Ignite Church Brussels, a vibrant Christian church nestled in the heart of Belgium. Our
-              community is rooted in the faith in Jesus, with a fervent belief in the transformative power of revival.
-              At Ignite Church Brussels, we are more than just a congregation; we are a family of believers united by
-              our passion for spiritual awakening and a genuine desire to make a positive impact on the world around us.
+            <h3 className="color-gradient p2 uppercase mt-3">About Ignite Church Brussels</h3>
+            <h4 className="mt-3">Welcome to Ignite Church Brussels</h4>
+            <p className=" color-gray mt-4">
+              A vibrant Christian church nestled in the heart of Belgium. Our community is rooted in the faith in{' '}
+              <span className="color-gradient">Jesus</span>, with a fervent belief in the transformative power of{' '}
+              <span className="color-gradient"> revival</span>. At Ignite Church Brussels, we are more than just a
+              congregation; we are a family of believers united by our passion for spiritual{' '}
+              <span className="color-gradient">awakening</span> and a genuine desire to make a positive impact on the
+              world around us.
             </p>
             <Link className="btn-orange mt-5" href="/about-ignite">
               Read more
@@ -101,19 +109,21 @@ export default function Home() {
         <section className="relative bg-black hidden-x" id="ministries">
           <div className="container py-3">
             <div className="row">
-              <div className="grid-6 grid-ministry-mobile">
+              {/* <div className="grid-1 disappear"></div> */}
+              <div className="grid-8 grid-ministry-mobile">
                 <Image
                   src={MinistriesImg}
                   alt="about ignite"
-                  style={{ objectFit: 'fill' }}
-                  height={340}
-                  width={360}
-                  className=" img-ministry"
+                  style={{}}
+                  // height={340}
+                  // width={360}
+                  className=" img-ministry h-auto"
+                  quality={100}
                 />
               </div>
-              <div className="grid-6 grid-itens-mobile">
+              <div className="grid-4">
                 <h4 className="color-gradient p2 uppercase">ministries</h4>
-                <p className="p1 color-gray mt-4 ">
+                <p className="p2 color-gray mt-2 ">
                   At Ignite, our ministries are the heartbeat of our community, each serving as a unique avenue for
                   spiritual growth, fellowship, and service. Whether you&apos;re seeking camaraderie in our vibrant
                   men&apos;s and women&apos;s groups, exploring inner healing and restoration, pursuing deeper insights

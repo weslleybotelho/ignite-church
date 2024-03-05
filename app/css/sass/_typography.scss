@@ -385,6 +385,6 @@ li {
 .hbig {
   @include typeface-1(hbig, desktop);
   @include responsive(s) {
-    @include typeface-1(hbig, mobile);
+    @include typeface-1(hbig, smallmobile);
   }
 }

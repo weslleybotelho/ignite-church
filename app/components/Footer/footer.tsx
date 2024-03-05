@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="container py-1">
           <div className="row flex-center">
             <div className="grid-2">
-              <Image src={logoIgniteFooter} alt="Ignite Logo" width={168} height={168} />
+              <Image src={logoIgniteFooter} alt="Ignite Logo" width={140} height={140} />
             </div>
             <div className="grid-7">
               <h3 className="uppercase color-white hbig">ignite church</h3>

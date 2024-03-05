@@ -21,7 +21,7 @@ export default function School() {
 
   useGSAP(() => {
     slideFromLeftScroll('#vision > section', '#vision');
-    slideFromRightScroll('#mission > section', '#mission');
+    fadeFromBelowScroll('#mission > section', '#mission');
     fadeFromOpacityScroll('#points > section', '#points');
     fadeFromBelowScroll('#years > section', '#years');
     slideFromLeftScroll('#infos > section', '#infos');
@@ -55,7 +55,7 @@ export default function School() {
             </section>
           </section>
         </section>
-        <section className="relative container flex-center py-0 hidden-x" id="mission">
+        <section className="relative container flex-center py-0" id="mission">
           <section className="grid-6">
             <h2 className="uppercase text-center">mission</h2>
             <p className="p1 text-center color-black">
