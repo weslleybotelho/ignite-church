@@ -10,7 +10,6 @@ import {
   fadeFromBelowScroll,
   fadeFromOpacityScroll,
   slideFromLeftScroll,
-  slideFromRightScroll,
 } from '../utils/gsapAnimations';
 import './school.scss';
 

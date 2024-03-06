@@ -10,7 +10,7 @@ User-agent: *
 Allow: /about-ignite
 
 User-agent: *
-Allow: /ignite-ministries
+Allow: /ministries
 
 User-agent: *
-Allow: /ignite-school-of-ministry
+Allow: /ignite-school-of-ministries

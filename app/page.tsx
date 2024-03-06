@@ -153,7 +153,7 @@ export default function Home() {
                 “Our misson is to see our students be transformed and empowered to reform the world around them and
                 release Heaven on earth.”
               </p>
-              <Link href="/ignite-school-of-ministry" className="btn-orange mt-5">
+              <Link href="/ignite-school-of-ministries" className="btn-orange mt-5">
                 Read more
               </Link>
             </section>

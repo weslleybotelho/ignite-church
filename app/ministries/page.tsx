@@ -65,7 +65,7 @@ export default function Ministries() {
                 className="img-ministries"
               />
               <h6 className="">School of Ministry</h6>
-              <Link href="/ignite-school-of-ministry" className="color-gradient bold">
+              <Link href="/ignite-school-of-ministries" className="color-gradient bold">
                 View More
               </Link>
             </div>
