@@ -35,7 +35,7 @@ export default function School() {
               <header>
                 <h1 className="absolute-center absolut color-white text-center uppercase">
                   Ignite School <br />
-                  Of Ministries
+                  Of Ministry
                 </h1>
               </header>
             </section>

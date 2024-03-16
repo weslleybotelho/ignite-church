@@ -817,6 +817,24 @@
   }
 }
 
+.img-women1 {
+  transform: translate(0px, -230px);
+}
+@media screen and (max-width: 960px) {
+  .img-women1 {
+    transform: translate(0px, 0px);
+  }
+}
+
+.women-paragraph {
+  transform: translate(0px, -180px);
+}
+@media screen and (max-width: 960px) {
+  .women-paragraph {
+    transform: translate(0px, 0px);
+  }
+}
+
 .s-0 {
   margin: 0;
   padding: 0;
@@ -1360,6 +1378,15 @@
 
 .pb-9 {
   padding-bottom: 128px !important;
+}
+
+.pb-9-back {
+  padding-bottom: 128px !important;
+}
+@media screen and (max-width: 960px) {
+  .pb-9-back {
+    padding-bottom: 16px !important;
+  }
 }
 
 .px-0 {

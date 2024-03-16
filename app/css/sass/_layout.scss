@@ -593,3 +593,17 @@ $gutter: 32px;
     transform: translate(0px, 0px);
   }
 }
+
+.img-women1 {
+  transform: translate(0px, -230px);
+  @include responsive(s) {
+    transform: translate(0px, 0px);
+  }
+}
+
+.women-paragraph {
+  transform: translate(0px, -180px);
+  @include responsive(s) {
+    transform: translate(0px, 0px);
+  }
+}

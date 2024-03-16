@@ -441,6 +441,12 @@ $gap-9: 128px;
 .pb-9 {
   padding-bottom: $gap-9 !important;
 }
+.pb-9-back {
+  padding-bottom: $gap-9 !important;
+  @include responsive(s) {
+    padding-bottom: $gap-2 !important;
+  }
+}
 
 .px-0 {
   padding-left: 0 !important;
