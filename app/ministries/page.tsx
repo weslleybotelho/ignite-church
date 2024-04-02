@@ -71,8 +71,8 @@ export default function Ministries() {
             </div>
             <div className="grid-3">
               <Image src={musicImg} alt="Image Ignite Music" width={260} height={190} className="img-ministries" />
-              <h6 className="">Ignite Music</h6>
-              <Link href={''} className="color-gradient bold">
+              <h6 className="">Ignite Worship</h6>
+              <Link href="/ministries/worship" className="color-gradient bold">
                 View More
               </Link>
             </div>
