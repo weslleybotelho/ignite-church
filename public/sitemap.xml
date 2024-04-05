@@ -1,20 +1,19 @@
-<xml version="1.0" encoding="UTF-8">
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-      <loc>https://igniteministries.eu/</loc>
-      <lastmod>2024-03-06</lastmod>
-    </url>
-    <url>
-      <loc>https://igniteministries.eu/about-ignite</loc>
-      <lastmod>2024-02-15</lastmod>
-    </url>
-    <url>
-      <loc>https://igniteministries.eu/ministries</loc>
-      <lastmod>2024-03-06</lastmod>
-    </url>
-    <url>
-      <loc>https://igniteministries.eu/ignite-school-of-ministries</loc>
-      <lastmod>2024-03-06</lastmod>
-    </url>
-  </urlset>
-</xml>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://igniteministries.eu/</loc>
+    <lastmod>2024-03-06</lastmod>
+  </url>
+  <url>
+    <loc>https://igniteministries.eu/about-ignite</loc>
+    <lastmod>2024-02-15</lastmod>
+  </url>
+  <url>
+    <loc>https://igniteministries.eu/ministries</loc>
+    <lastmod>2024-03-06</lastmod>
+  </url>
+  <url>
+    <loc>https://igniteministries.eu/ignite-school-of-ministries</loc>
+    <lastmod>2024-03-06</lastmod>
+  </url>
+</urlset>
