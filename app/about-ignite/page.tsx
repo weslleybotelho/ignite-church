@@ -38,7 +38,7 @@ export default function About() {
         <section id="about">
           <section className="container text-center text-about">
             <h2 className="p1">Ignite Church Brussels: A Journey of Faith and Vision</h2>
-            <p className="pt-4 p2 color-gray">
+            <p className="pt-4 p2">
               Maldo&apos;s journey to founding Ignite Church in Brussels, Belgium, is a testament to unwavering faith
               and dedication. Born in Dolores Eastern Samar, Philippines, he relocated to Belgium at a young age, where
               he encountered the transformative power of Christ. Influenced profoundly by his mother&apos;s prayers,
@@ -65,7 +65,7 @@ export default function About() {
             </div>
             <div className="grid-6">
               <h5 className="text-center">Pr Maldo</h5>
-              <p className="text-center pt-4 color-gray">
+              <p className="text-center pt-4">
                 Growing up in the vibrant Filipino community of &quot;Christian Center Anderlecht,&quot; Maldo&apos;s
                 calling to ministry became increasingly evident. Following years of faithful service within the church,
                 Maldo and his wife, Jasmine, were released in 2016 to establish Ignite Church—an endeavor rooted in the
@@ -94,13 +94,9 @@ export default function About() {
             <div className="row">
               <div className="grid-6 flex-center-column">
                 <h3 className="uppercase p1 bold">vision</h3>
-                <p className="p2 mt-2 color-gray text-center">
-                  Lorem ipsum dolor sit amet consectetur. Varius proin odio ut morbi nulla velit fusce. Pulvinar
-                  suspendisse facilisis et habitant pulvinar pellentesque. Egestas vel dui fermentum risus in. Platea
-                  auctor sapien mattis vel gravida massa nisl arcu sit.
-                </p>
+                <p className="p2 mt-2 text-center">Ignite a generation for Jesus.</p>
                 <h3 className="uppercase p1 bold mt-5">mission</h3>
-                <p className="p2 mt-2 color-gray text-center">
+                <p className="p2 mt-2 text-center">
                   At Ignite Church Brussels, our mission is deeply rooted in five foundational pillars: Presence, Power,
                   Purity, People, and Purpose. These pillars guide our every endeavor, shaping our collective vision and
                   driving our commitment to impacting lives and communities with the love and truth of Jesus Christ.
@@ -135,7 +131,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <p className="color-gray">
+                  <p className="">
                     At Ignite Church Brussels, we prioritize cultivating the presence of God in every aspect of our
                     community. Through vibrant worship, fervent prayer, and intentional fellowship, we create an
                     atmosphere where His presence is palpable, leading to transformative encounters and deepening our
@@ -159,7 +155,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <p className="color-gray">
+                  <p className="">
                     Driven by our passion for Jesus and His kingdom, we embrace our purpose to impact our world for His
                     glory. With clarity of vision and unwavering determination, we pursue God&apos;s purposes with
                     boldness and purpose, seeking to fulfill His plans for our lives and our church.
@@ -183,7 +179,7 @@ export default function About() {
                     </svg>
                   </div>
 
-                  <p className="color-gray">
+                  <p className="">
                     Integrity and purity are the cornerstones of our walk with God at Ignite Church Brussels. We are
                     committed to upholding biblical standards of righteousness and holiness in all areas of our lives,
                     striving to live blamelessly before God and one another, with hearts surrendered to His will.
@@ -207,7 +203,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <p className="color-gray">
+                  <p className="">
                     Empowered by the Holy Spirit, we embrace the power of God to bring about lasting change in our lives
                     and the world around us. Through the demonstration of God&apos;s power in signs, wonders, and
                     miracles, we boldly proclaim the gospel and advance His kingdom with confidence and authority.
@@ -229,7 +225,7 @@ export default function About() {
                       />
                     </svg>
                   </div>
-                  <p className="color-gray">
+                  <p className="">
                     At the heart of Ignite Church Brussels is a deep love for people. We believe in the value and
                     dignity of every individual, and we are dedicated to creating a welcoming and inclusive community
                     where everyone feels loved, accepted, and valued, regardless of background or circumstance.

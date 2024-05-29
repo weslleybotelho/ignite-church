@@ -78,13 +78,13 @@ export default function Ministries() {
             </div>
           </div>
           <div className="row">
-            <div className="grid-3">
+            {/* <div className="grid-3">
               <Image src={podcastImg} alt="Image Ignite Podcast" width={260} height={190} className="img-ministries" />
               <h6 className="">Podcast</h6>
               <Link href={''} className="color-gradient bold">
                 View More
               </Link>
-            </div>
+            </div> */}
             <div className="grid-3">
               <Image
                 src={homeGroupImg}

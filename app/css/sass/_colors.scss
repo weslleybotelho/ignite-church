@@ -47,7 +47,15 @@ $yellow-light: #ffd76b;
   color: $white-normal;
 }
 
+.color-white-dark {
+  color: $white-darken;
+}
+
 .color-black {
+  color: $black-light;
+}
+
+.color-black-light {
   color: $black-light;
 }
 

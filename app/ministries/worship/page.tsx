@@ -87,65 +87,33 @@ export default function Worship() {
               <Image src={school3} alt="school 1" className="contain h-auto school2" />
             </section>
             <section className="grid-6">
-              <h3 className="uppercase text-center color-white">The school is for you if:</h3>
-              <div className="ml-2 li-white">
-                <li>You feel a call towards ministry</li>
-                <li>You want to know your identity as a son and daughter of God</li>
-                <li>You want to learn how to walk in the gifts of the Spirit</li>
-                <li>You want to impact your sphere of influence by learning how to reflect Jesus</li>
-                <li>You want to go deeper in your relationship with God</li>
-              </div>
+              <h6 className="mt-2 color-white">Purity and integrity</h6>
+              <p className="text-center color-white">
+                Upholding the biblical standards in all our actions and decisions. Integrity and purity will be our
+                guiding principle, and we will lead by example, demonstrating honesty, fairness, and transparency, etc.
+              </p>
+              <h6 className="mt-2 color-white">Prayer and intercession</h6>
+              <p className="text-center color-white">
+                Pray and intercede for the worship team and its members as well as the members of the core team worship.
+                We want to bath everything we do with prayer.
+              </p>
+              <h6 className="mt-2 color-white">Excellency</h6>
+              <p className="text-center color-white">
+                Give God our best. We will give time to practice our skills in order to be better and give God what He
+                is worthy of. The goal is not perfection but excellence. The heart behind an excellent heart is giving
+                something that costs us.
+              </p>
             </section>
           </section>
         </section>
-        <section className="container row py-0" id="years">
-          <section className="grid-2 disappear"></section>
-          <section className="grid-4">
-            <h5 className="bold uppercase">First year</h5>
-            <div className="ml-2">
-              <ul className="">
-                <li>Identity in Christ</li>
-                <li>Intimacy with God</li>
-                <li>The gifts of the Spirit (prophetic, healing, miracles, etc.)</li>
-                <li>The church and the 5-fold ministry (apostle, prophet, teacher, evangelist, pastor)</li>
-                <li>Understanding the call of God upon your life</li>
-                <li>Revival history</li>
-                <li>And more ...</li>
-              </ul>
-            </div>
-          </section>
-          <section className="grid-4">
-            <h5 className="bold uppercase">Second year</h5>
-            <div className="ml-2">
-              <ul className="">
-                <li>Leadership and character</li>
-                <li>Culture of Honor</li>
-                <li>Spiritual warfare & Deliverance</li>
-                <li>Purity, dating & marriage</li>
-                <li>Emotional health</li>
-                <li>Preaching activation</li>
-                <li>Ministry trip</li>
-                <li>And more ...</li>
-              </ul>
-            </div>
-          </section>
-          <section className="grid-2 disappear"></section>
-        </section>
-        <section className="container row py-0" id="infos">
+        {/* <section className="container row py-0" id="infos">
           <section className="grid-2 disappear"></section>
           <section className="grid-8">
-            <h5>Meeting Times</h5>
-            <p className="p5 color-black">April</p>
             <h5 className="mt-3">Contact</h5>
-            <p className="p5 color-black">More information on the school and how to apply via email:</p>
-            <a
-              href="mailto:ignite.ministryschool@gmail.com?subject = ISM Information&body = Hi, I would like to get more information about the school."
-              className="color-gradient">
-              ignite.ministryschool@gmail.com
-            </a>
+            <p className="p5 color-black">Worship team for more information</p>
           </section>
           <section className="grid-2 disappear"></section>
-        </section>
+        </section> */}
       </article>
     </>
   );

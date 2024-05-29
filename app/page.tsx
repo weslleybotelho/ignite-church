@@ -83,7 +83,7 @@ export default function Home() {
           <section className="grid-6 grid-itens-mobile">
             <h3 className="color-gradient p2 uppercase mt-3">About Ignite Church Brussels</h3>
             <h4 className="mt-3">Welcome to Ignite Church Brussels</h4>
-            <p className=" color-gray mt-4">
+            <p className=" color-black-light mt-4">
               A vibrant Christian church nestled in the heart of Belgium. Our community is rooted in the faith in{' '}
               <span className="color-gradient">Jesus</span>, with a fervent belief in the transformative power of{' '}
               <span className="color-gradient"> revival</span>. At Ignite Church Brussels, we are more than just a
@@ -123,7 +123,7 @@ export default function Home() {
               </div>
               <div className="grid-4">
                 <h4 className="color-gradient p2 uppercase">ministries</h4>
-                <p className="p2 color-gray mt-2 ">
+                <p className="p2 color-white-dark mt-2 ">
                   At Ignite, our ministries are the heartbeat of our community, each serving as a unique avenue for
                   spiritual growth, fellowship, and service. Whether you&apos;re seeking camaraderie in our vibrant
                   men&apos;s and women&apos;s groups, exploring inner healing and restoration, pursuing deeper insights
@@ -149,11 +149,11 @@ export default function Home() {
               <p className="p1 color-white pt-5">
                 Encountered <br /> <span className="color-gradient">Transformed</span> <br /> Empowered
               </p>
-              <p className="p3 text-center pt-5 w-75">
+              <p className="p3 text-center pt-5 w-75 color-white">
                 “Our misson is to see our students be transformed and empowered to reform the world around them and
                 release Heaven on earth.”
               </p>
-              <Link href="/ignite-school-of-ministries" className="btn-orange mt-5">
+              <Link href="/ignite-school-of-ministry" className="btn-orange mt-5">
                 Read more
               </Link>
             </section>
@@ -184,7 +184,7 @@ export default function Home() {
               <p className="p1 color-black pt-3">
                 Ignite the future with our <span className="color-gradient">new home</span>
               </p>
-              <p className="p3 pt-4 color-gray">
+              <p className="p3 pt-4">
                 At Ignite Church, we&apos;re embarking on an exciting journey to secure a permanent home that goes
                 beyond bricks and mortar — it&apos;s a sanctuary where dreams are built and futures are shaped. <br />
                 We envision a space that caters to the diverse needs of our community. With your support, we aim to
@@ -192,7 +192,7 @@ export default function Home() {
                 Brussels, fostering connection and spreading the transformative message of God&apos;s love throughout
                 our city.
               </p>
-              <Link href="#" className="btn-orange mt-5">
+              <Link href="https://donate.stripe.com/dR63d476ucLN41i00a" target="_blank" className="btn-orange mt-5">
                 Donate
               </Link>
             </section>

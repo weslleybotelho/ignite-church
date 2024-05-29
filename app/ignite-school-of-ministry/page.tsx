@@ -48,7 +48,7 @@ export default function School() {
             </section>
             <section className="grid-6">
               <h2 className="uppercase color-white text-center">vision</h2>
-              <p className="text-center p1">
+              <p className="text-center p1 color-gray-light">
                 Equip a generation to walk in the Spirit and to experience God&apos;s radical love for them.
               </p>
             </section>
@@ -84,7 +84,7 @@ export default function School() {
             </section>
             <section className="grid-6">
               <h3 className="uppercase text-center color-white">The school is for you if:</h3>
-              <div className="ml-2 li-white">
+              <div className="ml-2 mt-3 li-white">
                 <li>You feel a call towards ministry</li>
                 <li>You want to know your identity as a son and daughter of God</li>
                 <li>You want to learn how to walk in the gifts of the Spirit</li>
@@ -98,7 +98,7 @@ export default function School() {
           <section className="grid-2 disappear"></section>
           <section className="grid-4">
             <h5 className="bold uppercase">First year</h5>
-            <div className="ml-2">
+            <div className="ml-2 mt-3">
               <ul className="">
                 <li>Identity in Christ</li>
                 <li>Intimacy with God</li>
@@ -112,7 +112,7 @@ export default function School() {
           </section>
           <section className="grid-4">
             <h5 className="bold uppercase">Second year</h5>
-            <div className="ml-2">
+            <div className="ml-2 mt-3">
               <ul className="">
                 <li>Leadership and character</li>
                 <li>Culture of Honor</li>
@@ -131,9 +131,9 @@ export default function School() {
           <section className="grid-2 disappear"></section>
           <section className="grid-8">
             <h5>Meeting Times</h5>
-            <p className="p5 color-black">April</p>
+            <p className="p5 ">April</p>
             <h5 className="mt-3">Contact</h5>
-            <p className="p5 color-black">More information on the school and how to apply via email:</p>
+            <p className="p5 ">More information on the school and how to apply via email:</p>
             <a
               href="mailto:ignite.ministryschool@gmail.com?subject = ISM Information&body = Hi, I would like to get more information about the school."
               className="color-gradient">
