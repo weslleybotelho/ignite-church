@@ -13,4 +13,4 @@ User-agent: *
 Allow: /ministries
 
 User-agent: *
-Allow: /ignite-school-of-ministries
+Allow: /ignite-school-of-ministry
