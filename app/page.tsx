@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 
-import AboutIgniteImg from './img/about-ignite.jpg';
+import AboutIgniteImg from './img/about-ignite2.png';
 import MinistriesImg from './img/ministries-home.jpg';
 import IsmImg from './img/ism.jpg';
 import BuildingImg from './img/building.jpg';
@@ -99,8 +99,8 @@ export default function Home() {
             <Image
               src={AboutIgniteImg}
               alt="about ignite "
-              className="cover img-mobile img-round"
-              width={490}
+              className="contain img-mobile img-round"
+              width={500}
               height={410}
             />
           </section>

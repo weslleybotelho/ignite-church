@@ -29,7 +29,7 @@ export default function Kids() {
                     hearts of preschool-aged children. Our dedicated team of volunteers, fluent in French, English, and
                     Dutch, welcomes your children at our office while you enjoy the service.
                   </p>
-                  <p>
+                  <p className="p3 mt-2 color-gray-light">
                     This is more than just babysitting. We believe in Christ&apos;s ability to transform the youngest
                     hearts, preparing them to positively impact the world. Together, we pray, memorize verses, and share
                     stories inspired by Holy Scriptures. Our lessons are carefully tailored for a deep understanding,

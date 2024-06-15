@@ -64,7 +64,7 @@ export default function Women() {
               />
 
               <div className="women-paragraph">
-                <p className="color-gray mt-4">
+                <p className="color-black mt-4">
                   Our focus is on fostering inner strength and confidence rooted in our identity in Christ, enabling us
                   to overcome life&apos;s challenges with resilience and grace. Through mutual support, encouragement,
                   and prayer, we create a safe space where transparency and vulnerability are celebrated. Join us as we

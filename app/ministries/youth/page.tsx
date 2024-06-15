@@ -42,12 +42,12 @@ export default function Youth() {
               </div>
               <div className="grid-6 pb-0">
                 <div>
-                  <p className="p3">
+                  <p className="p3 color-gray-light">
                     Ignite Youth Ministry (IYM) is a group of young people aged from 12 to 25 years old that are sold
                     for Jesus and His Kingdom and are ready to be equipped and taught to make a difference wherever God
                     calls them to.
                   </p>
-                  <p className="p3 mt-2">
+                  <p className="p3 mt-2 color-gray-light">
                     It is also a place to build healthy and long-lasting friendships that glorify God and help us to
                     finish the race on planet earth. Most importantly it is a place where young people can learn what it
                     means to have their identity anchored in Jesus-Christ, the perfect model.
@@ -61,7 +61,7 @@ export default function Youth() {
         <section className="container">
           <div className="row flex-center-revert-mobile" id="story2">
             <div className="grid-6 py-0">
-              <p className="p3 color-black">
+              <p className="p3">
                 For Jesus, his community of disciples was not just another kind of community like a school or a sport
                 club, it actually was his family: He replied to him, “Who is my mother, and who are my brothers?”
                 Pointing to his disciples, he said, “Here are my mother and my brothers. For whoever does the will of my

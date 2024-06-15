@@ -44,7 +44,7 @@ export default function Worship() {
             </section>
             <section className="grid-6">
               <h2 className="uppercase color-white text-center">vision</h2>
-              <p className="text-center p1">
+              <p className="text-center p1 color-gray-light">
                 Ignite Worship is a movement of sons and daughters who worship Jesus or what He has done and who He is.
                 We are a family. We are passionate worshippers of Him. We burn for Him. We are hungry and thirsty for
                 Jesus.
