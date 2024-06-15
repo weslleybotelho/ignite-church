@@ -38,7 +38,7 @@ export default function SliderEvents() {
         <section className="carousel-view">
           <button id="prev-btn" className="prev-btn" ref={prev} onClick={handlerPrevButton}></button>
           <section className="item-list" ref={list}>
-            <div className="item flex-center-column" id="item">
+            {/* <div className="item flex-center-column" id="item">
               <h6 className="text-center p1 bold" style={{ height: '70px' }}>
                 Presence Conference
               </h6>
@@ -60,12 +60,12 @@ export default function SliderEvents() {
                 target="_blank">
                 View more
               </Link>
-            </div>
+            </div> */}
             <div className="item flex-center-column" id="item">
               <h6 className="text-center p1 bold" style={{ height: '70px' }}>
                 Arise
               </h6>
-              <p className="color-gradient">Jul 19-20-21, 2024</p>
+              <p className="color-gradient">Jul 18-19-20, 2024</p>
               <Image
                 src={AriseImg}
                 alt="Arise background"
@@ -81,7 +81,7 @@ export default function SliderEvents() {
                 View more
               </Link>
             </div>
-            <div className="item flex-center-column" id="item">
+            {/* <div className="item flex-center-column" id="item">
               <h6 className="text-center p1 bold" style={{ height: '70px' }}>
                 Arise Camp
               </h6>
@@ -101,7 +101,7 @@ export default function SliderEvents() {
               <Link className="btn-black mt-3" href="#">
                 View more
               </Link>
-            </div>
+            </div> */}
           </section>
           <button id="next-btn" className="next-btn" ref={next} onClick={handlerNextButton}></button>
         </section>
