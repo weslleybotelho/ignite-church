@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="row">
             <div className="grid-4">
               <h4 className="color-white">Address</h4>
-              <p className="p2 color-gray">Rue de Ligne 8, 1000 Bruxelles</p>
+              <p className="p2 color-gray">Rue des Colonies 56, 1000 Bruxelles</p>
             </div>
             <div className="grid-4">
               <h4 className="color-white">Contact</h4>
