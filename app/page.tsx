@@ -105,6 +105,7 @@ export default function Home() {
             />
           </section>
         </section>
+
         {/* ----------------------------Ministries------------------------- */}
         <section className="relative bg-black hidden-x" id="ministries">
           <div className="container py-3">
@@ -137,37 +138,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* ----------------------Events----------------------------------- */}
-        <section className="container py-3 relative" id="events">
-          <SliderEvents></SliderEvents>
-        </section>
-        {/* ----------------------School------------------------------------ */}
-        <section className="relative bg-black" id="ism">
-          <section className="container row py-3">
-            <section className="grid-6 grid-itens-mobile">
-              <h5 className="p2 uppercase color-gradient">ignite school of ministry</h5>
-              <p className="p1 color-white pt-5">
-                Encountered <br /> <span className="color-gradient">Transformed</span> <br /> Empowered
-              </p>
-              <p className="p3 text-center pt-5 w-75 color-white">
-                “Our misson is to see our students be transformed and empowered to reform the world around them and
-                release Heaven on earth.”
-              </p>
-              <Link href="/ignite-school-of-ministry" className="btn-orange mt-5">
-                Read more
-              </Link>
-            </section>
-            <section className="grid-6 pt-6">
-              <Image
-                src={IsmImg}
-                className="img-mobile img-round"
-                alt="Ignite School of Ministry"
-                style={{ objectFit: 'cover' }}
-                width={360}
-                height={390}></Image>
-            </section>
-          </section>
-        </section>
         {/* ----------------------Building--------------------------------- */}
 
         <section className="relative hidden-x" id="building">
@@ -195,6 +165,37 @@ export default function Home() {
               <Link href="https://donate.stripe.com/dR63d476ucLN41i00a" target="_blank" className="btn-orange mt-5">
                 Donate
               </Link>
+            </section>
+          </section>
+        </section>
+        {/* ----------------------Events----------------------------------- */}
+        {/* <section className="container py-3 relative" id="events">
+          <SliderEvents></SliderEvents>
+        </section> */}
+        {/* ----------------------School------------------------------------ */}
+        <section className="relative bg-black" id="ism">
+          <section className="container row py-3">
+            <section className="grid-6 grid-itens-mobile">
+              <h5 className="p2 uppercase color-gradient">ignite school of ministry</h5>
+              <p className="p1 color-white pt-5">
+                Encountered <br /> <span className="color-gradient">Transformed</span> <br /> Empowered
+              </p>
+              <p className="p3 text-center pt-5 w-75 color-white">
+                “Our misson is to see our students be transformed and empowered to reform the world around them and
+                release Heaven on earth.”
+              </p>
+              <Link href="/ignite-school-of-ministry" className="btn-orange mt-5">
+                Read more
+              </Link>
+            </section>
+            <section className="grid-6 pt-6">
+              <Image
+                src={IsmImg}
+                className="img-mobile img-round"
+                alt="Ignite School of Ministry"
+                style={{ objectFit: 'cover' }}
+                width={360}
+                height={390}></Image>
             </section>
           </section>
         </section>
