@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
-import aboutHero from '../img/about-hero3.jpg';
-import aboutImg1 from '../img/about-image1.jpg';
-import coreValuesImg from '../img/core-values.png';
+import aboutHero from '../../img/about-hero3.jpg';
+import aboutImg1 from '../../img/about-image1.jpg';
+import coreValuesImg from '../../img/core-values.png';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,7 +11,7 @@ import {
   fadeFromOpacityScroll,
   slideFromLeftScroll,
   slideFromRightScroll,
-} from '../utils/gsapAnimations';
+} from '../../utils/gsapAnimations';
 
 export default function About() {
   useGSAP(() => {

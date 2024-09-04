@@ -1,10 +1,10 @@
 import { Inter } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import './css/style.scss';
-import Header from './components/Header/header';
-import Footer from './components/Footer/footer';
-import Loading from './components/Loading/loading';
+import '../css/style.scss';
+import Header from '../components/Header/header';
+import Footer from '../components/Footer/footer';
+import Loading from '../components/Loading/loading';
 import { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });

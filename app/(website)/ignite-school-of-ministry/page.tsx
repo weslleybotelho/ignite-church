@@ -1,16 +1,16 @@
 'use client';
 import Image from 'next/image';
-import heroImg from '../img/hero-school.webp';
-import school1 from '../img/school-1.png';
-import school2 from '../img/school-2.jpg';
-import school3 from '../img/school-3.jpg';
+import heroImg from '../../img/hero-school.webp';
+import school1 from '../../img/school-1.png';
+import school2 from '../../img/school-2.jpg';
+import school3 from '../../img/school-3.jpg';
 import { useGSAP } from '@gsap/react';
 import {
   fadeFromBelow,
   fadeFromBelowScroll,
   fadeFromOpacityScroll,
   slideFromLeftScroll,
-} from '../utils/gsapAnimations';
+} from '../../utils/gsapAnimations';
 import './school.scss';
 
 export default function School() {

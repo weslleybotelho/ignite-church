@@ -3,18 +3,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 
-import AboutIgniteImg from './img/about-ignite2.png';
-import MinistriesImg from './img/ministries-home.jpg';
-import IsmImg from './img/ism.jpg';
-import BuildingImg from './img/building.jpg';
-import SliderEvents from './components/Slider/sliderEvents';
+import AboutIgniteImg from '../img/about-ignite2.png';
+import MinistriesImg from '../img/ministries-home.jpg';
+import IsmImg from '../img/ism.jpg';
+import BuildingImg from '../img/building.jpg';
+import SliderEvents from '../components/Slider/sliderEvents';
 import {
   fadeFromBelow,
   fadeFromBelowScroll,
   fadeFromOpacityScroll,
   slideFromLeftScroll,
   slideFromRightScroll,
-} from './utils/gsapAnimations';
+} from '../utils/gsapAnimations';
 
 export default function Home() {
   useGSAP(() => {
