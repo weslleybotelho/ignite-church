@@ -28,7 +28,6 @@ export default function UploadHomework() {
       formData.append('studentClass', studentClass);
       formData.append('file', file as Blob);
 
-      console.log(studentClass, studentName, file as Blob);
       const data = await axios
         .post('/api/homework', formData, {
           headers: {
@@ -36,7 +35,6 @@ export default function UploadHomework() {
           },
         })
         .then(({ data }) => data);
-      console.log('API Response:', data);
     } catch (error) {
       console.error('API Error:', error);
     }
@@ -46,10 +44,8 @@ export default function UploadHomework() {
     const fetchHomeworks = async () => {
       try {
         const result = await axios.get('/api/homework').then(({ data }) => data);
-        console.log(result);
         if (result) {
           setData(result);
-          console.log('API Response:', result);
         }
       } catch (error) {
         console.error('API Error:', error);
