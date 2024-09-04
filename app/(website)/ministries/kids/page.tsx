@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import kidsImg from '../../img/kidsministry.jpg';
+import kidsImg from '../../../img/kidsministry.jpg';
 
 export default function Kids() {
   return (

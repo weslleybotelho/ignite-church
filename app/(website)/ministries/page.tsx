@@ -1,18 +1,17 @@
 'use client';
 import Image from 'next/image';
-import evangelismImg from '../img/evangelism.jpg';
-import innerHealingImg from '../img/inner-healing.jpg';
-import schoolImg from '../img/school.jpg';
-import musicImg from '../img/music.jpg';
-import podcastImg from '../img/ignite-podcast.png';
-import homeGroupImg from '../img/homegroup.jpg';
-import womenImg from '../img/women.jpg';
-import menImg from '../img/men.jpg';
-import kidsMinistry from '../img/kidsministry.jpg';
-import youthMinistry from '../img/hero-youth.webp';
+import evangelismImg from '../../img/evangelism.jpg';
+import innerHealingImg from '../../img/inner-healing.jpg';
+import schoolImg from '../../img/school.jpg';
+import musicImg from '../../img/music.jpg';
+import homeGroupImg from '../../img/homegroup.jpg';
+import womenImg from '../../img/women.jpg';
+import menImg from '../../img/men.jpg';
+import kidsMinistry from '../../img/kidsministry.jpg';
+import youthMinistry from '../../img/hero-youth.webp';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
-import { fadeFromOpacity, slideFromRight } from '../utils/gsapAnimations';
+import { fadeFromOpacity, slideFromRight } from '../../utils/gsapAnimations';
 
 export default function Ministries() {
   useGSAP(() => {

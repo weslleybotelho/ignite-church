@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
-import heroImg from '../../img/hero-homegroup.webp';
-import homeGroup2Img from '../../img/homegroup2.webp';
+import heroImg from '../../../img/hero-homegroup.webp';
+import homeGroup2Img from '../../../img/homegroup2.webp';
 import { useGSAP } from '@gsap/react';
 import {
   fadeFromBelow,

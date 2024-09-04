@@ -1,16 +1,16 @@
 'use client';
 import Image from 'next/image';
-import heroImg from '../../img/music.jpg';
-import school1 from '../../img/worship1-min.webp';
-import school2 from '../../img/worship2-min.webp';
-import school3 from '../../img/music.jpg';
+import heroImg from '../../../img/music.jpg';
+import school1 from '../../../img/worship1-min.webp';
+import school2 from '../../../img/worship2-min.webp';
+import school3 from '../../../img/music.jpg';
 import { useGSAP } from '@gsap/react';
 import {
   fadeFromBelow,
   fadeFromBelowScroll,
   fadeFromOpacityScroll,
   slideFromLeftScroll,
-} from '../../utils/gsapAnimations';
+} from '../../../utils/gsapAnimations';
 
 export default function Worship() {
   useGSAP(() => {

@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import evangelismImg from '../../img/evangelism_bg.webp';
+import evangelismImg from '../../../img/evangelism_bg.webp';
 import { useGSAP } from '@gsap/react';
 import { fadeFromBelow, fadeFromBelowScroll, slideFromLeftScroll } from '@/app/utils/gsapAnimations';
 

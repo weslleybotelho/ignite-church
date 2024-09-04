@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
-import bgWomen from '../../img/bg-women.jpg';
-import women1 from '../../img/women1.png';
+import bgWomen from '../../../img/bg-women.jpg';
+import women1 from '../../../img/women1.png';
 import { fadeFromBelow, fadeFromBelowScroll, slideFromLeftScroll } from '@/app/utils/gsapAnimations';
 import { useGSAP } from '@gsap/react';
 
