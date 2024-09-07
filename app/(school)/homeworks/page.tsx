@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import downloadIcon from '@/public/svg/download.svg';
 import successIcon from '@/public/svg/checkbox-circlesvg.svg';
 import closeIcon from '@/public/svg/close-circle.svg';
+import Notification from '@/app/components/Notification/notification';
 import './homeworks.css';
 
 interface DataType {
@@ -24,6 +25,7 @@ export default function Homeworks() {
   const [filteredData, setFilteredData] = useState<DataType[]>();
   const [studentNameFilter, setStudentNameFilter] = useState('');
   const [studentClassFilter, setStudentClassFilter] = useState('');
+  const [notification, setNotification] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchHomeworks = async () => {
@@ -56,6 +58,7 @@ export default function Homeworks() {
     try {
       await axios.patch(`/api/homework/${id}/reviewed`);
       setData((prevData) => prevData?.map((item) => (item.id === id ? { ...item, reviewed: true } : item)));
+      setNotification('Homework reviewed');
     } catch (error) {
       console.error('API Error:', error);
     }
@@ -65,6 +68,7 @@ export default function Homeworks() {
     try {
       await axios.patch(`/api/homework/${id}/not-reviewed`);
       setData((prevData) => prevData?.map((item) => (item.id === id ? { ...item, reviewed: false } : item)));
+      setNotification('Homework rejected');
     } catch (error) {
       console.error('API Error:', error);
     }
@@ -72,6 +76,7 @@ export default function Homeworks() {
 
   return (
     <>
+      {notification && <Notification message={notification} onClose={() => setNotification(null)} />}
       <article className="">
         <section className="container pb-0">
           <h3>Homeworks</h3>
