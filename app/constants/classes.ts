@@ -1,5 +1,5 @@
 export const CLASSES: { [key: string]: string } = {
-  1: 'First Year',
-  2: 'Second Year',
-  3: 'Third Year',
+  1: 'First',
+  2: 'Second',
+  3: 'Third',
 };

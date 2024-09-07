@@ -13,8 +13,8 @@ export async function POST(req: NextRequest) {
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
     const result = await Database.query(
-      'INSERT INTO homeworks (student_name, student_class, file_name, file_data) VALUES ($1, $2, $3, $4) RETURNING *',
-      [body.studentName, body.studentClass, (body.file as File).name, buffer]
+      'INSERT INTO homeworks (student_name, student_class, file_name, file_data, reviewed) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+      [body.studentName, body.studentClass, (body.file as File).name, buffer, false]
     );
 
     if (!result) {

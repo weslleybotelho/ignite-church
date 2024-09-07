@@ -223,6 +223,10 @@ button {
   }
 }
 
+button:disabled {
+  opacity: 0.2;
+}
+
 .underline {
   position: relative;
 
