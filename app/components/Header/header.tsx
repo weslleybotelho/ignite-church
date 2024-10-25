@@ -31,7 +31,7 @@ export default function Header() {
               <Link href="/about-ignite" className="link-menu ml-3">
                 About
               </Link>
-              <Link href="/about-ignite" className="link-menu ml-3">
+              <Link href="/events" className="link-menu ml-3">
                 Events
               </Link>
               <Link href="/ministries" className=" link-menu ml-3">
