@@ -127,9 +127,9 @@ export default function Home() {
                   Serving God and serving people is the core of our values at Ignite Church. The ministries at Ignite
                   are a means for spiritual growth and the well-being of our community, both spiritually and
                   emotionally. We want to encourage, build, and exhort the people of God in different ways, using the
-                  tools provided by each program and service. Whether you're looking for a deep connection with God,
-                  fellowship with others, or a chance to grow in scripture, we hope these ministries give you a great
-                  experience of community.
+                  tools provided by each program and service. Whether you&apos;re looking for a deep connection with
+                  God, fellowship with others, or a chance to grow in scripture, we hope these ministries give you a
+                  great experience of community.
                 </p>
                 <Link className="btn-orange mt-5" href="/ministries">
                   Check our Ministries
