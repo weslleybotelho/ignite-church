@@ -844,11 +844,10 @@
 }
 
 .styled-table {
-  border-collapse: collapse;
+  border-spacing: 0;
   margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -1958,7 +1957,7 @@ html {
 body {
   width: 100%;
   overflow-x: hidden;
-  background-color: #fdfaf6;
+  background-color: #f5f5f5;
 }
 body::-webkit-scrollbar {
   padding-right: 4px;
@@ -1970,8 +1969,13 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background: #332e29;
+  background: #f5f5f5;
   border: 6px solid #ede6df;
+}
+
+button {
+  border: none;
+  background: none;
 }
 
 .border {
@@ -2408,6 +2412,10 @@ button {
 a:hover,
 button:hover {
   opacity: 0.8;
+}
+
+button:disabled {
+  opacity: 0.2;
 }
 
 .underline {

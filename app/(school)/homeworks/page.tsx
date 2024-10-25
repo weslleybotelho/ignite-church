@@ -109,11 +109,11 @@ export default function Homeworks() {
                 <table className="w-100 styled-table">
                   <thead className="">
                     <tr className="">
-                      <th>Student Name</th>
+                      <th style={{ borderRadius: '10px 0 0 0 ' }}>Student Name</th>
                       <th>Year</th>
                       <th>File Name</th>
                       <th>Reviewed</th>
-                      <th>Actions</th>
+                      <th style={{ borderRadius: '0 10px 0 0 ' }}>Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -125,7 +125,10 @@ export default function Homeworks() {
                           <td>{item.file_name}</td>
                           <td>{item.reviewed ? 'Yes' : 'No'}</td>
                           <td className="flex-start-row">
-                            <Link href={'/api/download-homework?homeworkId=' + item.id} className="flex-center">
+                            <Link
+                              href={'/api/download-homework?homeworkId=' + item.id}
+                              className="flex-center"
+                              style={{ cursor: 'no-pointer' }}>
                               <Image
                                 src={downloadIcon}
                                 alt="Icon Donwload Homework"

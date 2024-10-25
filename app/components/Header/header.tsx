@@ -31,6 +31,9 @@ export default function Header() {
               <Link href="/about-ignite" className="link-menu ml-3">
                 About
               </Link>
+              <Link href="/about-ignite" className="link-menu ml-3">
+                Events
+              </Link>
               <Link href="/ministries" className=" link-menu ml-3">
                 Ministries
               </Link>
@@ -61,7 +64,11 @@ export default function Header() {
                 About
               </Link>
             </li>
-
+            <li>
+              <Link href="/events" className="link-menu-mobile" onClick={handlerMenuMobile}>
+                Events
+              </Link>
+            </li>
             <li>
               <Link href="/ministries" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 Ministries

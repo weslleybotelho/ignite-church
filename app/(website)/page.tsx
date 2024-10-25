@@ -86,10 +86,9 @@ export default function Home() {
             <p className=" color-black-light mt-4">
               A vibrant Christian church nestled in the heart of Belgium. Our community is rooted in the faith in{' '}
               <span className="color-gradient">Jesus</span>, with a fervent belief in the transformative power of{' '}
-              <span className="color-gradient"> revival</span>. At Ignite Church Brussels, we are more than just a
-              congregation; we are a family of believers united by our passion for spiritual{' '}
-              <span className="color-gradient">awakening</span> and a genuine desire to make a positive impact on the
-              world around us.
+              <span className="color-gradient"> revival</span>. Ignite Church is a congregation of believers transformed
+              and touched by the <span className="color-gradient">presence of God</span>, we believe in the manifested
+              presence of God that has power to transform world around us.
             </p>
             <Link className="btn-orange mt-5" href="/about-ignite">
               Read more
@@ -125,11 +124,12 @@ export default function Home() {
               <div className="grid-4">
                 <h4 className="color-gradient p2 uppercase">ministries</h4>
                 <p className="p2 color-white-dark mt-2 ">
-                  At Ignite, our ministries are the heartbeat of our community, each serving as a unique avenue for
-                  spiritual growth, fellowship, and service. Whether you&apos;re seeking camaraderie in our vibrant
-                  men&apos;s and women&apos;s groups, exploring inner healing and restoration, pursuing deeper insights
-                  through our School of Ministries, or engaging with thought-provoking discussions on our insightful
-                  podcasts, there&apos;s a place for you to thrive and connect at Ignite.
+                  Serving God and serving people is the core of our values at Ignite Church. The ministries at Ignite
+                  are a means for spiritual growth and the well-being of our community, both spiritually and
+                  emotionally. We want to encourage, build, and exhort the people of God in different ways, using the
+                  tools provided by each program and service. Whether you're looking for a deep connection with God,
+                  fellowship with others, or a chance to grow in scripture, we hope these ministries give you a great
+                  experience of community.
                 </p>
                 <Link className="btn-orange mt-5" href="/ministries">
                   Check our Ministries
@@ -155,12 +155,11 @@ export default function Home() {
                 Ignite the future with our <span className="color-gradient">new home</span>
               </p>
               <p className="p3 pt-4">
-                At Ignite Church, we&apos;re embarking on an exciting journey to secure a permanent home that goes
-                beyond bricks and mortar — it&apos;s a sanctuary where dreams are built and futures are shaped. <br />
-                We envision a space that caters to the diverse needs of our community. With your support, we aim to
-                create a hub that not only serves our attendees but also extends a welcoming hand to the people of
-                Brussels, fostering connection and spreading the transformative message of God&apos;s love throughout
-                our city.
+                At Ignite Church, we&apos;re on a heartfelt journey to create a lasting home — not just a building, but
+                a place where dreams can grow and lives can be transformed. <br />
+                We envision a space that meets the diverse needs of our community. With your support, we aim to create a
+                hub that not only serves our attendees but also extends a welcoming hand to the people of Brussels,
+                spreading the transformative message of God&apos;s love throughout our city.
               </p>
               <Link href="https://donate.stripe.com/dR63d476ucLN41i00a" target="_blank" className="btn-orange mt-5">
                 Donate

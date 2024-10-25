@@ -94,7 +94,9 @@ export default function About() {
             <div className="row">
               <div className="grid-6 flex-center-column">
                 <h3 className="uppercase p1 bold">vision</h3>
-                <p className="p2 mt-2 text-center">Ignite a generation for Jesus.</p>
+                <p className="p2 mt-2 text-center">
+                  Igniting a generation on fire for Jesus and for the presence of God.
+                </p>
                 <h3 className="uppercase p1 bold mt-5">mission</h3>
                 <p className="p2 mt-2 text-center">
                   At Ignite Church Brussels, our mission is deeply rooted in five foundational pillars: Presence, Power,
