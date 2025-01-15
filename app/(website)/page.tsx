@@ -52,8 +52,8 @@ export default function Home() {
             <p>Your browser doesn&apos;t support HTML video.</p>
           </video>
 
-          <section className="container hero row">
-            <section className="grid-6 relative p-3">
+          <section className="container hero row mt-6">
+            <section className="grid-6 relative p-3 mt-4">
               <h1 className="uppercase color-gradient p5">ignite church brussels</h1>
               <h2 className="uppercase color-white h1-hero">igniting a generation for jesus</h2>
 

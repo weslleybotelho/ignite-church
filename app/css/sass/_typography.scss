@@ -1,11 +1,12 @@
 // Typography of project
 
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;700&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @mixin typeface-1($size, $device: desktop) {
-  font-family: 'Hind', sans-serif;
+  font-family: 'M PLUS 2', serif;
 
   @if $size == hbig and $device == desktop {
-    font-size: px;
+    font-size: 45px;
     line-height: 120%;
     font-weight: 400;
   } @else if $size == hbig and $device == mobile {
@@ -108,7 +109,8 @@
 }
 
 @mixin typeface-2($size: p2, $device: desktop) {
-  font-family: 'Roboto', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'Red Hat Display', serif;
 
   @if $size == p1 and $device == desktop {
     font-size: 26px;

@@ -37,6 +37,9 @@ export default function Header() {
               <Link href="/ministries" className=" link-menu ml-3">
                 Ministries
               </Link>
+              <Link href="/give" className=" link-menu ml-3">
+                Give
+              </Link>
               <Link href="/ignite-school-of-ministry" className=" link-menu ml-3 mr-3">
                 School
               </Link>
@@ -72,6 +75,11 @@ export default function Header() {
             <li>
               <Link href="/ministries" className="link-menu-mobile" onClick={handlerMenuMobile}>
                 Ministries
+              </Link>
+            </li>
+            <li>
+              <Link href="/give" className="link-menu-mobile" onClick={handlerMenuMobile}>
+                Give
               </Link>
             </li>
             <li>

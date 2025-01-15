@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;700&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -338,7 +339,7 @@
 .container {
   max-width: 1268px;
   margin: 0 auto;
-  padding: 64px 24px;
+  padding: 24px 24px;
   /*display: flex;
   justify-content: center;
   align-items: center;
@@ -352,13 +353,13 @@
 @media screen and (max-width: 960px) {
   .container {
     flex-direction: column;
-    padding: 96px 16px;
+    padding: 16px 16px;
   }
 }
 @media screen and (max-width: 460px) {
   .container {
     flex-direction: column;
-    padding: 96px 16px;
+    padding: 16px 16px;
   }
 }
 
@@ -579,6 +580,15 @@
 @media screen and (max-width: 460px) {
   .bg-about img {
     height: 100vh;
+  }
+}
+
+.img-hero {
+  height: 100%;
+}
+@media screen and (max-width: 960px) {
+  .img-hero {
+    height: 280px;
   }
 }
 
@@ -1534,7 +1544,7 @@
 }
 
 .h0 {
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 80px;
   line-height: 120%;
   font-weight: 400;
@@ -1542,7 +1552,7 @@
 }
 @media screen and (max-width: 960px) {
   .h0 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 40px;
     line-height: 120%;
     font-weight: 400;
@@ -1551,7 +1561,7 @@
 }
 @media screen and (max-width: 460px) {
   .h0 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 24px;
     line-height: 120%;
     font-weight: 400;
@@ -1562,14 +1572,14 @@
 h1 {
   color: #1c1815;
   z-index: 5;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 72px;
   line-height: 110%;
   font-weight: 400;
 }
 @media screen and (max-width: 960px) {
   h1 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 52px;
     line-height: 110%;
     font-weight: 400;
@@ -1577,7 +1587,7 @@ h1 {
 }
 @media screen and (max-width: 460px) {
   h1 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 48px;
     line-height: 120%;
     font-weight: 400;
@@ -1586,14 +1596,14 @@ h1 {
 
 h2 {
   color: #1c1815;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 64px;
   line-height: 110%;
   font-weight: 400;
 }
 @media screen and (max-width: 960px) {
   h2 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 40px;
     line-height: 120%;
     font-weight: 400;
@@ -1601,7 +1611,7 @@ h2 {
 }
 @media screen and (max-width: 460px) {
   h2 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 36px;
     line-height: 120%;
     font-weight: 400;
@@ -1610,14 +1620,14 @@ h2 {
 
 h3 {
   color: #1c1815;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 48px;
   line-height: 120%;
   font-weight: 400;
 }
 @media screen and (max-width: 960px) {
   h3 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 32px;
     line-height: 120%;
     font-weight: 400;
@@ -1625,7 +1635,7 @@ h3 {
 }
 @media screen and (max-width: 460px) {
   h3 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 28px;
     line-height: 130%;
     font-weight: 400;
@@ -1634,14 +1644,14 @@ h3 {
 
 h4 {
   color: #1c1815;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 32px;
   line-height: 120%;
   font-weight: 400;
 }
 @media screen and (max-width: 960px) {
   h4 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 28px;
     line-height: 130%;
     font-weight: 400;
@@ -1649,7 +1659,7 @@ h4 {
 }
 @media screen and (max-width: 460px) {
   h4 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 20px;
     line-height: 140%;
     font-weight: 400;
@@ -1658,14 +1668,14 @@ h4 {
 
 h5 {
   color: #1c1815;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 24px;
   line-height: 140%;
   font-weight: 400;
 }
 @media screen and (max-width: 960px) {
   h5 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 20px;
     line-height: 140%;
     font-weight: 400;
@@ -1674,14 +1684,14 @@ h5 {
 
 h6 {
   color: #1c1815;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 18px;
   line-height: 150%;
   font-weight: 500;
 }
 @media screen and (max-width: 960px) {
   h6 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -1689,14 +1699,14 @@ h6 {
 }
 
 .h7 {
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 16px;
   line-height: 150%;
   font-weight: 500;
 }
 @media screen and (max-width: 960px) {
   .h7 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -1706,14 +1716,14 @@ h6 {
 p {
   letter-spacing: 0px;
   color: #332e29;
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 16px;
   line-height: 26px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   p {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
@@ -1721,7 +1731,7 @@ p {
 }
 @media screen and (max-width: 460px) {
   p {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 14px;
     line-height: 26px;
     font-weight: 300;
@@ -1735,14 +1745,14 @@ p {
 }
 
 .p1 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 26px;
   line-height: 30px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   .p1 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 22px;
     line-height: 30px;
     font-weight: 300;
@@ -1750,7 +1760,7 @@ p {
 }
 @media screen and (max-width: 460px) {
   .p1 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: 300;
@@ -1758,14 +1768,14 @@ p {
 }
 
 .p2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   .p2 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
@@ -1773,14 +1783,14 @@ p {
 }
 
 .p3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 16px;
   line-height: 26px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   .p3 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
@@ -1788,14 +1798,14 @@ p {
 }
 
 .p4 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   .p4 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;
@@ -1803,14 +1813,14 @@ p {
 }
 
 .p5 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   .p5 {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;
@@ -1838,14 +1848,14 @@ span {
   color: #1c1815;
   letter-spacing: 1px;
   text-transform: none;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 72px;
   line-height: 110%;
   font-weight: 400;
 }
 @media screen and (max-width: 960px) {
   .letter-h1 {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 52px;
     line-height: 110%;
     font-weight: 400;
@@ -1854,14 +1864,14 @@ span {
 
 strong {
   color: #1c1815;
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   strong {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
@@ -1873,14 +1883,14 @@ b {
 }
 
 li {
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   li {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 300;
@@ -1901,7 +1911,7 @@ li {
 
 .h-xl {
   color: #1c1815;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 80px;
   line-height: 120%;
   font-weight: 400;
@@ -1909,7 +1919,7 @@ li {
 }
 @media screen and (max-width: 960px) {
   .h-xl {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 40px;
     line-height: 120%;
     font-weight: 400;
@@ -1919,7 +1929,7 @@ li {
 
 .h-l {
   color: #1c1815;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 80px;
   line-height: 120%;
   font-weight: 400;
@@ -1927,7 +1937,7 @@ li {
 }
 @media screen and (max-width: 960px) {
   .h-l {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 40px;
     line-height: 120%;
     font-weight: 400;
@@ -1936,14 +1946,14 @@ li {
 }
 
 .hbig {
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: px;
   line-height: 120%;
   font-weight: 400;
 }
 @media screen and (max-width: 960px) {
   .hbig {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 40px;
     line-height: 120%;
     font-weight: 400;
@@ -1957,7 +1967,7 @@ html {
 body {
   width: 100%;
   overflow-x: hidden;
-  background-color: #f5f5f5;
+  background-color: #fcfcfc;
 }
 body::-webkit-scrollbar {
   padding-right: 4px;
@@ -1969,7 +1979,7 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background: #f5f5f5;
+  background: #fcfcfc;
   border: 6px solid #ede6df;
 }
 
@@ -2224,7 +2234,7 @@ nav {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border-radius: 2px;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 16px;
   line-height: 150%;
   font-weight: 500;
@@ -2233,7 +2243,7 @@ nav {
 }
 @media screen and (max-width: 960px) {
   .btn-address {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -2267,7 +2277,7 @@ nav {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   border-radius: 2px;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 16px;
   line-height: 150%;
   font-weight: 500;
@@ -2276,7 +2286,7 @@ nav {
 }
 @media screen and (max-width: 960px) {
   .btn-live {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -2308,13 +2318,13 @@ nav {
   text-align: center;
   background: linear-gradient(225deg, #353536 8.12%, #646465 92.21%);
   border-radius: 2px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   position: relative;
   transition: 0.7s ease;
 }
 @media screen and (max-width: 960px) {
   .btn-black {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
   }
 }
 .btn-black:hover {
@@ -2330,13 +2340,13 @@ nav {
   background: linear-gradient(225deg, #fc935b 8.12%, #d95916 92.21%);
   border-radius: 2px;
   box-shadow: 0px 7px 56px rgba(92, 118, 46, 0.4);
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   position: relative;
   transition: 0.7s ease;
 }
 @media screen and (max-width: 960px) {
   .btn-orange {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Display", serif;
   }
 }
 .btn-orange:hover {
@@ -2352,7 +2362,7 @@ nav {
   background: linear-gradient(225deg, #ef702d 8.12%, #a9c96b 92.21%);
   border-radius: 10px;
   box-shadow: 0px 7px 32px rgba(92, 118, 46, 0.6);
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 16px;
   line-height: 150%;
   font-weight: 500;
@@ -2360,7 +2370,7 @@ nav {
 }
 @media screen and (max-width: 960px) {
   .btn-small {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -2377,14 +2387,14 @@ nav {
   background: transparent;
   border: 2px solid #332e29;
   border-radius: 12px;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 16px;
   line-height: 150%;
   font-weight: 500;
 }
 @media screen and (max-width: 960px) {
   .btn-secondary {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -2401,7 +2411,7 @@ nav {
 
 a,
 button {
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 16px;
   line-height: 26px;
   font-weight: 300;
@@ -2416,6 +2426,15 @@ button:hover {
 
 button:disabled {
   opacity: 0.2;
+}
+
+.button-secondary {
+  border-radius: 2px;
+  border-style: solid;
+  border-color: orange;
+  color: black;
+  padding: 4px 12px 4px 12px;
+  font-weight: 400;
 }
 
 .underline {
@@ -2438,7 +2457,7 @@ button:disabled {
 
 .link {
   color: #fdfaf6;
-  font-family: "Hind", sans-serif;
+  font-family: "M PLUS 2", serif;
   font-size: 18px;
   line-height: 150%;
   font-weight: 500;
@@ -2450,7 +2469,7 @@ button:disabled {
 }
 @media screen and (max-width: 960px) {
   .link {
-    font-family: "Hind", sans-serif;
+    font-family: "M PLUS 2", serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 500;
@@ -2516,7 +2535,7 @@ textarea {
   border-radius: 4px;
   color: #332e29;
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Red Hat Display", serif;
   font-size: 16px;
   line-height: 26px;
   font-weight: 300;

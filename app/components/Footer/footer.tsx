@@ -14,29 +14,29 @@ export default function Footer() {
       <footer className="relative bg-black" id="footer">
         <div className="container py-1">
           <div className="row flex-center">
-            <div className="grid-2">
-              <Image src={logoIgniteFooter} alt="Ignite Logo" width={140} height={140} />
+            <div className="grid-2 m-0">
+              <Image src={logoIgniteFooter} alt="Ignite Logo" width={85} height={85} />
             </div>
-            <div className="grid-7">
-              <h3 className="uppercase color-white hbig">ignite church</h3>
+            <div className="grid-7 m-0">
+              <h3 className="uppercase color-white">ignite church</h3>
             </div>
             <div className="grid-3 disappear"></div>
           </div>
           <div className="row">
-            <div className="grid-4">
+            <div className="grid-4 m-0">
               <h4 className="color-white">Address</h4>
               <p className="p2 color-gray">Rue des Colonies 56, 1000 Bruxelles</p>
             </div>
-            <div className="grid-4">
+            <div className="grid-4 m-0">
               <h4 className="color-white">Contact</h4>
               <p className="p2 color-gray">ignitechurchbrussels@gmail.com</p>
             </div>
-            <div className="grid-4">
+            <div className="grid-4 m-0">
               <h4 className="color-white">Schedule</h4>
               <p className="p2 color-gray">Service every Sunday at 10:00am</p>
             </div>
           </div>
-          <div className="row flex-space mt-3">
+          <div className="row flex-space mt-1">
             <Link href="https://www.instagram.com/ignitechurchbrussels/" target="_blank" className="flex-center">
               <Image className="ml-3" src={iconInstagram} alt="Icon Instagram" width={36} height={36} />
               <p className="p2 color-white ml-2 disappear">Instagram</p>

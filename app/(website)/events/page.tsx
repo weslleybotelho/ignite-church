@@ -5,43 +5,6 @@ import { useGSAP } from '@gsap/react';
 
 const events2 = [
   {
-    month: 'NOV',
-    day: 19,
-    title: 'Prayer Meeting',
-    time: '07:30 PM',
-  },
-  {
-    month: 'NOV',
-    day: 22,
-    title: 'Evangelism - Gare Central',
-    time: '06:30 PM',
-  },
-  {
-    month: 'NOV',
-    day: 24,
-    title: "Women's Meeting - Anne Christine",
-    time: 'After service',
-  },
-  {
-    month: 'NOV',
-    day: 26,
-    title: "Men's Ministry - Boxing Activity",
-    time: '7:30 PM',
-    // location: 'Gare Central - Main entrance',
-  },
-  {
-    month: 'NOV',
-    day: 29,
-    title: 'Youth Meeting - Mélodie',
-    time: '7:00 PM',
-  },
-  {
-    month: 'DEC',
-    day: 15,
-    title: 'Baptism',
-    time: 'For more info - Lionel or Laurianne',
-  },
-  {
     month: 'DEC',
     day: 22,
     title: 'Christimas - Potluck (Bring your traditional dish)',

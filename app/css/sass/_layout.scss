@@ -76,7 +76,7 @@ $gutter: 32px;
   max-width: $container-l;
   margin: 0 auto;
 
-  padding: 64px 24px;
+  padding: 24px 24px;
 
   /*display: flex;
   justify-content: center;
@@ -95,13 +95,13 @@ $gutter: 32px;
   @include responsive(s) {
     flex-direction: column;
 
-    padding: 96px 16px;
+    padding: 16px 16px;
   }
 
   @include responsive(xs) {
     flex-direction: column;
 
-    padding: 96px 16px;
+    padding: 16px 16px;
   }
 }
 
@@ -356,6 +356,14 @@ $gutter: 32px;
     img {
       height: 100vh;
     }
+  }
+}
+
+.img-hero {
+  height: 100%;
+
+  @include responsive(s) {
+    height: 280px;
   }
 }
 
