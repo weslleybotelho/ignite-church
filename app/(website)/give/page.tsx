@@ -44,13 +44,13 @@ export default function Give() {
                 The concept of tithing and giving offerings is deeply rooted in biblical teachings and serves as an
                 expression of worship, gratitude, and trust in God. The first mention of tithing in the Bible is found
                 in Genesis 14, where Abram (later Abraham) honored God after a victorious battle by giving a tithe to
-                Melchizedek, a priest who represented God. Through this act, Abram recognized God’s provision and
+                Melchizedek, a priest who represented God. Through this act, Abram recognized God&apos;s provision and
                 sovereignty in his life.
               </p>
               <p className="mt-1">
                 Offerings, on the other hand, are a voluntary act of worship and devotion. The Bible encourages
-                believers to give cheerfully, as stated in 2 Corinthians 9:7, where it says, "God loves a cheerful
-                giver."
+                believers to give cheerfully, as stated in 2 Corinthians 9:7, where it says, &quot;God loves a cheerful
+                giver.&quot;
               </p>
               <p className="mt-1">
                 Giving tithes and offerings is a way to honor God with the resources He has entrusted to us, supporting
