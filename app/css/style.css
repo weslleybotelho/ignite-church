@@ -1840,6 +1840,10 @@ p {
   font-weight: bold;
 }
 
+.italic {
+  font-style: italic;
+}
+
 span {
   display: inline-block;
 }
@@ -1947,7 +1951,7 @@ li {
 
 .hbig {
   font-family: "M PLUS 2", serif;
-  font-size: px;
+  font-size: 45px;
   line-height: 120%;
   font-weight: 400;
 }

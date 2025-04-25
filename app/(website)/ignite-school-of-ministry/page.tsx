@@ -1,16 +1,13 @@
 'use client';
 import Image from 'next/image';
-import heroImg from '../../img/hero-school.webp';
+import heroImg from '../../img/heroSchool2.jpeg';
 import school1 from '../../img/school-1.png';
-import school2 from '../../img/school-2.jpg';
+import school2 from '../../img/school-4.jpeg';
 import school3 from '../../img/school-3.jpg';
+import school5 from '../../img/school-5.jpeg';
+import school6 from '../../img/school-6.png';
 import { useGSAP } from '@gsap/react';
-import {
-  fadeFromBelow,
-  fadeFromBelowScroll,
-  fadeFromOpacityScroll,
-  slideFromLeftScroll,
-} from '../../utils/gsapAnimations';
+import { fadeFromBelow, fadeFromBelowScroll, fadeFromOpacityScroll, slideFromLeftScroll } from '../../utils/gsapAnimations';
 import './school.scss';
 
 export default function School() {
@@ -48,7 +45,7 @@ export default function School() {
             </section>
             <section className="grid-6">
               <h2 className="uppercase color-white text-center">vision</h2>
-              <p className="text-center p1 color-gray-light">
+              <p className="text-center p1 color-gray-light mt-2">
                 Equip a generation to walk in the Spirit and to experience God&apos;s radical love for them.
               </p>
             </section>
@@ -57,30 +54,33 @@ export default function School() {
         <section className="relative container flex-center py-0" id="mission">
           <section className="grid-6">
             <h2 className="uppercase text-center">mission</h2>
-            <p className="p1 text-center color-black">
+            <p className="p1 text-center color-black mt-2">
               See our students be transformed and empowered to reform the world around them and release Heaven on earth.
             </p>
             <p className="mt-3 text-center">
-              At Ignite School of Ministries, we are dedicated to cultivating a dynamic environment where individuals
-              are empowered to walk in the Spirit and encounter the radical love of God.
+              What you can expect from the first, second and third year is to receive{' '}
+              <span className="bold">transformational teachings</span>, from our team but also{' '}
+              <span className="bold">local and international</span> speakers. You can expect to be{' '}
+              <span className="bold">activated and empowered in ministry</span> and in the gifts that God has given you.
             </p>
             <p className="mt-3 text-center">
-              Our focus is on the transformation and empowerment of each student, fostering a community that seeks to
-              reform the world around them and actively release the presence of Heaven on earth.
+              We will also have <span className="bold">moments of worship</span> and where we&apos;ll{' '}
+              <span className="bold">pursue God&apos;s presence together</span>. Our goal is not merely to give you information but to help
+              facilitate God&apos;s presence to touch and transform you in a deep way.
             </p>
             <p className="mt-3 text-center">
-              Join us on a journey of spiritual growth and impactful learning at ISM, where the pursuit of divine
-              understanding and purposeful living takes center stage.
+              There will be 1 class a month starting September till the end of June + 5 going deeper sessions on Friday nights. This means a
+              total of 15 classes.
             </p>
           </section>
           <section className="grid-6 ">
-            <Image src={school2} alt="school 1" className="contain h-auto school2" />
+            <Image src={school6} alt="school 1" className="contain h-auto school2" />
           </section>
         </section>
         <section className="relative bg-black" id="points">
           <section className="relative container flex-center py-0">
             <section className="grid-6 ">
-              <Image src={school3} alt="school 1" className="contain h-auto school2" />
+              <Image src={school5} alt="school 1" className="contain h-auto school2" />
             </section>
             <section className="grid-6">
               <h3 className="uppercase text-center color-white">The school is for you if:</h3>
@@ -95,10 +95,14 @@ export default function School() {
           </section>
         </section>
         <section className="container row py-0" id="years">
-          <section className="grid-2 disappear"></section>
           <section className="grid-4">
             <h5 className="bold uppercase">First year</h5>
-            <div className="ml-2 mt-3">
+            <div className="h7 italic mt-1">Encountered</div>
+            <p className="mt-1">
+              The first year at ISM is focused on encountering God&apos;s love and breaking free from any lies about His nature or our
+              identity. You can expect content such as:
+            </p>
+            <div className="ml-2 mt-2">
               <ul className="">
                 <li>Identity in Christ</li>
                 <li>Intimacy with God</li>
@@ -106,13 +110,21 @@ export default function School() {
                 <li>The church and the 5-fold ministry (apostle, prophet, teacher, evangelist, pastor)</li>
                 <li>Understanding the call of God upon your life</li>
                 <li>Revival history</li>
+                <li>Ministry trip in Belgium*</li>
                 <li>And more ...</li>
               </ul>
             </div>
+            <p className="mt-1">*These trips are not included in the tuition costs</p>
           </section>
           <section className="grid-4">
             <h5 className="bold uppercase">Second year</h5>
-            <div className="ml-2 mt-3">
+            <div className="h7 italic mt-1">Transformed</div>
+            <p className="mt-1">
+              The second year is focused on being transformed character wise and growing in maturity as a christian. But also starting to do
+              more practical ministry. Students will take on more responsibility and serve as part of their training. You can expect content
+              such as:
+            </p>
+            <div className="ml-2 mt-2">
               <ul className="">
                 <li>Leadership and character</li>
                 <li>Culture of Honor</li>
@@ -120,23 +132,45 @@ export default function School() {
                 <li>Purity, dating & marriage</li>
                 <li>Emotional health</li>
                 <li>Preaching activation</li>
-                <li>Ministry trip</li>
+                <li>Ministry trip in Belgium*</li>
+                <li>International mission trips*</li>
                 <li>And more ...</li>
               </ul>
             </div>
+            <p className="mt-1">*These trips are not included in the tuition costs</p>
           </section>
-          <section className="grid-2 disappear"></section>
+          <section className="grid-4">
+            <h5 className="bold uppercase">Third year</h5>
+            <div className="h7 italic mt-1">Empowered</div>
+            <p className="mt-1">
+              Five classes throughout the year focused on leadership and practical ministry, along with an{' '}
+              <span className="bold">internship</span> where you will be part of the ISM team in these different departments:{' '}
+            </p>
+            <div className="ml-2 mt-2">
+              <ul className="">
+                <li>Pastoral</li>
+                <li>Missions</li>
+                <li>Administration</li>
+                <li>Worship</li>
+                <li>Creativity</li>
+                <li>And more...</li>
+              </ul>
+            </div>
+          </section>
         </section>
         <section className="container row py-0" id="infos">
           <section className="grid-2 disappear"></section>
           <section className="grid-8">
-            <h5>Meeting Times</h5>
-            <p className="p5 ">April</p>
+            <h5>How to apply ?</h5>
+            <p className="p4 my-1">Applications open in April</p>
+            <a href="https://forms.gle/ePnwMDS498gHHKn59" className="color-gradient bold " target="_blank">
+              click here to apply
+            </a>
             <h5 className="mt-3">Contact</h5>
-            <p className="p5 ">More information on the school and how to apply via email:</p>
+            <p className="p5 mt-1">More information on the school and how to apply via email:</p>
             <a
               href="mailto:ignite.ministryschool@gmail.com?subject = ISM Information&body = Hi, I would like to get more information about the school."
-              className="color-gradient">
+              className="color-gradient mt-1">
               ignite.ministryschool@gmail.com
             </a>
           </section>
