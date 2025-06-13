@@ -30,39 +30,21 @@ export default function Ministries() {
           </header>
           <div className="row">
             <div className="grid-3">
-              <Image
-                src={evangelismImg}
-                alt="Image Ignite Evangelism"
-                width={260}
-                height={190}
-                className="img-ministries"
-              />
+              <Image src={evangelismImg} alt="Image Ignite Evangelism" width={260} height={190} className="img-ministries" />
               <h6 className="">Evangelism</h6>
               <Link href="/ministries/evangelism" className="color-gradient bold">
                 View More
               </Link>
             </div>
             <div className="grid-3">
-              <Image
-                src={innerHealingImg}
-                alt="Image Ignite Inner Healing"
-                width={260}
-                height={190}
-                className="img-ministries"
-              />
+              <Image src={innerHealingImg} alt="Image Ignite Inner Healing" width={260} height={190} className="img-ministries" />
               <h6 className="">Inner Healing</h6>
-              <Link href={''} className="color-gradient bold">
+              <Link href={'/ministries/innerhealing'} className="color-gradient bold">
                 View More
               </Link>
             </div>
             <div className="grid-3">
-              <Image
-                src={schoolImg}
-                alt="Image Ignite School of Ministries"
-                width={260}
-                height={190}
-                className="img-ministries"
-              />
+              <Image src={schoolImg} alt="Image Ignite School of Ministries" width={260} height={190} className="img-ministries" />
               <h6 className="">School of Ministry</h6>
               <Link href="/ignite-school-of-ministry" className="color-gradient bold">
                 View More
@@ -85,13 +67,7 @@ export default function Ministries() {
               </Link>
             </div> */}
             <div className="grid-3">
-              <Image
-                src={homeGroupImg}
-                alt="Image Ignite Home Group"
-                width={260}
-                height={190}
-                className="img-ministries"
-              />
+              <Image src={homeGroupImg} alt="Image Ignite Home Group" width={260} height={190} className="img-ministries" />
               <h6 className="">Home Groups</h6>
               <Link href="/ministries/homegroup" className="color-gradient bold">
                 View More
@@ -114,26 +90,14 @@ export default function Ministries() {
           </div>
           <div className="row">
             <div className="grid-3">
-              <Image
-                src={kidsMinistry}
-                alt="Image Ignite Podcast"
-                width={260}
-                height={190}
-                className="img-ministries cover"
-              />
+              <Image src={kidsMinistry} alt="Image Ignite Podcast" width={260} height={190} className="img-ministries cover" />
               <h6 className="">Kid&apos;s Ministry</h6>
               <Link href={'/ministries/kids'} className="color-gradient bold">
                 View More
               </Link>
             </div>
             <div className="grid-3">
-              <Image
-                src={youthMinistry}
-                alt="Image Ignite Podcast"
-                width={260}
-                height={190}
-                className="img-ministries cover"
-              />
+              <Image src={youthMinistry} alt="Image Ignite Podcast" width={260} height={190} className="img-ministries cover" />
               <h6 className="">Youth Ministry</h6>
               <Link href={'/ministries/youth'} className="color-gradient bold">
                 View More

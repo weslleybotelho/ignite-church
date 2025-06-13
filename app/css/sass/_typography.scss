@@ -1,9 +1,10 @@
 // Typography of project
 
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;700&family=Roboto:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @mixin typeface-1($size, $device: desktop) {
-  font-family: 'M PLUS 2', serif;
+  // font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 
   @if $size == hbig and $device == desktop {
     font-size: 45px;
@@ -109,8 +110,7 @@
 }
 
 @mixin typeface-2($size: p2, $device: desktop) {
-  // font-family: 'Roboto', sans-serif;
-  font-family: 'Red Hat Display', serif;
+  font-family: 'Nunito', sans-serif;
 
   @if $size == p1 and $device == desktop {
     font-size: 26px;
