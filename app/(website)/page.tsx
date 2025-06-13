@@ -1,6 +1,6 @@
 import path from 'path';
 import fs from 'fs';
-import HomeClient from './HomeClient';
+import HomeClient from './homeClient';
 
 export default function Home() {
   const dir = path.join(process.cwd(), 'public/img/annoucements');
