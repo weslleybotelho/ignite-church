@@ -5,7 +5,6 @@ import { useGSAP } from '@gsap/react';
 import AboutIgniteImg from '../img/about-ignite2.png';
 import MinistriesImg from '../img/ministries-home.jpg';
 import IsmImg from '../img/ism-thumb.jpeg';
-import BuildingImg from '../img/building.jpg';
 import {
   fadeFromBelow,
   fadeFromBelowScroll,
