@@ -158,6 +158,31 @@ export default function School() {
             </div>
           </section>
         </section>
+        <section className="container row py-0">
+          <h4 className="bold">Tuition costs 25/26</h4>
+          <p>These are two different models from which you can decide what fits you best.</p>
+          <section className="grid-3 disappear"></section>
+          <section className="grid-3 card-one">
+            <div className="flex-center-column">
+              <h5 className="bold">Early bird</h5>
+              <p>ISM 1 - 325€</p>
+              <p>ISM 2 - 270€</p>
+              <p>ISM 3 - 125€</p>
+              <p className="p5 italic">Paid in full before August 24th</p>
+            </div>
+          </section>
+          <section className="grid-3 card-two">
+            <div className="flex-center-column">
+              <h5 className="bold">Full payment</h5>
+              <p>ISM 1 - 350€</p>
+              <p>ISM 2 - 295€</p>
+              <p>ISM 3 - 150€</p>
+              <p className="p5 italic">Paid in multiple installments </p>
+              <p className="p5 italic"> from September till December</p>
+            </div>
+          </section>
+          <section className="grid-3 disappear"></section>
+        </section>
         <section className="container row py-0" id="infos">
           <section className="grid-2 disappear"></section>
           <section className="grid-8">
