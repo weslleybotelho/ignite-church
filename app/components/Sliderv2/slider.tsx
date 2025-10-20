@@ -4,6 +4,7 @@ import 'swiper/css/pagination';
 // import 'swiper/css/navigation';
 // import './styles.css';I
 import { Navigation, Pagination } from 'swiper/modules';
+import './slider.scss';
 
 type SliderImagesProps = {
   imageFiles: string[];

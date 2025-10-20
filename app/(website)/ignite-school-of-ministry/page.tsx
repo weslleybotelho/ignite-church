@@ -177,8 +177,7 @@ export default function School() {
               <p>ISM 1 - 350€</p>
               <p>ISM 2 - 295€</p>
               <p>ISM 3 - 150€</p>
-              <p className="p5 italic">Paid in multiple installments </p>
-              <p className="p5 italic"> from September till December</p>
+              <p className="p5 italic">Paid in multiple installments</p>
             </div>
           </section>
           <section className="grid-3 disappear"></section>

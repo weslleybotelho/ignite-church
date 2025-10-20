@@ -615,3 +615,52 @@ $gutter: 32px;
     transform: translate(0px, 0px);
   }
 }
+
+.card-container {
+  display: flex;
+  align-items: stretch;
+
+  @include responsive(s) {
+    display: table;
+  }
+}
+
+.card {
+  background-color: $white-normal;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0px;
+  height: 100%;
+
+  .icon {
+    width: 46px;
+    height: 46px;
+    color: $primary-dark;
+    border-radius: 8px;
+    background-color: $white-light;
+    padding: 8px;
+  }
+
+  .card-header {
+    margin-bottom: 12px;
+  }
+
+  .card-title {
+    margin-bottom: 12px;
+    font-weight: bold;
+    h5 {
+      color: $black-darken;
+      font-weight: bold;
+    }
+  }
+
+  .card-body {
+    p {
+      color: $black-lighten;
+    }
+  }
+
+  .card-footer {
+    margin-top: 10px;
+  }
+}

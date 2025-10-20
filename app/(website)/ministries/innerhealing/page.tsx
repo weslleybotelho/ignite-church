@@ -138,20 +138,16 @@ export default function InnerHealing() {
         </div>
 
         <div className="row">
-          <div className="grid-4">
+          <div className="grid-6">
             <h3>
               Ways to <span className="bold">contribute</span>
             </h3>
             <p className="mt-1">We kindly ask you to donate and support us in the way that is possible to you!</p>
           </div>
-        </div>
-
-        <div className="row">
-          <div className="grid-3 disappear"></div>
           <div className="grid-6 flex-center-column">
             <h4 className="bold">Through bank transfer</h4>
             <p className="mt-1">Ignite Church Ministries</p>
-            <p className="black">IBAN | BE22 0689 4526 7047</p>
+            <p className="black">IBAN | BE89 0689 5686 2385</p>
             <p className="black">Reference: Ignite inner healing</p>
             {/* <div className="row flex-center">
               <div className="grid-12 flex-center-column">
@@ -165,6 +161,11 @@ export default function InnerHealing() {
               </div>
             </div> */}
           </div>
+        </div>
+
+        <div className="row">
+          <div className="grid-3 disappear"></div>
+
           <div className="grid-3 disappear"></div>
         </div>
 

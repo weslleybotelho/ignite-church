@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
+import { HeartPlus, Music, Sparkles, Users } from 'lucide-react';
 import AboutIgniteImg from '../img/about-ignite2.png';
 import MinistriesImg from '../img/ministries-home.jpg';
 import IsmImg from '../img/ism-thumb.jpeg';
@@ -70,7 +71,7 @@ export default function HomeClient({ imageFiles }: Props) {
         </header>
         <section className="container py-3 relative" id="announcement">
           <section>
-            <h4 className="my-3">Swap 👋 and check our announcement</h4>
+            <h4 className="my-3 text-center">Swap 👋 and check our announcement</h4>
             <SliderImages imageFiles={imageFiles} />
           </section>
         </section>
@@ -101,33 +102,78 @@ export default function HomeClient({ imageFiles }: Props) {
         </section>
 
         {/* ----------------------------Ministries------------------------- */}
-        <section className="relative hidden-x" id="ministries">
-          <div className="container py-3">
-            <div className="row">
-              {/* <div className="grid-1 disappear"></div> */}
-              <div className="grid-8 grid-ministry-mobile">
-                <Image
-                  src={MinistriesImg}
-                  alt="about ignite"
-                  style={{}}
-                  // height={340}
-                  // width={360}
-                  className=" img-ministry h-auto"
-                  quality={100}
-                />
+        <section className="relative hidden-x">
+          <div className="container py-3" id="ministries">
+            <div className="flex-space">
+              <h4 className="color-gradient p2 uppercase">ministries</h4>
+              <Link className="color-black mx-2 underline bold" href="/ministries">
+                See all ministries &gt;
+              </Link>
+            </div>
+            <div className="row card-container" style={{ alignItems: 'stretch' }}>
+              <div className="grid-3">
+                <div className="card">
+                  <div className="card-title">
+                    <HeartPlus className="icon" />
+                    <h5>Inner Healing</h5>
+                  </div>
+                  <div className="card-body">
+                    <p>
+                      The journey to emotional health is an invitation to intimacy with God. Every wound is an opportunity to encounter God
+                      as Redeemer, Healer, and Comforter.
+                    </p>
+                  </div>
+                  <div className="">
+                    <Link className="color-gradient mt-2" href="/ministries/innerhealing">
+                      Read more
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="grid-4">
-                <h4 className="color-gradient p2 uppercase">ministries</h4>
-                <p className="p2-dark mt-2 ">
-                  Serving God and serving people is the core of our values at Ignite Church. The ministries at Ignite are a means for
-                  spiritual growth and the well-being of our community, both spiritually and emotionally. We want to encourage, build, and
-                  exhort the people of God in different ways, using the tools provided by each program and service. Whether you&apos;re
-                  looking for a deep connection with God, fellowship with others, or a chance to grow in scripture, we hope these ministries
-                  give you a great experience of community.
-                </p>
-                <Link className="btn-orange mt-5" href="/ministries">
-                  Check our Ministries
-                </Link>
+
+              <div className="grid-3">
+                <div className="card">
+                  <div className="card-title">
+                    <Sparkles className="icon" />
+                    <h5>Youth</h5>
+                  </div>
+                  <div className="card-body">
+                    <p>Empowering the next generation to live boldly for Christ through engaging activities and mentorship.</p>
+                    <Link className="color-gradient mt-2" href="/ministries/youth">
+                      Read more
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid-3">
+                <div className="card">
+                  <div className="card-title">
+                    <Music className="icon" />
+                    <h5>Worship</h5>
+                  </div>
+                  <div className="card-body">
+                    <p>Leading our congregation into God&apos;s presence through powerful worship and music ministry.</p>
+                    <Link className="color-gradient mt-2" href="/ministries/worship">
+                      Read more
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid-3">
+                <div className="card">
+                  <div className="card-title">
+                    <Users className="icon" />
+                    <h5>Home Groups</h5>
+                  </div>
+                  <div className="card-body">
+                    <p>Fellowship with brothers and sisters every other week to grow, belong and go deep in relantionship.</p>
+                    <Link className="color-gradient mt-2" href="/ministries/homegroup">
+                      Read more
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
