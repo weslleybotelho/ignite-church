@@ -1,0 +1,229 @@
+// ============================================
+// MODERN LAYOUT SYSTEM
+// ============================================
+
+@import 'variables';
+
+// Container
+.container {
+  width: 100%;
+  max-width: $container-max;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+.container-sm {
+  max-width: 800px;
+}
+
+.container-lg {
+  max-width: 1400px;
+}
+
+.container-full {
+  max-width: 100%;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+// Section Spacing
+.section {
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+  
+  @include mobile {
+    padding-top: $space-12;
+    padding-bottom: $space-12;
+  }
+}
+
+.section-sm {
+  padding-top: $space-12;
+  padding-bottom: $space-12;
+  
+  @include mobile {
+    padding-top: $space-8;
+    padding-bottom: $space-8;
+  }
+}
+
+.section-lg {
+  padding-top: $space-24;
+  padding-bottom: $space-24;
+  
+  @include mobile {
+    padding-top: $space-16;
+    padding-bottom: $space-16;
+  }
+}
+
+// Grid System
+.grid {
+  display: grid;
+  gap: $space-6;
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+.grid-cols-12 { grid-template-columns: repeat(12, 1fr); }
+
+// Auto-fit grids
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-auto-fit-sm {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-auto-fit-lg {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+// Gap utilities
+.gap-2 { gap: $space-2; }
+.gap-4 { gap: $space-4; }
+.gap-6 { gap: $space-6; }
+.gap-8 { gap: $space-8; }
+.gap-10 { gap: $space-10; }
+.gap-12 { gap: $space-12; }
+
+// Flexbox Utilities
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+// Justify Content
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+.justify-evenly { justify-content: space-evenly; }
+
+// Align Items
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+
+// Common flex patterns
+.flex-center {
+  @include flex-center;
+}
+
+.flex-between {
+  @include flex-between;
+}
+
+.flex-col-center {
+  @include flex-column;
+  @include flex-center;
+}
+
+// Two Column Layout
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-12;
+  align-items: center;
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-8;
+  }
+}
+
+.two-col-reverse {
+  @extend .two-col;
+  
+  @include mobile {
+    > *:first-child {
+      order: 2;
+    }
+    > *:last-child {
+      order: 1;
+    }
+  }
+}
+
+// Position Utilities
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.absolute-center {
+  @include absolute-center;
+}
+
+// Display Utilities
+.block { display: block; }
+.inline-block { display: inline-block; }
+.hidden { display: none; }
+
+// Hide on specific breakpoints
+.hide-mobile {
+  @include mobile { display: none !important; }
+}
+
+.hide-desktop {
+  @include lg { display: none !important; }
+}
+
+.show-mobile {
+  display: none !important;
+  @include mobile { display: block !important; }
+}
+
+// Overflow
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+
+// Width & Height
+.w-full { width: 100%; }
+.w-screen { width: 100vw; }
+.w-auto { width: auto; }
+.max-w-full { max-width: 100%; }
+.min-w-0 { min-width: 0; }
+
+.h-full { height: 100%; }
+.h-screen { height: 100vh; }
+.h-auto { height: auto; }
+.min-h-screen { min-height: 100vh; }
+
+// Aspect Ratios
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video { aspect-ratio: 16 / 9; }
+.aspect-portrait { aspect-ratio: 3 / 4; }
+
+// Z-index
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+// Object Fit
+.object-cover { object-fit: cover; }
+.object-contain { object-fit: contain; }
+.object-center { object-position: center; }

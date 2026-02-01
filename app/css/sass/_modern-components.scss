@@ -1,0 +1,556 @@
+// ============================================
+// MODERN COMPONENTS
+// ============================================
+
+@import 'variables';
+
+// ============================================
+// CARDS
+// ============================================
+
+.card {
+  background: $bg-light;
+  border-radius: $radius-xl;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+  transition: all $transition-base;
+  
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: translateY(-4px);
+  }
+}
+
+.card-glass {
+  @include glassmorphism;
+  border-radius: $radius-xl;
+  overflow: hidden;
+}
+
+.card-dark {
+  background: $bg-dark-secondary;
+  border-radius: $radius-xl;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: $space-6;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-family: $font-heading;
+  font-size: $text-xl;
+  font-weight: 600;
+  margin-bottom: $space-2;
+}
+
+.card-text {
+  color: $text-secondary;
+  font-size: $text-sm;
+}
+
+// Feature Card
+.feature-card {
+  padding: $space-8;
+  background: $bg-light;
+  border-radius: $radius-2xl;
+  border: 1px solid $neutral-200;
+  transition: all $transition-base;
+  
+  &:hover {
+    border-color: $brand-primary;
+    box-shadow: $shadow-lg;
+  }
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($brand-primary, 0.1);
+  color: $brand-primary;
+  border-radius: $radius-lg;
+  margin-bottom: $space-4;
+  
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.feature-title {
+  font-family: $font-heading;
+  font-size: $text-lg;
+  font-weight: 600;
+  margin-bottom: $space-3;
+}
+
+.feature-text {
+  color: $text-muted;
+  font-size: $text-sm;
+  line-height: 1.6;
+}
+
+// Ministry Card
+.ministry-card {
+  position: relative;
+  border-radius: $radius-2xl;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  
+  @include mobile {
+    aspect-ratio: 16 / 9;
+  }
+  
+  &:hover {
+    .ministry-card-image {
+      transform: scale(1.05);
+    }
+    
+    .ministry-card-overlay {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.ministry-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform $transition-slow;
+}
+
+.ministry-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: $gradient-overlay;
+  transition: background $transition-base;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: $space-6;
+}
+
+.ministry-card-title {
+  color: $text-light;
+  font-family: $font-heading;
+  font-size: $text-xl;
+  font-weight: 600;
+  margin-bottom: $space-2;
+}
+
+.ministry-card-link {
+  color: $brand-accent;
+  font-size: $text-sm;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  
+  &:hover {
+    color: $brand-accent-light;
+  }
+  
+  &::after {
+    content: '→';
+    transition: transform $transition-fast;
+  }
+  
+  &:hover::after {
+    transform: translateX(4px);
+  }
+}
+
+// ============================================
+// HERO SECTIONS
+// ============================================
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-sm {
+  min-height: 60vh;
+}
+
+.hero-md {
+  min-height: 75vh;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: $gradient-hero;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  padding: $space-8;
+}
+
+.hero-title {
+  color: $text-light;
+  font-size: $text-5xl;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: $space-6;
+  
+  @include mobile {
+    font-size: $text-4xl;
+  }
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: $text-xl;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto $space-8;
+  line-height: 1.6;
+  
+  @include mobile {
+    font-size: $text-lg;
+  }
+}
+
+.hero-eyebrow {
+  font-family: $font-heading;
+  font-size: $text-sm;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: $brand-accent;
+  margin-bottom: $space-4;
+}
+
+// Page Header (for inner pages)
+.page-header {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: $bg-dark;
+  
+  @include mobile {
+    min-height: 40vh;
+  }
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: $space-8;
+}
+
+.page-header-title {
+  color: $text-light;
+  font-size: $text-4xl;
+  font-weight: 700;
+  margin-bottom: $space-3;
+  
+  @include mobile {
+    font-size: $text-3xl;
+  }
+}
+
+.page-header-subtitle {
+  color: $text-light-muted;
+  font-size: $text-lg;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// ============================================
+// SECTIONS
+// ============================================
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto $space-12;
+}
+
+.section-eyebrow {
+  @extend .eyebrow;
+  margin-bottom: $space-4;
+}
+
+.section-title {
+  font-size: $text-3xl;
+  font-weight: 700;
+  margin-bottom: $space-4;
+  
+  @include mobile {
+    font-size: $text-2xl;
+  }
+}
+
+.section-subtitle {
+  color: $text-muted;
+  font-size: $text-lg;
+  line-height: 1.7;
+}
+
+// Dark Section
+.section-dark {
+  background: $bg-dark;
+  color: $text-light;
+  
+  .section-title {
+    color: $text-light;
+  }
+  
+  .section-subtitle {
+    color: $text-light-muted;
+  }
+}
+
+// Cream Section
+.section-cream {
+  background: $bg-cream;
+}
+
+// ============================================
+// TESTIMONIALS
+// ============================================
+
+.testimonial-card {
+  padding: $space-8;
+  background: $bg-light;
+  border-radius: $radius-2xl;
+  box-shadow: $shadow-md;
+}
+
+.testimonial-text {
+  font-size: $text-lg;
+  font-style: italic;
+  color: $text-secondary;
+  margin-bottom: $space-6;
+  line-height: 1.8;
+  
+  &::before {
+    content: '"';
+    color: $brand-primary;
+    font-size: $text-4xl;
+    font-family: serif;
+    line-height: 0;
+    vertical-align: -0.3em;
+    margin-right: $space-2;
+  }
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: $radius-full;
+  object-fit: cover;
+}
+
+.testimonial-name {
+  font-weight: 600;
+  margin-bottom: $space-1;
+}
+
+.testimonial-role {
+  color: $text-muted;
+  font-size: $text-sm;
+}
+
+// ============================================
+// DIVIDERS
+// ============================================
+
+.divider {
+  height: 1px;
+  background: $neutral-200;
+  margin: $space-12 0;
+}
+
+.divider-dark {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+// ============================================
+// BADGES
+// ============================================
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: $space-1 $space-3;
+  font-size: $text-xs;
+  font-weight: 600;
+  border-radius: $radius-full;
+  background: rgba($brand-primary, 0.1);
+  color: $brand-primary;
+}
+
+.badge-primary {
+  background: $brand-primary;
+  color: $text-light;
+}
+
+.badge-accent {
+  background: $brand-accent;
+  color: $text-primary;
+}
+
+.badge-dark {
+  background: $neutral-900;
+  color: $text-light;
+}
+
+// ============================================
+// FORMS
+// ============================================
+
+.form-group {
+  margin-bottom: $space-5;
+}
+
+.form-label {
+  display: block;
+  font-size: $text-sm;
+  font-weight: 500;
+  margin-bottom: $space-2;
+  color: $text-primary;
+}
+
+.form-input {
+  width: 100%;
+  padding: $space-3 $space-4;
+  font-size: $text-base;
+  border: 2px solid $neutral-200;
+  border-radius: $radius-lg;
+  background: $bg-light;
+  color: $text-primary;
+  transition: all $transition-fast;
+  
+  &::placeholder {
+    color: $neutral-400;
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: $brand-primary;
+    box-shadow: 0 0 0 4px rgba($brand-primary, 0.1);
+  }
+}
+
+.form-input-dark {
+  background: $bg-dark-secondary;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: $text-light;
+  
+  &::placeholder {
+    color: $text-light-muted;
+  }
+  
+  &:focus {
+    border-color: $brand-primary;
+  }
+}
+
+.form-textarea {
+  @extend .form-input;
+  min-height: 150px;
+  resize: vertical;
+}
+
+// ============================================
+// STATS
+// ============================================
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: $font-heading;
+  font-size: $text-4xl;
+  font-weight: 700;
+  @include text-gradient;
+  margin-bottom: $space-2;
+}
+
+.stat-label {
+  font-size: $text-sm;
+  color: $text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// ============================================
+// IMAGE CONTAINERS
+// ============================================
+
+.image-rounded {
+  border-radius: $radius-2xl;
+  overflow: hidden;
+}
+
+.image-shadow {
+  box-shadow: $shadow-2xl;
+}
+
+.image-frame {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: $space-6;
+    left: $space-6;
+    right: -$space-6;
+    bottom: -$space-6;
+    background: $gradient-primary;
+    border-radius: $radius-2xl;
+    z-index: -1;
+    opacity: 0.2;
+  }
+}

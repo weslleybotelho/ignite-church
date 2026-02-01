@@ -1,74 +1,49 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+// ============================================
+// IGNITE CHURCH - MAIN STYLESHEET
+// Modern Professional Design System
+// ============================================
 
+// Design System - Core Variables & Mixins
+@import 'sass/variables';
+
+// Base Styles (Reset & Defaults)
+@import 'sass/base';
+
+// Modern Typography System
+@import 'sass/modern-typography';
+
+// Modern Layout System
+@import 'sass/modern-layout';
+
+// Modern Components
+@import 'sass/modern-components';
+
+// Modern Navigation & Footer
+@import 'sass/modern-navigation';
+
+// Modern Buttons
+@import 'sass/modern-buttons';
+
+// Modern Animations
+@import 'sass/modern-animations';
+
+// Spacing Utilities
+@import 'sass/modern-spacing';
+
+// Legacy support (keeping some old styles for compatibility)
 @import 'sass/colors';
 @import 'sass/layout';
 @import 'sass/table';
 @import 'sass/spacing';
 @import 'sass/typography';
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  width: 100%;
-  overflow-x: hidden;
-
-  background-color: #fcfcfc;
-
-  &::-webkit-scrollbar {
-    padding-right: 4px;
-    width: 20px;
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent; /* color of the tracking area */
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background: #fcfcfc;
-    border: 6px solid $white-dark;
-  }
-}
-
-button {
-  border: none;
-  background: none;
-}
-
-.border {
-  border: 1px solid red;
-}
-
-.border-radius {
-  border-radius: 8px;
-}
-
-.block {
-  display: block;
-}
-
-.hidden {
-  overflow: hidden;
-}
-
-.relative {
-  position: relative;
-}
-
-svg,
-img {
-  width: 100%;
-  //height: auto;
-}
-
 @import 'sass/menu';
 @import 'sass/icons';
 @import 'sass/buttons';
 @import 'sass/animations';
+
+// Additional overrides for modern design
+svg,
+img {
+  max-width: 100%;
+  height: auto;
+}

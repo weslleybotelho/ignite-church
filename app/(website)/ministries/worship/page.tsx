@@ -3,118 +3,175 @@ import Image from 'next/image';
 import heroImg from '../../../img/music.jpg';
 import school1 from '../../../img/worship1-min.webp';
 import school2 from '../../../img/worship2-min.webp';
-import school3 from '../../../img/music.jpg';
 import { useGSAP } from '@gsap/react';
-import {
-  fadeFromBelow,
-  fadeFromBelowScroll,
-  fadeFromOpacityScroll,
-  slideFromLeftScroll,
-} from '../../../utils/gsapAnimations';
+import { Music, Heart, MessageCircle, Lightbulb, Shield, HandHeart, Star, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
+import { fadeFromBelow, fadeFromOpacityScroll, slideFromLeftScroll } from '../../../utils/gsapAnimations';
+
+const values = [
+  {
+    title: 'Presence and Prophetic',
+    description:
+      "Cultivating and valuing the Presence of God and a prophetic culture in our midst. Seeking alignment with God's heart and desires.",
+    icon: Heart,
+  },
+  {
+    title: 'Collaboration and Communication',
+    description: 'Fostering a culture of open and transparent communication. Prioritizing collaboration above individual ambitions.',
+    icon: MessageCircle,
+  },
+  {
+    title: 'Flexibility and Creativity',
+    description:
+      "Embracing flexibility and openness to the Holy Spirit's leading. Creating an environment of freedom where everyone feels valued.",
+    icon: Lightbulb,
+  },
+  {
+    title: 'Accountability and Responsibility',
+    description:
+      'Taking ownership of responsibilities and holding ourselves accountable. Delivering on commitments and seeking continuous improvement.',
+    icon: Shield,
+  },
+  {
+    title: 'Purity and Integrity',
+    description: 'Upholding biblical standards in all our actions. Leading by example with honesty, fairness, and transparency.',
+    icon: Star,
+  },
+  {
+    title: 'Prayer and Intercession',
+    description: 'Praying and interceding for the worship team and its members. We want to bathe everything we do with prayer.',
+    icon: HandHeart,
+  },
+];
 
 export default function Worship() {
   useGSAP(() => {
-    fadeFromBelow('#hero > section');
+    fadeFromBelow('.page-header-content');
   });
 
   useGSAP(() => {
-    slideFromLeftScroll('#vision > section', '#vision');
-    fadeFromBelowScroll('#mission > section', '#mission');
-    fadeFromOpacityScroll('#points > section', '#points');
-    fadeFromBelowScroll('#years > section', '#years');
-    slideFromLeftScroll('#infos > section', '#infos');
+    slideFromLeftScroll('#vision .two-col', '#vision');
+    fadeFromOpacityScroll('#values .grid', '#values');
   });
+
   return (
     <>
-      <article>
-        <header className="bg-ministries">
-          <section className="bg-black h-100" id="hero">
-            <section className="bg-about relativexs">
-              <Image src={heroImg} alt="About Ignite" className="cover hero-school h-100" />
-              <header>
-                <h1 className="absolute-center absolut color-white text-center uppercase">Ignite Worship</h1>
-              </header>
-            </section>
-          </section>
-        </header>
-        <section className="relative bg-black" id="vision">
-          <section className="container flex-center p-0">
-            <section className="grid-6 p-0">
-              <Image src={school1} alt="school 1" className="contain h-auto" />
-            </section>
-            <section className="grid-6">
-              <h2 className="uppercase color-white text-center">vision</h2>
-              <p className="text-center p1 color-gray-light">
-                Ignite Worship is a movement of sons and daughters who worship Jesus or what He has done and who He is.
-                We are a family. We are passionate worshippers of Him. We burn for Him. We are hungry and thirsty for
-                Jesus.
+      {/* ==================== PAGE HEADER ==================== */}
+      <section className="page-header" style={{ minHeight: '70vh' }}>
+        <Image src={heroImg} alt="Ignite Worship" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
+        <div className="hero-overlay"></div>
+        <div className="page-header-content">
+          <Link href="/ministries" className="btn-ghost btn-sm mb-4" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+            <ArrowLeft size={16} />
+            Back to Ministries
+          </Link>
+          <span className="hero-eyebrow">Ministry</span>
+          <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
+            Ignite Worship
+          </h1>
+          <p className="page-header-subtitle">A movement of sons and daughters who worship Jesus</p>
+        </div>
+      </section>
+
+      {/* ==================== VISION ==================== */}
+      <section className="section" id="vision">
+        <div className="container">
+          <div className="two-col">
+            <div className="image-frame">
+              <Image
+                src={school1}
+                alt="Worship team leading"
+                width={500}
+                height={400}
+                className="image-rounded image-shadow"
+                style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+              />
+            </div>
+            <div>
+              <span className="eyebrow mb-4">Our Vision</span>
+              <h2 className="mb-4">We Burn for Him</h2>
+              <p className="lead mb-4">
+                Ignite Worship is a movement of sons and daughters who worship Jesus for what He has done and who He is.
               </p>
-            </section>
-          </section>
-        </section>
-        <section className="relative container flex-center py-0" id="mission">
-          <section className="grid-6">
-            <h2 className="uppercase text-center">values</h2>
-            <h6>Presence and Prophetic</h6>
-            <p className="text-center color-black">
-              Cultivating and valuing the Presence of God and a prophetic culture in our midst and in everything we do.
-              Seeking alignment with God&apos;s heart and desires.{' '}
-            </p>
-            <h6 className="mt-2">Collaboration and Communication</h6>
-            <p className="text-center color-black">
-              Fostering a culture of open and transparent communication. Actively listening, sharing relevant
-              information, and encouraging constructive feedback. Prioritizing collaboration above individual ambitions.
-            </p>
-            <h6 className="mt-2">Flexibility, Freedom, and Creativity</h6>
-            <p className="text-center color-black">
-              Embracing flexibility and openness to the Holy Spirit&apos;s leading, even when uncomfortable. Creating an
-              environment of freedom where everyone feels valued and can contribute. Encouraging creativity and
-              innovative ideas.
-            </p>
-            <h6 className="mt-2">Accountability and Responsibility</h6>
-            <p className="text-center color-black">
-              Taking ownership of responsibilities and holding ourselves and each other accountable. Delivering on
-              commitments, learning from mistakes, and seeking continuous improvement.
-            </p>
-          </section>
-          <section className="grid-6 ">
-            <Image src={school2} alt="school 1" className="contain h-auto school2" />
-          </section>
-        </section>
-        <section className="relative bg-black" id="points">
-          <section className="relative container flex-center py-0">
-            <section className="grid-6 ">
-              <Image src={school3} alt="school 1" className="contain h-auto school2" />
-            </section>
-            <section className="grid-6">
-              <h6 className="mt-2 color-white">Purity and integrity</h6>
-              <p className="text-center color-white">
-                Upholding the biblical standards in all our actions and decisions. Integrity and purity will be our
-                guiding principle, and we will lead by example, demonstrating honesty, fairness, and transparency, etc.
+              <p className="text-secondary">
+                We are a family. We are passionate worshippers of Him. We burn for Him. We are hungry and thirsty for Jesus. Through our
+                worship, we create an atmosphere where His presence is tangible and lives are transformed.
               </p>
-              <h6 className="mt-2 color-white">Prayer and intercession</h6>
-              <p className="text-center color-white">
-                Pray and intercede for the worship team and its members as well as the members of the core team worship.
-                We want to bath everything we do with prayer.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== VALUES ==================== */}
+      <section className="section section-cream" id="values">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-eyebrow">Our Values</span>
+            <h2 className="section-title">What We Stand For</h2>
+            <p className="section-subtitle">The principles that guide our worship ministry and shape who we are.</p>
+          </div>
+
+          <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
+              return (
+                <div className="feature-card" key={index}>
+                  <div className="feature-icon">
+                    <IconComponent />
+                  </div>
+                  <h4 className="feature-title">{value.title}</h4>
+                  <p className="feature-text">{value.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== GALLERY ==================== */}
+      <section className="section">
+        <div className="container">
+          <div className="two-col">
+            <div>
+              <span className="eyebrow mb-4">Excellence</span>
+              <h3 className="mb-4">Striving for Excellence</h3>
+              <p className="text-secondary mb-4">
+                We believe in giving our best to God in everything we do. Excellence in worship is not about perfection but about bringing
+                our best offering to the One who deserves it all.
               </p>
-              <h6 className="mt-2 color-white">Excellency</h6>
-              <p className="text-center color-white">
-                Give God our best. We will give time to practice our skills in order to be better and give God what He
-                is worthy of. The goal is not perfection but excellence. The heart behind an excellent heart is giving
-                something that costs us.
+              <p className="text-secondary">
+                Our team commits to preparation, practice, and prayer so that we can lead others into authentic encounters with God.
               </p>
-            </section>
-          </section>
-        </section>
-        {/* <section className="container row py-0" id="infos">
-          <section className="grid-2 disappear"></section>
-          <section className="grid-8">
-            <h5 className="mt-3">Contact</h5>
-            <p className="p5 color-black">Worship team for more information</p>
-          </section>
-          <section className="grid-2 disappear"></section>
-        </section> */}
-      </article>
+            </div>
+            <div className="image-frame">
+              <Image
+                src={school2}
+                alt="Worship team practice"
+                width={500}
+                height={400}
+                className="image-rounded image-shadow"
+                style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== CTA ==================== */}
+      <section className="section section-dark" style={{ textAlign: 'center' }}>
+        <div className="container">
+          <div className="feature-icon mx-auto mb-6" style={{ background: 'rgba(232, 90, 36, 0.2)', width: '80px', height: '80px' }}>
+            <Music size={36} />
+          </div>
+          <h2 className="text-light mb-4">Join Our Worship Team</h2>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+            Do you have a heart for worship? We&apos;d love to connect with you and explore how you can use your gifts to glorify God.
+          </p>
+          <a href="mailto:info@ignitechurch.be" className="btn-primary btn-lg">
+            Get in Touch
+          </a>
+        </div>
+      </section>
     </>
   );
 }

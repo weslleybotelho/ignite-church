@@ -1,0 +1,108 @@
+// ============================================
+// MODERN BASE STYLES
+// ============================================
+
+@import 'variables';
+
+// CSS Reset & Base
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $text-base;
+  line-height: 1.7;
+  color: $text-primary;
+  background-color: $bg-light;
+  overflow-x: hidden;
+  min-height: 100vh;
+  
+  // Custom Scrollbar
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $neutral-100;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $neutral-400;
+    border-radius: $radius-full;
+    
+    &:hover {
+      background: $neutral-500;
+    }
+  }
+}
+
+// Selection
+::selection {
+  background: rgba($brand-primary, 0.2);
+  color: $brand-primary-dark;
+}
+
+// Links
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-fast;
+}
+
+// Images
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Forms
+input, button, textarea, select {
+  font: inherit;
+}
+
+// Remove default button styles
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// Typography Defaults
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $text-primary;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin-bottom: $space-4;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Lists
+ul, ol {
+  list-style: none;
+}
+
+// Horizontal Rule
+hr {
+  border: none;
+  height: 1px;
+  background: $neutral-200;
+  margin: $space-8 0;
+}

@@ -1,0 +1,253 @@
+// ============================================
+// MODERN BUTTONS
+// ============================================
+
+@import 'variables';
+
+// Base Button
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-3 $space-6;
+  font-family: $font-heading;
+  font-size: $text-sm;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 2px solid transparent;
+  border-radius: $radius-lg;
+  cursor: pointer;
+  transition: all $transition-base;
+  
+  @include focus-ring;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Button Sizes
+.btn-sm {
+  padding: $space-2 $space-4;
+  font-size: $text-xs;
+  border-radius: $radius-md;
+}
+
+.btn-lg {
+  padding: $space-4 $space-8;
+  font-size: $text-base;
+  border-radius: $radius-xl;
+}
+
+.btn-xl {
+  padding: $space-5 $space-10;
+  font-size: $text-lg;
+  border-radius: $radius-xl;
+}
+
+// Primary Button
+.btn-primary {
+  @extend .btn;
+  background: $gradient-primary;
+  color: $text-light;
+  box-shadow: $shadow-md, 0 4px 20px rgba($brand-primary, 0.3);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg, 0 8px 30px rgba($brand-primary, 0.4);
+  }
+  
+  &:active {
+    transform: translateY(0);
+    box-shadow: $shadow-sm;
+  }
+}
+
+// Secondary Button
+.btn-secondary {
+  @extend .btn;
+  background: $brand-secondary;
+  color: $text-light;
+  
+  &:hover {
+    background: $brand-secondary-light;
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Outline Button
+.btn-outline {
+  @extend .btn;
+  background: transparent;
+  border-color: $brand-primary;
+  color: $brand-primary;
+  
+  &:hover {
+    background: $brand-primary;
+    color: $text-light;
+  }
+}
+
+.btn-outline-light {
+  @extend .btn;
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: $text-light;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+// Ghost Button
+.btn-ghost {
+  @extend .btn;
+  background: transparent;
+  color: $brand-primary;
+  padding-left: 0;
+  padding-right: 0;
+  
+  &:hover {
+    background: transparent;
+    color: $brand-primary-dark;
+  }
+}
+
+// Glass Button
+.btn-glass {
+  @extend .btn;
+  @include glassmorphism;
+  color: $text-light;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.btn-glass-dark {
+  @extend .btn;
+  @include glassmorphism-dark;
+  color: $text-light;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// Accent Button
+.btn-accent {
+  @extend .btn;
+  background: $brand-accent;
+  color: $text-primary;
+  
+  &:hover {
+    background: $brand-accent-light;
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Dark Button
+.btn-dark {
+  @extend .btn;
+  background: $neutral-900;
+  color: $text-light;
+  
+  &:hover {
+    background: $neutral-800;
+    transform: translateY(-2px);
+  }
+}
+
+// Light Button
+.btn-light {
+  @extend .btn;
+  background: $neutral-100;
+  color: $text-primary;
+  
+  &:hover {
+    background: $neutral-200;
+    transform: translateY(-2px);
+  }
+}
+
+// Link Style Button
+.btn-link {
+  @extend .btn;
+  background: transparent;
+  color: $brand-primary;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  
+  &:hover {
+    color: $brand-primary-dark;
+  }
+}
+
+// Button with Icon
+.btn-icon {
+  @extend .btn;
+  padding: $space-3;
+  
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.btn-icon-lg {
+  @extend .btn-icon;
+  padding: $space-4;
+  
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+// Arrow Button (for CTAs)
+.btn-arrow {
+  @extend .btn;
+  padding-right: $space-10;
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '→';
+    position: absolute;
+    right: $space-4;
+    transition: transform $transition-base;
+  }
+  
+  &:hover::after {
+    transform: translateX(4px);
+  }
+}
+
+// Full Width Button
+.btn-full {
+  width: 100%;
+}
+
+// Button Group
+.btn-group {
+  display: flex;
+  gap: $space-3;
+  flex-wrap: wrap;
+  
+  @include mobile {
+    flex-direction: column;
+    
+    .btn {
+      width: 100%;
+    }
+  }
+}

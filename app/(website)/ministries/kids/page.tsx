@@ -1,58 +1,141 @@
+'use client';
 import Image from 'next/image';
 import kidsImg from '../../../img/kidsministry.jpg';
+import { useGSAP } from '@gsap/react';
+import { Baby, Calendar, MapPin, Heart, BookOpen, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
+import { fadeFromBelow, fadeFromOpacityScroll } from '@/app/utils/gsapAnimations';
 
 export default function Kids() {
+  useGSAP(() => {
+    fadeFromBelow('.page-header-content');
+  });
+
+  useGSAP(() => {
+    fadeFromOpacityScroll('#mission .container', '#mission');
+  });
+
   return (
     <>
-      <article>
-        <header className="bg-ministries">
-          <section className="bg-black h-100" id="hero">
-            <section className="bg-about relativexs">
-              <Image src={kidsImg} alt="About Ignite" className="cover h-100 filter-black50" />
-              <header>
-                <h1 className="absolute-center absolut color-white text-center uppercase">Ignite Kid&apos;s</h1>
-              </header>
-            </section>
-          </section>
-        </header>
+      {/* ==================== PAGE HEADER ==================== */}
+      <section className="page-header" style={{ minHeight: '70vh' }}>
+        <Image src={kidsImg} alt="Kids Ministry" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
+        <div className="hero-overlay"></div>
+        <div className="page-header-content">
+          <Link href="/ministries" className="btn-ghost btn-sm mb-4" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+            <ArrowLeft size={16} />
+            Back to Ministries
+          </Link>
+          <span className="hero-eyebrow">Ages 0-12</span>
+          <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
+            Ignite Kids
+          </h1>
+          <p className="page-header-subtitle">Launched in 2020</p>
+        </div>
+      </section>
 
-        <section className="bg-black">
-          <div className="container" id="vision">
-            <div className="row flex-center-revert-mobile">
-              <div className="grid-6">
-                <h2 className="uppercase text-center color-white">mission</h2>
+      {/* ==================== MISSION ==================== */}
+      <section className="section" id="mission">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-eyebrow">Our Mission</span>
+            <h2 className="section-title">Touching Young Hearts</h2>
+          </div>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <p className="lead text-center mb-6">
+              A vibrant ministry dedicated to touching the hearts of preschool-aged children and helping them discover Jesus&apos;s love.
+            </p>
+            <p className="text-secondary text-center mb-4">
+              Our dedicated team of volunteers, fluent in French, English, and Dutch, welcomes your children at our office while you enjoy
+              the service.
+            </p>
+            <p className="text-secondary text-center">
+              This is more than just babysitting. We believe in Christ&apos;s ability to transform the youngest hearts, preparing them to
+              positively impact the world.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== WHAT WE DO ==================== */}
+      <section className="section section-cream">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-eyebrow">What We Do</span>
+            <h2 className="section-title">Growing Together in Faith</h2>
+          </div>
+
+          <div className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <Heart />
               </div>
-              <div className="grid-6 pb-0">
-                <div>
-                  <p className="p3 color-gray-light">
-                    Discover Ignite Kids Ministry, a vibrant ministry launched in 2020. Our goal is clear: to touch the
-                    hearts of preschool-aged children. Our dedicated team of volunteers, fluent in French, English, and
-                    Dutch, welcomes your children at our office while you enjoy the service.
-                  </p>
-                  <p className="p3 mt-2 color-gray-light">
-                    This is more than just babysitting. We believe in Christ&apos;s ability to transform the youngest
-                    hearts, preparing them to positively impact the world. Together, we pray, memorize verses, and share
-                    stories inspired by Holy Scriptures. Our lessons are carefully tailored for a deep understanding,
-                    integrating faith into children&apos;s everyday lives.
-                  </p>
-                </div>
+              <h4 className="feature-title">Prayer</h4>
+              <p className="feature-text">
+                We pray together, teaching children to communicate with God and building their relationship with Him from an early age.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">
+                <BookOpen />
               </div>
+              <h4 className="feature-title">Scripture</h4>
+              <p className="feature-text">
+                We memorize verses and share stories inspired by Holy Scriptures, carefully tailored for deep understanding.
+              </p>
+            </div>
+
+            <div className="feature-card">
+              <div className="feature-icon">
+                <Baby />
+              </div>
+              <h4 className="feature-title">Fun Activities</h4>
+              <p className="feature-text">
+                We integrate faith into children&apos;s everyday lives through engaging games, crafts, and interactive lessons.
+              </p>
             </div>
           </div>
-        </section>
-        <section className="" id="infos">
-          <div className="container">
-            <h6 className="mt-3 ">Meeting times</h6>
-            <div className="ml-2 mt-2">
-              <li className="none-bullet">Every Sunday from 9:45 AM to 12:30 PM</li>
+        </div>
+      </section>
+
+      {/* ==================== DETAILS ==================== */}
+      <section className="section">
+        <div className="container">
+          <div
+            className="grid gap-8"
+            style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', maxWidth: '700px', margin: '0 auto' }}>
+            <div className="feature-card" style={{ textAlign: 'center' }}>
+              <div className="feature-icon mx-auto">
+                <Calendar />
+              </div>
+              <h4 className="feature-title">When We Meet</h4>
+              <p className="feature-text">Every Sunday from 9:45 AM to 12:30 PM</p>
             </div>
-            <h6 className="mt-3">Location</h6>
-            <div className="ml-2 mt-2">
-              <li className="none-bullet">Tribes Office</li>
+
+            <div className="feature-card" style={{ textAlign: 'center' }}>
+              <div className="feature-icon mx-auto">
+                <MapPin />
+              </div>
+              <h4 className="feature-title">Where We Meet</h4>
+              <p className="feature-text">Tribes Office</p>
             </div>
           </div>
-        </section>
-      </article>
+        </div>
+      </section>
+
+      {/* ==================== CTA ==================== */}
+      <section className="section section-brand" style={{ textAlign: 'center' }}>
+        <div className="container">
+          <h2 className="text-light mb-4">Questions About Kids Ministry?</h2>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+            We&apos;d love to tell you more about how we care for and nurture your little ones!
+          </p>
+          <a href="mailto:info@ignitechurch.be" className="btn-light btn-lg">
+            Contact Us
+          </a>
+        </div>
+      </section>
     </>
   );
 }

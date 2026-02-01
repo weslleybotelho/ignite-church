@@ -1,98 +1,79 @@
 'use client';
 import Image from 'next/image';
 import logoIgnite from '../../../public/svg/logo-ignite.svg';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
-  const bxRef = useRef<HTMLDivElement>(null);
-  const menuMobileRef = useRef<HTMLDivElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-  function handlerMenuMobile() {
-    if (bxRef.current && menuMobileRef.current) {
-      bxRef.current.classList.toggle('activebx');
-      menuMobileRef.current.classList.toggle('showmenu');
-    }
-  }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = '';
+  };
+
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/about-ignite', label: 'About' },
+    { href: '/events', label: 'Events' },
+    { href: '/ministries', label: 'Ministries' },
+    { href: '/give', label: 'Give' },
+    { href: '/ignite-school-of-ministry', label: 'School' },
+  ];
 
   return (
     <>
-      <header className="header-bar">
-        <nav>
-          <Link href="/">
-            <Image src={logoIgnite} alt="Ignite Church Logo" width={42} height={42}></Image>
+      <header className={`header header-transparent ${isScrolled ? 'header-scrolled' : ''}`}>
+        <nav className="nav">
+          <Link href="/" className="nav-logo" onClick={closeMenu}>
+            <Image src={logoIgnite} alt="Ignite Church Logo" width={44} height={44} priority />
+            <span className="nav-logo-text">Ignite Church</span>
           </Link>
 
-          <div className="flex-start-row ">
-            <div className="disappear">
-              <Link href="/" className="link-menu">
-                Home
+          <div className="nav-menu">
+            {navLinks.map((link) => (
+              <Link key={link.href} href={link.href} className={`nav-link ${pathname === link.href ? 'active' : ''}`}>
+                {link.label}
               </Link>
-              <Link href="/about-ignite" className="link-menu ml-3">
-                About
-              </Link>
-              <Link href="/events" className="link-menu ml-3">
-                Events
-              </Link>
-              <Link href="/ministries" className=" link-menu ml-3">
-                Ministries
-              </Link>
-              <Link href="/give" className=" link-menu ml-3">
-                Give
-              </Link>
-              <Link href="/ignite-school-of-ministry" className=" link-menu ml-3 mr-3">
-                School
-              </Link>
-            </div>
-            {/* <div className="ml-3">
-                <Link href="#" className=" link-menu">
-                  Contact
-                </Link>
-              </div> */}
+            ))}
           </div>
-          <div className="bx" ref={bxRef} onClick={handlerMenuMobile}></div>
+
+          <div className={`nav-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
+            <span className="nav-toggle-line"></span>
+            <span className="nav-toggle-line"></span>
+            <span className="nav-toggle-line"></span>
+          </div>
         </nav>
       </header>
 
-      <div className="relative">
-        <div className="menu-mobile" ref={menuMobileRef}>
-          <ul className="nav-mobile">
-            <li>
-              <Link href="/" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/about-ignite" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/events" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link href="/ministries" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                Ministries
-              </Link>
-            </li>
-            <li>
-              <Link href="/give" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                Give
-              </Link>
-            </li>
-            <li>
-              <Link href="/ignite-school-of-ministry" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                School
-              </Link>
-            </li>
-            {/* <li>
-              <Link href="" className="link-menu-mobile" onClick={handlerMenuMobile}>
-                Contact
-              </Link>
-            </li> */}
-          </ul>
+      {/* Mobile Navigation */}
+      <div className={`nav-mobile ${isMenuOpen ? 'active' : ''}`}>
+        {navLinks.map((link) => (
+          <Link key={link.href} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
+            {link.label}
+          </Link>
+        ))}
+        <div className="nav-mobile-cta">
+          <Link href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-primary btn-lg" onClick={closeMenu}>
+            Visit Us Sunday
+          </Link>
         </div>
       </div>
     </>
