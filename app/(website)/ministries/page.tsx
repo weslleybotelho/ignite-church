@@ -6,14 +6,10 @@ import schoolImg from '../../img/school.jpg';
 import musicImg from '../../img/music.jpg';
 import homeGroupImg from '../../img/homegroup.jpg';
 import womenImg from '../../img/women.jpg';
-import menImg from '../../img/men.jpg';
 import kidsMinistry from '../../img/kidsministry.jpg';
 import youthMinistry from '../../img/hero-youth.webp';
 import Link from 'next/link';
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import { fadeFromBelow } from '../../utils/gsapAnimations';
-import { ArrowRight, Users, Heart, Music, BookOpen, Home, Sparkles, Baby, UserCheck } from 'lucide-react';
+import { ArrowRight, Users, Heart, Music, BookOpen, Home, Sparkles, Baby } from 'lucide-react';
 
 const ministries = [
   {
@@ -22,6 +18,7 @@ const ministries = [
     image: evangelismImg,
     link: '/ministries/evangelism',
     icon: Heart,
+    external: false,
   },
   {
     title: 'Inner Healing',
@@ -29,13 +26,15 @@ const ministries = [
     image: innerHealingImg,
     link: '/ministries/innerhealing',
     icon: Sparkles,
+    external: false,
   },
   {
     title: 'School of Ministry',
     description: 'Equipping believers for effective ministry and spiritual growth.',
     image: schoolImg,
-    link: '/ignite-school-of-ministry',
+    link: 'https://www.igniteschoolofministry.com/',
     icon: BookOpen,
+    external: true,
   },
   {
     title: 'Ignite Worship',
@@ -43,6 +42,7 @@ const ministries = [
     image: musicImg,
     link: '/ministries/worship',
     icon: Music,
+    external: false,
   },
   {
     title: 'Home Groups',
@@ -50,13 +50,7 @@ const ministries = [
     image: homeGroupImg,
     link: '/ministries/homegroup',
     icon: Home,
-  },
-  {
-    title: 'Men Ministry',
-    description: 'Empowering men to become spiritual leaders in their families and communities.',
-    image: menImg,
-    link: '/ministries/men',
-    icon: UserCheck,
+    external: false,
   },
   {
     title: 'Women Ministry',
@@ -64,6 +58,7 @@ const ministries = [
     image: womenImg,
     link: '/ministries/women',
     icon: Users,
+    external: false,
   },
   {
     title: 'Kids Ministry',
@@ -71,6 +66,7 @@ const ministries = [
     image: kidsMinistry,
     link: '/ministries/kids',
     icon: Baby,
+    external: false,
   },
   {
     title: 'Youth Ministry',
@@ -78,30 +74,15 @@ const ministries = [
     image: youthMinistry,
     link: '/ministries/youth',
     icon: Users,
+    external: false,
   },
 ];
 
-  const cardsRef = React.useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    fadeFromBelow('.page-header-content');
-  });
-
-  useGSAP(() => {
-    if (cardsRef.current) {
-      gsap.from(cardsRef.current.querySelectorAll('.ministry-card'), {
-        opacity: 0,
-        ease: 'power4.out',
-        stagger: { each: 0.2 },
-        duration: 2,
-      });
-    }
-  }, { dependencies: [ministries] });
-
+export default function Ministries() {
   return (
     <>
       {/* ==================== PAGE HEADER ==================== */}
-      <section className="page-header" style={{ minHeight: '50vh' }}>
+      <section className="page-header" style={{ minHeight: '50vh', backgroundColor: '#1A1A2E' }}>
         <div
           className="hero-overlay"
           style={{ background: 'radial-gradient(circle at 30% 70%, rgba(232, 90, 36, 0.15) 0%, transparent 50%)' }}></div>
@@ -123,49 +104,61 @@ const ministries = [
             <p className="section-subtitle">Discover the different ways you can get involved and make a difference in our community.</p>
           </div>
 
-          <div ref={cardsRef} className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
+          <div id="ministries-grid" className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
             {ministries.map((ministry, index) => {
               const IconComponent = ministry.icon;
-              return (
-                <Link href={ministry.link} key={index} className="ministry-card" style={{ textDecoration: 'none' }}>
-                  <div className="card card-hover" style={{ height: '100%', overflow: 'hidden' }}>
-                    <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
-                      <Image
-                        src={ministry.image}
-                        alt={ministry.title}
-                        fill
-                        style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
-                        className="ministry-image"
-                      />
-                      <div
-                        style={{
-                          position: 'absolute',
-                          top: '1rem',
-                          right: '1rem',
-                          background: 'var(--color-brand)',
-                          borderRadius: '50%',
-                          width: '48px',
-                          height: '48px',
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: 'white',
-                        }}>
-                        <IconComponent size={24} />
-                      </div>
-                    </div>
-                    <div style={{ padding: '1.5rem' }}>
-                      <h3 style={{ marginBottom: '0.5rem', color: 'var(--color-text)' }}>{ministry.title}</h3>
-                      <p className="text-secondary" style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
-                        {ministry.description}
-                      </p>
-                      <span
-                        className="text-brand"
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600' }}>
-                        Learn More <ArrowRight size={16} />
-                      </span>
+              const CardContent = (
+                <div className="card card-hover" style={{ height: '100%', overflow: 'hidden' }}>
+                  <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
+                    <Image
+                      src={ministry.image}
+                      alt={ministry.title}
+                      fill
+                      style={{ objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                      className="ministry-image"
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '1rem',
+                        right: '1rem',
+                        background: 'var(--color-brand)',
+                        borderRadius: '50%',
+                        width: '48px',
+                        height: '48px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: 'white',
+                      }}>
+                      <IconComponent size={24} />
                     </div>
                   </div>
+                  <div style={{ padding: '1.5rem' }}>
+                    <h3 style={{ marginBottom: '0.5rem', color: '#1A1A1A', fontWeight: '600' }}>{ministry.title}</h3>
+                    <p className="text-secondary" style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
+                      {ministry.description}
+                    </p>
+                    <span className="text-brand" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: '600' }}>
+                      Learn More <ArrowRight size={16} />
+                    </span>
+                  </div>
+                </div>
+              );
+
+              return ministry.external ? (
+                <a
+                  href={ministry.link}
+                  key={index}
+                  className="ministry-card"
+                  style={{ textDecoration: 'none' }}
+                  target="_self"
+                  rel="noopener">
+                  {CardContent}
+                </a>
+              ) : (
+                <Link href={ministry.link} key={index} className="ministry-card" style={{ textDecoration: 'none' }}>
+                  {CardContent}
                 </Link>
               );
             })}

@@ -48,9 +48,9 @@ export default function Footer() {
           <div className="footer-column">
             <h5>Get Involved</h5>
             <div className="footer-links">
-              <Link href="/ignite-school-of-ministry" className="footer-link">
+              <a href="https://www.igniteschoolofministry.com/" className="footer-link" target="_self" rel="noopener">
                 School of Ministry
-              </Link>
+              </a>
               <Link href="/ministries/homegroup" className="footer-link">
                 Home Groups
               </Link>

@@ -1,7 +1,5 @@
 'use client';
-import { useGSAP } from '@gsap/react';
 import { Calendar, Clock, MapPin, ChevronRight, Bell } from 'lucide-react';
-import { slideFromRightScroll, fadeFromBelow } from '../../utils/gsapAnimations';
 
 // Update these events as needed
 const upcomingEvents = [
@@ -44,14 +42,6 @@ const regularServices = [
 ];
 
 export default function Events() {
-  useGSAP(() => {
-    fadeFromBelow('.page-header-content');
-  });
-
-  useGSAP(() => {
-    slideFromRightScroll('#upcoming .event-card', '#upcoming');
-  });
-
   return (
     <>
       {/* ==================== PAGE HEADER ==================== */}
@@ -59,7 +49,7 @@ export default function Events() {
         className="page-header"
         style={{
           minHeight: '50vh',
-          background: 'linear-gradient(135deg, var(--color-secondary) 0%, #2D2D4A 100%)',
+          backgroundColor: '#1A1A2E',
         }}>
         <div
           className="hero-overlay"
@@ -109,7 +99,7 @@ export default function Events() {
                           display: 'block',
                           fontSize: '0.75rem',
                           fontWeight: 600,
-                          color: event.featured ? 'white' : 'var(--color-brand)',
+                          color: event.featured ? '#1A1A1A' : 'var(--color-brand)',
                           textTransform: 'uppercase',
                           letterSpacing: '0.05em',
                         }}>
@@ -120,7 +110,7 @@ export default function Events() {
                           display: 'block',
                           fontSize: '2rem',
                           fontWeight: 700,
-                          color: event.featured ? 'white' : 'var(--color-text)',
+                          color: event.featured ? '#1A1A1A' : 'var(--color-text)',
                           lineHeight: 1,
                         }}>
                         {event.day}

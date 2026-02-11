@@ -7,7 +7,7 @@ export const fadeFromBelow = (element: string, duration: number = 2) => {
   const tl = gsap.timeline();
   tl.from(element, {
     duration,
-    opacity: 1,
+    opacity: 0,
     y: 200,
     stagger: { each: 0.1 },
     ease: 'power4.out',
@@ -16,7 +16,7 @@ export const fadeFromBelow = (element: string, duration: number = 2) => {
 export const fadeFromBelowScroll = (element: string, trigger: string, duration: number = 2) => {
   gsap.from(element, {
     duration,
-    opacity: 1,
+    opacity: 0,
     y: 200,
     stagger: { each: 0.1 },
     ease: 'power4.out',
@@ -55,7 +55,7 @@ export const slideFromRight = (element: string, duration: number = 2) => {
   const tl = gsap.timeline();
 
   tl.from(element, {
-    opacity: 1,
+    opacity: 0,
     x: 200,
     ease: 'power4.out',
     stagger: { each: 0.2 },
@@ -65,7 +65,7 @@ export const slideFromRight = (element: string, duration: number = 2) => {
 
 export const slideFromRightScroll = (element: string, trigger: string, duration: number = 2) => {
   gsap.from(element, {
-    opacity: 1,
+    opacity: 0,
     x: 300,
     ease: 'power4.out',
     stagger: { each: 0.2 },
@@ -80,7 +80,7 @@ export const slideFromRightScroll = (element: string, trigger: string, duration:
 
 export const slideFromLeftScroll = (element: string, trigger: string, duration: number = 2) => {
   gsap.from(element, {
-    opacity: 1,
+    opacity: 0,
     x: -300,
     ease: 'power4.out',
     stagger: { each: 0.2 },

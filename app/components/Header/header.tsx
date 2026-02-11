@@ -30,12 +30,12 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about-ignite', label: 'About' },
-    { href: '/events', label: 'Events' },
-    { href: '/ministries', label: 'Ministries' },
-    { href: '/give', label: 'Give' },
-    { href: '/ignite-school-of-ministry', label: 'School' },
+    { href: '/', label: 'Home', external: false },
+    { href: '/about-ignite', label: 'About', external: false },
+    { href: '/events', label: 'Events', external: false },
+    { href: '/ministries', label: 'Ministries', external: false },
+    { href: '/give', label: 'Give', external: false },
+    { href: 'https://www.igniteschoolofministry.com/', label: 'School', external: true },
   ];
 
   return (
@@ -48,11 +48,17 @@ export default function Header() {
           </Link>
 
           <div className="nav-menu">
-            {navLinks.map((link) => (
-              <Link key={link.href} href={link.href} className={`nav-link ${pathname === link.href ? 'active' : ''}`}>
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a key={link.href} href={link.href} className="nav-link" target="_self" rel="noopener">
+                  {link.label}
+                </a>
+              ) : (
+                <Link key={link.href} href={link.href} className={`nav-link ${pathname === link.href ? 'active' : ''}`}>
+                  {link.label}
+                </Link>
+              ),
+            )}
           </div>
 
           <div className={`nav-toggle ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
@@ -65,11 +71,17 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       <div className={`nav-mobile ${isMenuOpen ? 'active' : ''}`}>
-        {navLinks.map((link) => (
-          <Link key={link.href} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
-            {link.label}
-          </Link>
-        ))}
+        {navLinks.map((link) =>
+          link.external ? (
+            <a key={link.href} href={link.href} className="nav-mobile-link" onClick={closeMenu} target="_self" rel="noopener">
+              {link.label}
+            </a>
+          ) : (
+            <Link key={link.href} href={link.href} className="nav-mobile-link" onClick={closeMenu}>
+              {link.label}
+            </Link>
+          ),
+        )}
         <div className="nav-mobile-cta">
           <Link href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-primary btn-lg" onClick={closeMenu}>
             Visit Us Sunday
