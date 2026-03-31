@@ -89,8 +89,15 @@ export default function Give() {
             style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', maxWidth: '800px', margin: '0 auto' }}>
             {/* Bank Transfer */}
             <div className="card" style={{ padding: '2rem', textAlign: 'center' }}>
-              <div className="feature-icon mx-auto mb-4" style={{ width: '64px', height: '64px' }}>
-                <Landmark size={28} />
+              <div
+                className="feature-icon mx-auto mb-4"
+                style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'rgba(232, 90, 36, 0.12)',
+                  border: '2px solid var(--color-brand)',
+                }}>
+                <Landmark size={28} color="#C44A1C" />
               </div>
               <h3 className="mb-4">{t.give.bankTitle}</h3>
               <div style={{ background: 'var(--color-cream)', padding: '1.5rem', borderRadius: 'var(--radius-md)', marginBottom: '1rem' }}>
@@ -106,8 +113,15 @@ export default function Give() {
 
             {/* Online Giving */}
             <div className="card" style={{ padding: '2rem', textAlign: 'center', border: '2px solid var(--color-brand)' }}>
-              <div className="feature-icon mx-auto mb-4" style={{ width: '64px', height: '64px', background: 'var(--color-brand)' }}>
-                <CreditCard size={28} color="white" />
+              <div
+                className="feature-icon mx-auto mb-4"
+                style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'rgba(232, 90, 36, 0.12)',
+                  border: '2px solid var(--color-brand)',
+                }}>
+                <CreditCard size={28} color="#C44A1C" />
               </div>
               <h3 className="mb-4">{t.give.onlineTitle}</h3>
               <p className="text-secondary mb-6">
