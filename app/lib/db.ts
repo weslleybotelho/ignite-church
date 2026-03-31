@@ -1,11 +1,14 @@
 import { Pool } from 'pg';
 
+// Required for Supabase pooler SSL certificates
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 class Database {
   private pool: Pool;
 
   constructor() {
     this.pool = new Pool({
-      connectionString: process.env.ignite_URL,
+      connectionString: process.env.POSTGRES_URL_NON_POOLING,
       ssl: {
         rejectUnauthorized: false,
       },

@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Ignite Church Brussels',
   description:
-    'Ignite Church Brussels, your Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events.',
+    'Ignite Church Brussels — a Christian community in the heart of Belgium. Join us for worship, community, and Christ-centered events.',
   keywords:
     'ignite church brussels, ignite, church, brussels, church brussels, christian church, christian community, evangelical church, worship brussels',
 };
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:title" content="Ignite Church Brussels" />
         <meta
           property="og:description"
-          content="Your Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events."
+          content="A Christian community in the heart of Belgium. Join us for worship, community, and Christ-centered events."
         />
         <meta property="og:image" content="/metatag-ignitechurch.png" />
 
@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="twitter:title" content="Ignite Church" />
         <meta
           property="twitter:description"
-          content="Your Christian community in the heart of Belgium. Join us for dynamic worship, impactful ministries, and transformative events."
+          content="A Christian community in the heart of Belgium. Join us for worship, community, and Christ-centered events."
         />
         <meta property="twitter:image" content="/metatag-ignitechurch.png" />
       </head>

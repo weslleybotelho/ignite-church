@@ -30,16 +30,16 @@ export default function Women() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={bgWomen} alt="Women Ministry" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <div className="page-header-content">
-          <Link href="/ministries" className="btn-ghost btn-sm mb-4" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
             <ArrowLeft size={16} />
             Back to Ministries
           </Link>
+        <div className="page-header-content">
           <span className="hero-eyebrow">Ministry</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Women Ministry
           </h1>
-          <p className="page-header-subtitle">Empower each other in our natural and spiritual abilities</p>
+          <p className="page-header-subtitle">Growing together in our natural and spiritual abilities</p>
         </div>
       </section>
 
@@ -49,7 +49,7 @@ export default function Women() {
           <div className="two-col">
             <div>
               <span className="eyebrow mb-4">Our Vision</span>
-              <h2 className="mb-6">Empowering Women in Christ</h2>
+              <h2 className="mb-6">Women Growing Together in Christ</h2>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {visionPoints.map((point, index) => (
@@ -101,7 +101,7 @@ export default function Women() {
             </p>
             <p className="text-secondary">
               Through mutual support, encouragement, and prayer, we create a safe space where transparency and vulnerability are celebrated.
-              Join us as we journey together, embracing our unique journeys and empowering one another to thrive in every aspect of life.
+              Join us as we journey together, embracing our unique stories and lifting one another up in every area of life.
             </p>
           </div>
         </div>

@@ -127,6 +127,7 @@ export default function Give() {
       </section>
 
       {/* ==================== BUILDING FUND ==================== */}
+      {/*
       <section className="section section-dark">
         <div className="container">
           <div className="two-col" style={{ alignItems: 'center' }}>
@@ -137,11 +138,11 @@ export default function Give() {
               <h2 className="text-light mb-4">Building Dreams, Shaping Futures</h2>
               <p className="text-light-muted mb-4">
                 At Ignite Church, we&apos;re on a heartfelt journey to create a lasting home — not just a building, but a place where dreams
-                can grow and lives can be transformed.
+                can grow and lives can be changed.
               </p>
               <p className="text-light-muted mb-6">
                 We envision a space that meets the diverse needs of our community. With your support, we aim to create a hub that not only
-                serves our attendees but also extends a welcoming hand to the people of Brussels, spreading the transformative message of
+                serves our attendees but also reaches out to the people of Brussels, spreading the message of
                 God&apos;s love throughout our city.
               </p>
               <a href="https://donate.stripe.com/dR63d476ucLN41i00a" target="_blank" className="btn-primary btn-lg">
@@ -166,6 +167,7 @@ export default function Give() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ==================== CHEERFUL GIVER ==================== */}
       <section className="section">

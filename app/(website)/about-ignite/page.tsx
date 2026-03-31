@@ -29,7 +29,7 @@ export default function About() {
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             About Ignite Church
           </h1>
-          <p className="page-header-subtitle">A vibrant Christian community igniting a generation for Jesus</p>
+          <p className="page-header-subtitle">A Christian community igniting a generation for Jesus</p>
         </div>
       </section>
 
@@ -38,14 +38,14 @@ export default function About() {
         <div className="container">
           <div className="section-header">
             <span className="section-eyebrow">Our Story</span>
-            <h2 className="section-title">A Journey of Faith and Vision</h2>
+            <h2 className="section-title">A Journey of Faith</h2>
           </div>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p className="lead text-center mb-6">
               Maldo&apos;s journey to founding Ignite Church in Brussels, Belgium, is a testament to unwavering faith and dedication.
             </p>
             <p className="text-secondary text-center">
-              Born in Dolores Eastern Samar, Philippines, he relocated to Belgium at a young age, where he encountered the transformative
+              Born in Dolores Eastern Samar, Philippines, he relocated to Belgium at a young age, where he encountered the 
               power of Christ. Influenced profoundly by his mother&apos;s prayers, Maldo&apos;s spiritual journey took root amidst the
               Flemish-speaking landscape of Brussels.
             </p>
@@ -76,7 +76,7 @@ export default function About() {
               </p>
               <p className="text-secondary mb-4">
                 Following years of faithful service within the church, Maldo and his wife, Jasmine, were released in 2016 to establish
-                Ignite Church—an endeavor rooted in the belief that every heart ignited with God&apos;s love has the power to transform
+                Ignite Church—an endeavor rooted in the belief that every heart ignited with God&apos;s love has the power to change
                 communities.
               </p>
               <p className="text-secondary">
@@ -120,8 +120,8 @@ export default function About() {
             <span className="section-eyebrow">What We Believe</span>
             <h2 className="section-title">Our Five Pillars</h2>
             <p className="section-subtitle">
-              These foundational pillars guide our every endeavor, shaping our collective vision and driving our commitment to impacting
-              lives and communities.
+              These foundational pillars guide everything we do, shaping our shared vision and driving our commitment to people
+              and communities.
             </p>
           </div>
 
@@ -133,8 +133,8 @@ export default function About() {
               </div>
               <h4 className="feature-title">Presence</h4>
               <p className="feature-text">
-                We prioritize cultivating the presence of God in every aspect of our community. Through vibrant worship and intentional
-                fellowship, we create an atmosphere where His presence is palpable.
+                We prioritize cultivating the presence of God in every part of our community. Through worship and intentional
+                fellowship, we create an atmosphere where His presence is real.
               </p>
             </div>
 
@@ -145,7 +145,7 @@ export default function About() {
               </div>
               <h4 className="feature-title">Power</h4>
               <p className="feature-text">
-                Empowered by the Holy Spirit, we embrace the power of God to bring about lasting change. Through signs, wonders, and
+                Led by the Holy Spirit, we embrace the power of God to bring about lasting change. Through signs, wonders, and
                 miracles, we boldly proclaim the gospel.
               </p>
             </div>
@@ -181,7 +181,7 @@ export default function About() {
               </div>
               <h4 className="feature-title">Purpose</h4>
               <p className="feature-text">
-                Driven by our passion for Jesus, we embrace our purpose to impact our world for His glory. With clarity and determination,
+                Driven by our love for Jesus, we embrace our purpose to impact our world for His glory. With clarity and determination,
                 we pursue God&apos;s purposes.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function About() {
         <div className="container">
           <h2 className="text-light mb-4">Join Our Family</h2>
           <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
-            We&apos;d love to meet you! Visit us this Sunday and experience the warmth of our community firsthand.
+            We&apos;d love to meet you! Come visit us this Sunday and see what we&apos;re all about.
           </p>
           <a href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-primary btn-lg">
             <MapPin size={20} />

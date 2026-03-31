@@ -1,47 +1,41 @@
 'use client';
-import { Calendar, Clock, MapPin, ChevronRight, Bell } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Calendar, Clock, MapPin, Bell } from 'lucide-react';
 
-// Update these events as needed
-const upcomingEvents = [
-  {
-    month: 'DEC',
-    day: 22,
-    title: 'Christmas Celebration - Potluck',
-    description: 'Bring your traditional dish and celebrate the birth of our Savior together!',
-    time: 'After service',
-    location: 'Ignite Church',
-    featured: true,
-  },
-  {
-    month: 'DEC',
-    day: 31,
-    title: "New Year's Eve Celebration",
-    description: '25€ per person (Free for kids under 12). Ticket non-refundable.',
-    time: 'Evening',
-    location: 'Ignite Church',
-    featured: true,
-  },
-];
+interface Event {
+  id: number;
+  title: string;
+  description: string;
+  event_date: string;
+  event_time: string;
+  location: string;
+  featured: boolean;
+}
 
-const regularServices = [
-  {
-    title: 'Sunday Service',
-    time: '10:00 AM',
-    description: 'Join us for worship, teaching, and fellowship every Sunday.',
-  },
-  {
-    title: 'Home Groups',
-    time: 'Every other week',
-    description: 'Connect in smaller groups around Brussels and Antwerp.',
-  },
-  {
-    title: 'Youth Ministry',
-    time: 'Every other week',
-    description: 'For ages 12-25. Building community and growing in faith together.',
-  },
-];
+interface Service {
+  id: number;
+  title: string;
+  time: string;
+  description: string;
+}
 
 export default function Events() {
+  const [upcomingEvents, setUpcomingEvents] = useState<Event[]>([]);
+  const [regularServices, setRegularServices] = useState<Service[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/api/events').then((r) => r.json()),
+      fetch('/api/services').then((r) => r.json()),
+    ])
+      .then(([events, services]) => {
+        setUpcomingEvents(events);
+        setRegularServices(services);
+      })
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
   return (
     <>
       {/* ==================== PAGE HEADER ==================== */}
@@ -61,7 +55,7 @@ export default function Events() {
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Events &amp; Calendar
           </h1>
-          <p className="page-header-subtitle">Discover what&apos;s happening at Ignite Church</p>
+          <p className="page-header-subtitle">See what&apos;s happening at Ignite Church</p>
         </div>
       </section>
 
@@ -74,77 +68,84 @@ export default function Events() {
             <p className="section-subtitle">Special events and gatherings you won&apos;t want to miss.</p>
           </div>
 
-          {upcomingEvents.length > 0 ? (
+          {loading ? (
+            <p className="text-secondary" style={{ textAlign: 'center' }}>Loading events...</p>
+          ) : upcomingEvents.length > 0 ? (
             <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))' }}>
-              {upcomingEvents.map((event, index) => (
-                <div
-                  key={index}
-                  className="event-card card card-hover"
-                  style={{
-                    overflow: 'hidden',
-                    border: event.featured ? '2px solid var(--color-brand)' : undefined,
-                  }}>
-                  <div style={{ display: 'flex', gap: '1.5rem', padding: '1.5rem' }}>
-                    {/* Date Badge */}
-                    <div
-                      style={{
-                        background: event.featured ? 'var(--color-brand)' : 'var(--color-cream)',
-                        borderRadius: 'var(--radius-md)',
-                        padding: '1rem',
-                        textAlign: 'center',
-                        minWidth: '80px',
-                      }}>
-                      <span
+              {upcomingEvents.map((event) => {
+                const date = new Date(event.event_date);
+                const month = date.toLocaleString('en', { month: 'short' }).toUpperCase();
+                const day = date.getDate();
+                return (
+                  <div
+                    key={event.id}
+                    className="event-card card card-hover"
+                    style={{
+                      overflow: 'hidden',
+                      border: event.featured ? '2px solid var(--color-brand)' : undefined,
+                    }}>
+                    <div style={{ display: 'flex', gap: '1.5rem', padding: '1.5rem' }}>
+                      {/* Date Badge */}
+                      <div
                         style={{
-                          display: 'block',
-                          fontSize: '0.75rem',
-                          fontWeight: 600,
-                          color: event.featured ? '#1A1A1A' : 'var(--color-brand)',
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.05em',
+                          background: event.featured ? 'var(--color-brand)' : 'var(--color-cream)',
+                          borderRadius: 'var(--radius-md)',
+                          padding: '1rem',
+                          textAlign: 'center',
+                          minWidth: '80px',
                         }}>
-                        {event.month}
-                      </span>
-                      <span
-                        style={{
-                          display: 'block',
-                          fontSize: '2rem',
-                          fontWeight: 700,
-                          color: event.featured ? '#1A1A1A' : 'var(--color-text)',
-                          lineHeight: 1,
-                        }}>
-                        {event.day}
-                      </span>
-                    </div>
+                        <span
+                          style={{
+                            display: 'block',
+                            fontSize: '0.75rem',
+                            fontWeight: 600,
+                            color: event.featured ? '#1A1A1A' : 'var(--color-brand)',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em',
+                          }}>
+                          {month}
+                        </span>
+                        <span
+                          style={{
+                            display: 'block',
+                            fontSize: '2rem',
+                            fontWeight: 700,
+                            color: event.featured ? '#1A1A1A' : 'var(--color-text)',
+                            lineHeight: 1,
+                          }}>
+                          {day}
+                        </span>
+                      </div>
 
-                    {/* Event Details */}
-                    <div style={{ flex: 1 }}>
-                      <h3 style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>{event.title}</h3>
-                      <p className="text-secondary" style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
-                        {event.description}
-                      </p>
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                        {event.time && (
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <Clock size={16} className="text-brand" />
-                            <span className="text-secondary" style={{ fontSize: '0.9rem' }}>
-                              {event.time}
-                            </span>
-                          </div>
-                        )}
-                        {event.location && (
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <MapPin size={16} className="text-brand" />
-                            <span className="text-secondary" style={{ fontSize: '0.9rem' }}>
-                              {event.location}
-                            </span>
-                          </div>
-                        )}
+                      {/* Event Details */}
+                      <div style={{ flex: 1 }}>
+                        <h3 style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>{event.title}</h3>
+                        <p className="text-secondary" style={{ marginBottom: '1rem', fontSize: '0.95rem' }}>
+                          {event.description}
+                        </p>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+                          {event.event_time && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                              <Clock size={16} className="text-brand" />
+                              <span className="text-secondary" style={{ fontSize: '0.9rem' }}>
+                                {event.event_time}
+                              </span>
+                            </div>
+                          )}
+                          {event.location && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                              <MapPin size={16} className="text-brand" />
+                              <span className="text-secondary" style={{ fontSize: '0.9rem' }}>
+                                {event.location}
+                              </span>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <div style={{ textAlign: 'center', padding: '3rem' }}>
@@ -167,8 +168,8 @@ export default function Events() {
           </div>
 
           <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-            {regularServices.map((service, index) => (
-              <div key={index} className="feature-card">
+            {regularServices.map((service) => (
+              <div key={service.id} className="feature-card">
                 <div
                   style={{
                     display: 'flex',

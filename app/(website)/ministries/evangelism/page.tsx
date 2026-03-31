@@ -9,7 +9,7 @@ import { fadeFromBelow, fadeFromOpacityScroll } from '@/app/utils/gsapAnimations
 const activities = [
   {
     title: 'Training Sessions',
-    description: 'Mini-training sessions to prepare, equip and empower people for effective outreach.',
+    description: 'Mini-training sessions to prepare and equip people for effective outreach.',
     icon: Users,
   },
   {
@@ -39,11 +39,11 @@ export default function Evangelism() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={evangelismImg} alt="Evangelism Ministry" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <div className="page-header-content">
-          <Link href="/ministries" className="btn-ghost btn-sm mb-4" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
             <ArrowLeft size={16} />
             Back to Ministries
           </Link>
+        <div className="page-header-content">
           <span className="hero-eyebrow">Ministry</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Ignite Evangelism
@@ -57,14 +57,14 @@ export default function Evangelism() {
         <div className="container">
           <div className="section-header">
             <span className="section-eyebrow">Our Mission</span>
-            <h2 className="section-title">Transformative Encounters with God</h2>
+            <h2 className="section-title">Encounters with God</h2>
           </div>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p className="lead text-center mb-6">
               The mission of Ignite Evangelism is to passionately share the Gospel of Jesus Christ throughout the city of Brussels.
             </p>
             <p className="text-secondary text-center">
-              We facilitate transformative encounters with God through Jesus. To fulfill this mission, we organize a variety of impactful
+              We help people encounter God through Jesus. To fulfill this mission, we organize different
               activities aimed at reaching and connecting with people in our community.
             </p>
           </div>
@@ -127,9 +127,9 @@ export default function Evangelism() {
           <div className="feature-icon mx-auto mb-6" style={{ background: 'rgba(232, 90, 36, 0.2)', width: '80px', height: '80px' }}>
             <Heart size={36} />
           </div>
-          <h2 className="text-light mb-4">Ready to Share God&apos;s Love?</h2>
+          <h2 className="text-light mb-4">Want to Share God&apos;s Love?</h2>
           <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
-            Join us in spreading the Gospel and making a difference in our community.
+            Come join us in spreading the Gospel and making a difference in our community.
           </p>
           <a href="mailto:info@ignitechurch.be" className="btn-primary btn-lg">
             Get Involved

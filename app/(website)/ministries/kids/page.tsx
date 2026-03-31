@@ -21,11 +21,11 @@ export default function Kids() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={kidsImg} alt="Kids Ministry" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <div className="page-header-content">
-          <Link href="/ministries" className="btn-ghost btn-sm mb-4" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
             <ArrowLeft size={16} />
             Back to Ministries
           </Link>
+        <div className="page-header-content">
           <span className="hero-eyebrow">Ages 0-12</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Ignite Kids
@@ -43,14 +43,14 @@ export default function Kids() {
           </div>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p className="lead text-center mb-6">
-              A vibrant ministry dedicated to touching the hearts of preschool-aged children and helping them discover Jesus&apos;s love.
+              A ministry dedicated to touching the hearts of preschool-aged children and helping them discover Jesus&apos;s love.
             </p>
             <p className="text-secondary text-center mb-4">
               Our dedicated team of volunteers, fluent in French, English, and Dutch, welcomes your children at our office while you enjoy
               the service.
             </p>
             <p className="text-secondary text-center">
-              This is more than just babysitting. We believe in Christ&apos;s ability to transform the youngest hearts, preparing them to
+              This is more than just babysitting. We believe in Christ&apos;s ability to change the youngest hearts, preparing them to
               positively impact the world.
             </p>
           </div>

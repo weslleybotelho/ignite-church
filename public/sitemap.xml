@@ -1,19 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- English -->
   <url>
-    <loc>https://ignitechurch.be/</loc>
-    <lastmod>2024-03-06</lastmod>
+    <loc>https://ignitechurch.be/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl" />
   </url>
   <url>
-    <loc>https://ignitechurch.be/about-ignite</loc>
-    <lastmod>2024-02-15</lastmod>
+    <loc>https://ignitechurch.be/en/about-ignite</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/about-ignite" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/about-ignite" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/about-ignite" />
   </url>
   <url>
-    <loc>https://ignitechurch.be/ministries</loc>
-    <lastmod>2024-03-06</lastmod>
+    <loc>https://ignitechurch.be/en/ministries</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/ministries" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/ministries" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/ministries" />
   </url>
   <url>
-    <loc>https://ignitechurch.be/ignite-school-of-ministry</loc>
-    <lastmod>2024-05-29</lastmod>
+    <loc>https://ignitechurch.be/en/events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/events" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/events" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/events" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/en/give</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/give" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/give" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/give" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/en/supporters</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/supporters" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/supporters" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/supporters" />
+  </url>
+
+  <!-- French -->
+  <url>
+    <loc>https://ignitechurch.be/fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/fr/about-ignite</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/about-ignite" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/about-ignite" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/about-ignite" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/fr/ministries</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/ministries" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/ministries" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/ministries" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/fr/events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/events" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/events" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/events" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/fr/give</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/give" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/give" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/give" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/fr/supporters</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/supporters" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/supporters" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/supporters" />
+  </url>
+
+  <!-- Dutch -->
+  <url>
+    <loc>https://ignitechurch.be/nl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/nl/about-ignite</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/about-ignite" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/about-ignite" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/about-ignite" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/nl/ministries</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/ministries" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/ministries" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/ministries" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/nl/events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/events" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/events" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/events" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/nl/give</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/give" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/give" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/give" />
+  </url>
+  <url>
+    <loc>https://ignitechurch.be/nl/supporters</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ignitechurch.be/en/supporters" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ignitechurch.be/fr/supporters" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://ignitechurch.be/nl/supporters" />
   </url>
 </urlset>

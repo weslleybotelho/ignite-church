@@ -5,12 +5,12 @@ const nextConfig = {
       {
         source: '/about',
         destination: '/about-ignite',
-        permanent: true, // triggers 308
+        permanent: true,
       },
       {
-        source: '/school',
-        destination: '/ignite-school-of-ministry',
-        permanent: true, // triggers 308
+        source: '/:locale(en|fr|nl)/about',
+        destination: '/:locale/about-ignite',
+        permanent: true,
       },
     ];
   },

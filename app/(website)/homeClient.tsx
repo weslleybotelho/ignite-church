@@ -1,4 +1,5 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
@@ -13,11 +14,23 @@ import {
 } from '../utils/gsapAnimations';
 import SliderImages from '../components/Sliderv2/slider';
 
-type Props = {
-  imageFiles: string[];
-};
+interface Announcement {
+  id: number;
+  title: string;
+  image_url: string;
+  link_url?: string;
+}
 
-export default function HomeClient({ imageFiles }: Props) {
+export default function HomeClient() {
+  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
+
+  useEffect(() => {
+    fetch('/api/announcements')
+      .then((r) => r.json())
+      .then((data) => { if (Array.isArray(data)) setAnnouncements(data); })
+      .catch(console.error);
+  }, []);
+
   useGSAP(() => {
     fadeFromBelow('#hero .hero-content');
   });
@@ -27,7 +40,6 @@ export default function HomeClient({ imageFiles }: Props) {
     slideFromLeftScroll('#about .two-col', '#about');
     fadeFromOpacityScroll('#ministries .grid', '#ministries');
     fadeFromBelowScroll('#ism .two-col', '#ism');
-    fadeFromOpacityScroll('#newsletter .newsletter-content', '#newsletter');
   });
 
   return (
@@ -54,8 +66,8 @@ export default function HomeClient({ imageFiles }: Props) {
             <span className="text-gradient">for Jesus</span>
           </h1>
           <p className="hero-subtitle">
-            Join our vibrant community every Sunday at 10:00 AM for powerful worship, 
-            transformative teaching, and authentic fellowship.
+            Join us every Sunday at 10:00 AM for worship, 
+            good teaching, and real community.
           </p>
           <div className="btn-group justify-center">
             <Link href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-primary btn-lg btn-arrow">
@@ -80,20 +92,22 @@ export default function HomeClient({ imageFiles }: Props) {
       </section>
 
       {/* ==================== ANNOUNCEMENTS ==================== */}
-      <section className="section section-cream" id="announcement">
-        <div className="container">
-          <div className="section-header">
-            <span className="section-eyebrow">What&apos;s Happening</span>
-            <h2 className="section-title">Latest Announcements</h2>
-            <p className="section-subtitle">
-              Stay connected with what God is doing in our community
-            </p>
+      {announcements.length > 0 && (
+        <section className="section section-cream" id="announcement">
+          <div className="container">
+            <div className="section-header">
+              <span className="section-eyebrow">What&apos;s Happening</span>
+              <h2 className="section-title">Latest Announcements</h2>
+              <p className="section-subtitle">
+                Stay connected with what God is doing in our community
+              </p>
+            </div>
+            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+              <SliderImages announcements={announcements} />
+            </div>
           </div>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <SliderImages imageFiles={imageFiles} />
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ==================== ABOUT SECTION ==================== */}
       <section className="section" id="about">
@@ -106,14 +120,14 @@ export default function HomeClient({ imageFiles }: Props) {
                 <span className="text-gradient">you found a family.</span>
               </h2>
               <p className="lead mb-6">
-                Welcome to Ignite Church Brussels — a vibrant Christian community 
-                nestled in the heart of Belgium.
+                Welcome to Ignite Church Brussels — a Christian community 
+                in the heart of Belgium.
               </p>
               <p className="text-secondary mb-6">
-                Our community is rooted in faith in <strong>Jesus</strong>, with a fervent 
-                belief in the transformative power of <strong>revival</strong>. We are a 
+                Our community is rooted in faith in <strong>Jesus</strong>, with a deep 
+                belief in the power of <strong>revival</strong>. We are a 
                 congregation of believers touched by the <strong>presence of God</strong>, 
-                believing in His manifested presence that has the power to transform the 
+                believing in His manifested presence that has the power to change the 
                 world around us.
               </p>
               <Link href="/about-ignite" className="btn-primary btn-arrow">
@@ -140,7 +154,7 @@ export default function HomeClient({ imageFiles }: Props) {
           <div className="flex-between mb-12" style={{ flexWrap: 'wrap', gap: '1rem' }}>
             <div>
               <span className="eyebrow-light mb-3">Our Ministries</span>
-              <h2 className="text-light">Find Your Place</h2>
+              <h2 className="text-light">Get Involved</h2>
             </div>
             <Link href="/ministries" className="btn-outline-light">
               View All Ministries <ArrowRight size={18} />
@@ -170,8 +184,8 @@ export default function HomeClient({ imageFiles }: Props) {
               </div>
               <h4 className="feature-title text-light">Youth Ministry</h4>
               <p className="feature-text text-light-muted">
-                Empowering the next generation to live boldly for Christ through 
-                engaging activities, mentorship, and community.
+                Helping the next generation grow in Christ through 
+                activities, mentorship, and community.
               </p>
               <Link href="/ministries/youth" className="btn-ghost mt-4" style={{ color: '#F4A261' }}>
                 Learn More <ArrowRight size={16} />
@@ -185,7 +199,7 @@ export default function HomeClient({ imageFiles }: Props) {
               </div>
               <h4 className="feature-title text-light">Worship</h4>
               <p className="feature-text text-light-muted">
-                Leading our congregation into God&apos;s presence through powerful 
+                Leading our congregation into God&apos;s presence through 
                 worship and an anointed music ministry.
               </p>
               <Link href="/ministries/worship" className="btn-ghost mt-4" style={{ color: '#F4A261' }}>
@@ -219,16 +233,16 @@ export default function HomeClient({ imageFiles }: Props) {
               <span className="eyebrow mb-4">Ignite School of Ministry</span>
               <h2 className="mb-4">
                 Encountered.<br />
-                <span className="text-gradient">Transformed.</span><br />
-                Empowered.
+                <span className="text-gradient">Changed.</span><br />
+                Sent Out.
               </h2>
               <p className="lead mb-6" style={{ maxWidth: '500px' }}>
-                &ldquo;Our mission is to see our students be transformed and empowered 
-                to reform the world around them and release Heaven on earth.&rdquo;
+                &ldquo;Our mission is to see our students be changed and equipped 
+                to make a difference in the world around them and release Heaven on earth.&rdquo;
               </p>
-              <Link href="/ignite-school-of-ministry" className="btn-primary btn-lg btn-arrow">
+              <a href="https://www.igniteschoolofministry.com/" target="_blank" rel="noopener noreferrer" className="btn-primary btn-lg btn-arrow">
                 Explore the School
-              </Link>
+              </a>
             </div>
             <div>
               <Image 
@@ -245,61 +259,13 @@ export default function HomeClient({ imageFiles }: Props) {
         </div>
       </section>
 
-      {/* ==================== NEWSLETTER ==================== */}
-      <section className="section section-cream" id="newsletter">
-        <div className="container">
-          <div className="newsletter-content" style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-            <span className="eyebrow mb-4">Stay Connected</span>
-            <h2 className="mb-4">Join Our Newsletter</h2>
-            <p className="section-subtitle mb-8">
-              Get the latest updates, event announcements, and encouragement 
-              delivered straight to your inbox.
-            </p>
-            
-            <form 
-              action="https://formsubmit.co/7aaf31e9c1e59aa2047a15acd2c62b39" 
-              method="POST" 
-              className="flex-col-center gap-4"
-            >
-              <div className="grid gap-4" style={{ width: '100%', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
-                <input 
-                  type="text" 
-                  name="first-name" 
-                  placeholder="First Name" 
-                  required 
-                  className="form-input"
-                />
-                <input 
-                  type="text" 
-                  name="last-name" 
-                  placeholder="Last Name" 
-                  required 
-                  className="form-input"
-                />
-              </div>
-              <input 
-                type="email" 
-                name="email" 
-                placeholder="Email Address" 
-                required 
-                className="form-input"
-                style={{ width: '100%' }}
-              />
-              <button type="submit" className="btn-primary btn-lg btn-full mt-2">
-                Subscribe to Newsletter
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
       {/* ==================== CTA SECTION ==================== */}
       <section className="section section-dark" style={{ textAlign: 'center' }}>
         <div className="container">
-          <h2 className="text-light mb-4">Ready to Experience More?</h2>
+          <h2 className="text-light mb-4">Come hang out with us</h2>
           <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
-            We&apos;d love to welcome you this Sunday. Come as you are and 
-            discover a community that will walk alongside you in your faith journey.
+            We&apos;d love to see you this Sunday. Come as you are — 
+            you&apos;re always welcome here.
           </p>
           <div className="btn-group justify-center">
             <Link href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-primary btn-lg">

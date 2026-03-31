@@ -52,11 +52,11 @@ export default function InnerHealing() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={innerHealing} alt="Inner Healing Ministry" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <div className="page-header-content">
-          <Link href="/ministries" className="btn-ghost btn-sm mb-4" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
             <ArrowLeft size={16} />
             Back to Ministries
           </Link>
+        <div className="page-header-content">
           <span className="hero-eyebrow">Ministry</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Inner Healing
@@ -219,7 +219,7 @@ export default function InnerHealing() {
           <div className="feature-icon mx-auto mb-6" style={{ background: 'rgba(232, 90, 36, 0.2)', width: '80px', height: '80px' }}>
             <HandHeart size={36} />
           </div>
-          <h2 className="text-light mb-4">Ready for Healing?</h2>
+          <h2 className="text-light mb-4">Want to Know More?</h2>
           <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
             Take the first step toward freedom and wholeness. Our trained ministry team is here to walk with you through the healing
             process.

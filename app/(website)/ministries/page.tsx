@@ -70,7 +70,7 @@ const ministries = [
   },
   {
     title: 'Youth Ministry',
-    description: 'Empowering the next generation to live boldly for Christ.',
+    description: 'Helping the next generation grow in Christ.',
     image: youthMinistry,
     link: '/ministries/youth',
     icon: Users,
@@ -101,7 +101,7 @@ export default function Ministries() {
           <div className="section-header">
             <span className="section-eyebrow">Our Ministries</span>
             <h2 className="section-title">Ways to Connect & Serve</h2>
-            <p className="section-subtitle">Discover the different ways you can get involved and make a difference in our community.</p>
+            <p className="section-subtitle">Here are the different ways you can get involved and make a difference in our community.</p>
           </div>
 
           <div id="ministries-grid" className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
@@ -152,8 +152,8 @@ export default function Ministries() {
                   key={index}
                   className="ministry-card"
                   style={{ textDecoration: 'none' }}
-                  target="_self"
-                  rel="noopener">
+                  target="_blank"
+                  rel="noopener noreferrer">
                   {CardContent}
                 </a>
               ) : (

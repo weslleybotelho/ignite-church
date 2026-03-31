@@ -1,9 +1,14 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation, useLocale } from '../../i18n/useTranslation';
 
 import logoIgniteFooter from '../../../public/svg/icon-footer.svg';
 
 export default function Footer() {
+  const t = useTranslation();
+  const locale = useLocale();
+  const lp = (href: string) => `/${locale}${href}`;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -17,58 +22,60 @@ export default function Footer() {
               <span className="footer-logo-text">Ignite Church</span>
             </div>
             <p className="footer-tagline">
-              A vibrant Christian community in the heart of Brussels, igniting a generation for Jesus through powerful worship,
-              transformative ministry, and authentic fellowship.
+              {t.footer.tagline}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="footer-column">
-            <h5>Quick Links</h5>
+            <h5>{t.footer.quickLinks}</h5>
             <div className="footer-links">
-              <Link href="/" className="footer-link">
-                Home
+              <Link href={lp('/')} className="footer-link">
+                {t.footer.home}
               </Link>
-              <Link href="/about-ignite" className="footer-link">
-                About Us
+              <Link href={lp('/about-ignite')} className="footer-link">
+                {t.footer.aboutUs}
               </Link>
-              <Link href="/ministries" className="footer-link">
-                Ministries
+              <Link href={lp('/ministries')} className="footer-link">
+                {t.footer.ministries}
               </Link>
-              <Link href="/events" className="footer-link">
-                Events
+              <Link href={lp('/events')} className="footer-link">
+                {t.footer.events}
               </Link>
-              <Link href="/give" className="footer-link">
-                Give
+              <Link href={lp('/locations')} className="footer-link">
+                {t.footer.locations}
+              </Link>
+              <Link href={lp('/give')} className="footer-link">
+                {t.footer.give}
               </Link>
             </div>
           </div>
 
           {/* Get Involved */}
           <div className="footer-column">
-            <h5>Get Involved</h5>
+            <h5>{t.footer.getInvolved}</h5>
             <div className="footer-links">
-              <a href="https://www.igniteschoolofministry.com/" className="footer-link" target="_self" rel="noopener">
-                School of Ministry
+              <a href="https://www.igniteschoolofministry.com/" className="footer-link" target="_blank" rel="noopener noreferrer">
+                {t.footer.schoolOfMinistry}
               </a>
-              <Link href="/ministries/homegroup" className="footer-link">
-                Home Groups
+              <Link href={lp('/ministries/homegroup')} className="footer-link">
+                {t.footer.homeGroups}
               </Link>
-              <Link href="/ministries/youth" className="footer-link">
-                Youth Ministry
+              <Link href={lp('/ministries/youth')} className="footer-link">
+                {t.footer.youthMinistry}
               </Link>
-              <Link href="/ministries/worship" className="footer-link">
-                Worship Team
+              <Link href={lp('/ministries/worship')} className="footer-link">
+                {t.footer.worshipTeam}
               </Link>
-              <Link href="/supporters" className="footer-link">
-                Our Supporters
+              <Link href={lp('/supporters')} className="footer-link">
+                {t.footer.ourSupporters}
               </Link>
             </div>
           </div>
 
           {/* Contact Info */}
           <div className="footer-column">
-            <h5>Contact Us</h5>
+            <h5>{t.footer.contact}</h5>
             <div className="footer-contact-item">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,11 +88,7 @@ export default function Footer() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
-              <span>
-                Rue des Colonies 56,
-                <br />
-                1000 Brussels, Belgium
-              </span>
+              <span>{t.footer.address}</span>
             </div>
             <div className="footer-contact-item">
               <svg
@@ -99,11 +102,7 @@ export default function Footer() {
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <span>
-                ignitechurchbrussels
-                <br />
-                @gmail.com
-              </span>
+              <span>{t.footer.email}</span>
             </div>
             <div className="footer-contact-item">
               <svg
@@ -117,13 +116,13 @@ export default function Footer() {
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
-              <span>Sundays at 10:00 AM</span>
+              <span>{t.footer.serviceTime}</span>
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p className="footer-copyright">© {currentYear} Ignite Church Brussels. All rights reserved.</p>
+          <p className="footer-copyright">{t.footer.copyright.replace('{year}', String(currentYear))}</p>
           <div className="footer-socials">
             <Link
               href="https://www.instagram.com/ignitechurchbrussels/"

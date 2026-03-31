@@ -60,11 +60,11 @@ export default function Worship() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={heroImg} alt="Ignite Worship" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <div className="page-header-content">
-          <Link href="/ministries" className="btn-ghost btn-sm mb-4" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
+        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
             <ArrowLeft size={16} />
             Back to Ministries
           </Link>
+        <div className="page-header-content">
           <span className="hero-eyebrow">Ministry</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Ignite Worship
@@ -95,7 +95,7 @@ export default function Worship() {
               </p>
               <p className="text-secondary">
                 We are a family. We are passionate worshippers of Him. We burn for Him. We are hungry and thirsty for Jesus. Through our
-                worship, we create an atmosphere where His presence is tangible and lives are transformed.
+                worship, we create an atmosphere where His presence is real and lives are changed.
               </p>
             </div>
           </div>
