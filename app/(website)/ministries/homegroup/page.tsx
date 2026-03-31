@@ -23,16 +23,16 @@ export default function HomeGroup() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={heroImg} alt="Home Groups" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
-            <ArrowLeft size={16} />
-            Back to Ministries
-          </Link>
         <div className="page-header-content">
           <span className="hero-eyebrow">Ministry</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Ignite Home Group
           </h1>
           <p className="page-header-subtitle">Building Christ-like relationships</p>
+          <Link href="/ministries" className="btn-ghost btn-sm" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)', marginTop: '1.5rem', display: 'inline-block' }}>
+            <ArrowLeft size={16} />
+            Back to Ministries
+          </Link>
         </div>
       </section>
 
@@ -145,7 +145,7 @@ export default function HomeGroup() {
             <Home size={36} />
           </div>
           <h2 className="text-light mb-4">Find Your Home Group</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#EF702D' }}>
             Ready to connect with a community that feels like family? Reach out and we&apos;ll help you find the perfect group.
           </p>
           <a href="mailto:ignitechurchbrussels@gmail.com" className="btn-primary btn-lg">

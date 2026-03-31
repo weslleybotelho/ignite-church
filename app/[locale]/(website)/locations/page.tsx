@@ -196,7 +196,7 @@ export default function Locations() {
           <h2 className="text-light mb-4">{t.locations.contactLabel}</h2>
           <p
             className="lead text-light-muted mb-8"
-            style={{ maxWidth: '560px', margin: '0 auto 2rem' }}>
+            style={{ maxWidth: '560px', margin: '0 auto 2rem', color: '#EF702D' }}>
             {t.locations.contactText}
           </p>
           <a

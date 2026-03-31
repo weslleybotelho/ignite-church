@@ -23,16 +23,16 @@ export default function Youth() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={heroYouth} alt="Youth Ministry" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
-            <ArrowLeft size={16} />
-            Back to Ministries
-          </Link>
         <div className="page-header-content">
           <span className="hero-eyebrow">Ages 12-25</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             Youth Ministry
           </h1>
           <p className="page-header-subtitle">Launched in October 2023</p>
+          <Link href="/ministries" className="btn-ghost btn-sm" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)', marginTop: '1.5rem', display: 'inline-block' }}>
+            <ArrowLeft size={16} />
+            Back to Ministries
+          </Link>
         </div>
       </section>
 
@@ -112,7 +112,7 @@ export default function Youth() {
             <Users size={36} />
           </div>
           <h2 className="text-light mb-4">Come Through!</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#EF702D' }}>
             Whether you&apos;re 12 or 25, there&apos;s a place for you here. Come as you are and grow with us!
           </p>
           <a href="mailto:info@ignitechurch.be" className="btn-primary btn-lg">

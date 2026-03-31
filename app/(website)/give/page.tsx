@@ -204,7 +204,7 @@ export default function Give() {
       <section className="section section-brand" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 className="text-light mb-4">Our Supporters</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#EF702D' }}>
             Check out the businesses that support our mission and help us make an impact.
           </p>
           <Link href="/supporters" className="btn-light btn-lg">

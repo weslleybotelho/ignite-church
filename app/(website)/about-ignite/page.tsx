@@ -193,7 +193,7 @@ export default function About() {
       <section className="section section-dark" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 className="text-light mb-4">Join Our Family</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#EF702D' }}>
             We&apos;d love to meet you! Come visit us this Sunday and see what we&apos;re all about.
           </p>
           <a href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-primary btn-lg">

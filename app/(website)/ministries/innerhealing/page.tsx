@@ -52,16 +52,16 @@ export default function InnerHealing() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={innerHealing} alt="Inner Healing Ministry" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <Link href="/ministries" className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
-            <ArrowLeft size={16} />
-            Back to Ministries
-          </Link>
         <div className="page-header-content">
           <span className="hero-eyebrow">Ministry</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
-            Inner Healing
+            Ignite Inner Healing
           </h1>
-          <p className="page-header-subtitle">Finding freedom and restoration through Christ</p>
+          <p className="page-header-subtitle">Freedom and Wholeness in Christ</p>
+          <Link href="/ministries" className="btn-ghost btn-sm" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)', marginTop: '1.5rem', display: 'inline-block' }}>
+            <ArrowLeft size={16} />
+            Back to Ministries
+          </Link>
         </div>
       </section>
 
@@ -220,7 +220,7 @@ export default function InnerHealing() {
             <HandHeart size={36} />
           </div>
           <h2 className="text-light mb-4">Want to Know More?</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#EF702D' }}>
             Take the first step toward freedom and wholeness. Our trained ministry team is here to walk with you through the healing
             process.
           </p>

@@ -170,7 +170,7 @@ export default function Ministries() {
       <section className="section section-brand" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 className="text-light mb-4">Not Sure Where to Start?</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#EF702D' }}>
             We&apos;d love to help you find the right ministry for you. Reach out and let&apos;s chat!
           </p>
           <a href="mailto:info@ignitechurch.be" className="btn-light btn-lg">

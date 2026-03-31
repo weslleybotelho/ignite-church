@@ -205,7 +205,7 @@ export default function Events() {
             <Bell size={36} />
           </div>
           <h2 className="text-light mb-4">Stay Updated</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#EF702D' }}>
             Follow us on social media or contact us to stay informed about all our events and activities.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
