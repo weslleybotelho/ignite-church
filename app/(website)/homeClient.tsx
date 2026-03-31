@@ -66,13 +66,12 @@ export default function HomeClient() {
             <span className="text-gradient">for Jesus</span>
           </h1>
           <p className="hero-subtitle">
-            Join us every Sunday at 10:00 AM for worship, 
-            good teaching, and real community.
+            Join us every Sunday for our service at 10:00 AM
           </p>
           <div className="btn-group justify-center">
             <Link href="https://maps.app.goo.gl/QrMxLi79z9gTyGBg9" target="_blank" className="btn-primary btn-lg btn-arrow">
               <MapPin size={20} />
-              Visit Us Sunday
+              Visit Us
             </Link>
             <Link href="https://www.youtube.com/@ignitechurchbrussels/streams" target="_blank" className="btn-outline-light btn-lg">
               <Play size={20} />
@@ -263,7 +262,7 @@ export default function HomeClient() {
       <section className="section section-dark" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 className="text-light mb-4">Come hang out with us</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#d95916' }}>
             We&apos;d love to see you this Sunday. Come as you are — 
             you&apos;re always welcome here.
           </p>

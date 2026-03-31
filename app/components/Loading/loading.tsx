@@ -1,7 +1,7 @@
 'use client';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import { useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 
 interface LoadingProps {
@@ -9,8 +9,21 @@ interface LoadingProps {
 }
 
 export default function Loading({ onLoadingComplete = () => {} }: LoadingProps) {
+  const [shouldShow, setShouldShow] = useState(false);
   const tl1 = gsap.timeline();
+
+  useEffect(() => {
+    const hasLoaded = sessionStorage.getItem('app-loaded');
+    if (!hasLoaded) {
+      sessionStorage.setItem('app-loaded', '1');
+      setShouldShow(true);
+    } else {
+      onLoadingComplete();
+    }
+  }, []);
+
   useGSAP(() => {
+    if (!shouldShow) return;
     tl1.to('.screen-loading', {
       delay: 3.3,
       duration: 1.2,
@@ -33,7 +46,9 @@ export default function Loading({ onLoadingComplete = () => {} }: LoadingProps) 
         }
       },
     });
-  });
+  }, { dependencies: [shouldShow] });
+
+  if (!shouldShow) return null;
 
   return (
     <>

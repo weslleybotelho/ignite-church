@@ -256,7 +256,7 @@ export default function HomeClient() {
       <section className="section section-dark" style={{ textAlign: 'center' }}>
         <div className="container">
           <h2 className="text-light mb-4">{t.home.ctaTitle}</h2>
-          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem' }}>
+          <p className="lead text-light-muted mb-8" style={{ maxWidth: '600px', margin: '0 auto 2rem', color: '#d95916' }}>
             {t.home.ctaSubtitle}
           </p>
           <div className="btn-group justify-center">
