@@ -16,6 +16,8 @@ const translations = {
       getDirections: 'Get Directions',
       getInvolved: 'Get Involved',
       getConnected: 'Get Connected',
+      toggleMenu: 'Menu',
+      visitUsSunday: 'Visit Us Sunday',
     },
     footer: {
       tagline: 'A Christian community in the heart of Brussels, igniting a generation for Jesus through worship, ministry, and real fellowship.',
@@ -471,6 +473,7 @@ const translations = {
       getDirections: 'Itinéraire',
       getInvolved: "S'impliquer",
       getConnected: 'Nous rejoindre',
+      visitUsSunday: 'Venez dimanche',
     },
     footer: {
       tagline: "Une communauté chrétienne au cœur de Bruxelles, embrasant une génération pour Jésus à travers l'adoration, le ministère et une vraie communion fraternelle.",
@@ -912,6 +915,7 @@ const translations = {
       getDirections: 'Routebeschrijving',
       getInvolved: 'Doe mee',
       getConnected: 'Sluit je aan',
+      visitUsSunday: 'Bezoek ons zondag',
     },
     footer: {
       tagline: 'Een christelijke gemeenschap in het hart van Brussel, een generatie in vuur en vlam zetten voor Jezus door aanbidding, bediening en echte gemeenschap.',

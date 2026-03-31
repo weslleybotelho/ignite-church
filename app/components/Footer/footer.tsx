@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Get Involved */}
           <div className="footer-column">
-            <h5>{t.footer.getInvolved}</h5>
+            <h5>{t.common.getInvolved}</h5>
             <div className="footer-links">
               <a href="https://www.igniteschoolofministry.com/" className="footer-link" target="_blank" rel="noopener noreferrer">
                 {t.footer.schoolOfMinistry}
