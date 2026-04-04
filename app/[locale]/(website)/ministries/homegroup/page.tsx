@@ -27,16 +27,16 @@ export default function HomeGroup() {
       <section className="page-header" style={{ minHeight: '70vh' }}>
         <Image src={heroImg} alt="Home Groups" fill className="hero-background" style={{ objectFit: 'cover' }} priority />
         <div className="hero-overlay"></div>
-        <Link href={lp('/ministries')} className="btn-ghost btn-sm back-btn-hero" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>
-            <ArrowLeft size={16} />
-            {t.common.backToMinistries}
-          </Link>
         <div className="page-header-content">
           <span className="hero-eyebrow">{t.homegroup.headerEyebrow}</span>
           <h1 className="page-header-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
             {t.homegroup.headerTitle}
           </h1>
           <p className="page-header-subtitle">{t.homegroup.headerSubtitle}</p>
+          <Link href={lp('/ministries')} className="btn-ghost btn-sm" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)', marginTop: '1.5rem', display: 'inline-block' }}>
+            <ArrowLeft size={16} />
+            {t.common.backToMinistries}
+          </Link>
         </div>
       </section>
 
