@@ -15,5 +15,5 @@ export function useLocale(): Locale {
 
 export function useTranslation(): TranslationKeys {
   const locale = useLocale();
-  return translations[locale];
+  return translations[locale] ?? translations[defaultLocale];
 }

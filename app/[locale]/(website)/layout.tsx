@@ -1,11 +1,12 @@
 import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import '../../css/style.scss';
 import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
 import Loading from '../../components/Loading/loading';
-import { Locale, locales, defaultLocale } from '../../i18n/config';
+import { Locale, locales } from '../../i18n/config';
 import { getTranslations } from '../../i18n/server';
 import { LocaleProvider } from '../../i18n/useTranslation';
 
@@ -15,8 +16,12 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: Locale } }) {
-  const t = getTranslations(params.locale || defaultLocale);
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  if (!(locales as readonly string[]).includes(params.locale)) {
+    notFound();
+  }
+  const locale = params.locale as Locale;
+  const t = getTranslations(locale);
   const baseUrl = 'https://ignite-church.vercel.app';
 
   return {
@@ -24,14 +29,14 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     description: t.meta.description,
     keywords: t.meta.keywords,
     alternates: {
-      canonical: `${baseUrl}/${params.locale}`,
+      canonical: `${baseUrl}/${locale}`,
       languages: Object.fromEntries(locales.map((l) => [l, `${baseUrl}/${l}`])),
     },
     openGraph: {
       title: t.meta.ogTitle,
       description: t.meta.ogDescription,
-      url: `${baseUrl}/${params.locale}`,
-      locale: params.locale === 'fr' ? 'fr_BE' : params.locale === 'nl' ? 'nl_BE' : 'en_US',
+      url: `${baseUrl}/${locale}`,
+      locale: locale === 'fr' ? 'fr_BE' : locale === 'nl' ? 'nl_BE' : 'en_US',
       type: 'website',
       images: ['/metatag-ignitechurch.png'],
     },
@@ -49,9 +54,12 @@ export default function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: { locale: string };
 }) {
-  const locale = params.locale || defaultLocale;
+  if (!(locales as readonly string[]).includes(params.locale)) {
+    notFound();
+  }
+  const locale = params.locale as Locale;
   return (
     <html lang={locale}>
       <head>
